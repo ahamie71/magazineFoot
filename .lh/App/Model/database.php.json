@@ -1,0 +1,214 @@
+{
+    "sourceFile": "App/Model/database.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1681894530788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681894538982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+<?php\n \n class Database\n {\n     private $db_name;\n"
+                },
+                {
+                    "date": 1681894544673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n         $this->db_pass = $db_pass;\n         $this->db_host = $db_host;\n \n \n-    }\n+    }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681894562147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     private $db_host;\n \n     private $pdo;\n \n-    public function __construct($db_name, $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n+    public function __construct($db_name= , $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n         $this->db_user = $db_user;\n"
+                },
+                {
+                    "date": 1681894567264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     private $db_host;\n \n     private $pdo;\n \n-    public function __construct($db_name= , $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n+    public function __construct($db_name= '', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n         $this->db_user = $db_user;\n"
+                },
+                {
+                    "date": 1681894576495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     private $db_host;\n \n     private $pdo;\n \n-    public function __construct($db_name= '', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n+    public function __construct($db_name= 'Magaz', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n         $this->db_user = $db_user;\n"
+                },
+                {
+                    "date": 1681894582350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     private $db_host;\n \n     private $pdo;\n \n-    public function __construct($db_name= 'Magaz', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n+    public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n         $this->db_user = $db_user;\n"
+                },
+                {
+                    "date": 1681894601528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-<?php\n \n+\n class Database\n {\n     private $db_name;\n     private $db_user;\n"
+                },
+                {
+                    "date": 1681894607638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+<?php\n \n-\n class Database\n {\n     private $db_name;\n     private $db_user;\n"
+                },
+                {
+                    "date": 1681894613317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,6 @@\n         $this->db_pass = $db_pass;\n         $this->db_host = $db_host;\n \n \n-    }\n\\ No newline at end of file\n+    }\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681894731273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n     private $db_host;\n \n     private $pdo;\n \n+\n+    \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894822766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    \n+    // le contr\n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894832455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le contr\n+    // le constructeur est une  \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894839344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  \n+    // le constructeur est une  methode special \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894867349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special \n+    // le constructeur est une  methode special d'une class\n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894876653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une class\n+    // le constructeur est une  methode special d'une classe , qui erst app\n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894884043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une classe , qui erst app\n+    // le constructeur est une  methode special d'une classe , qui erst appelée automatiqueement \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894892595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une classe , qui erst appelée automatiqueement \n+    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lors\n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894900361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lors\n+    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894906741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet \n+    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet de cette classe st applée \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894911837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet de cette classe st applée \n+    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet de cette classe est applée \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894920524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     private $pdo;\n \n \n-    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet de cette classe est applée \n+    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet de cette classe est crée \n     public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n     {\n \n         $this->db_name = $db_name;\n"
+                },
+                {
+                    "date": 1681894935123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,7 @@\n         $this->db_host = $db_host;\n \n \n     }\n+\n+    \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681894947027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n \n \n     }\n \n-    \n+    publuc \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681894957674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n \n \n     }\n \n-    publuc \n+    public function \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895022329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n \n \n     }\n \n-    public function \n+    public function Connect\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895030449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n \n \n     }\n \n-    public function Connect\n+    public function ConnectDatabase\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895036612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,6 @@\n \n \n     }\n \n-    public function ConnectDatabase\n+    public function ConnectDatabase()\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895138456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,6 +22,9 @@\n \n \n     }\n \n-    public function ConnectDatabase()\n+    public function ConnectDatabase(){\n+       \n+\n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895143697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,8 @@\n     }\n \n     public function ConnectDatabase(){\n        \n+        $rhis->\n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895150538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n     }\n \n     public function ConnectDatabase(){\n        \n-        $rhis->\n+        $rhis->pdo= \n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895158086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n     }\n \n     public function ConnectDatabase(){\n        \n-        $rhis->pdo= \n+        $rhis->pdo= null\n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895163436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,8 @@\n     }\n \n     public function ConnectDatabase(){\n        \n-        $rhis->pdo= null\n+        $this->pdo= null;\n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895169868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,6 +26,8 @@\n     public function ConnectDatabase(){\n        \n         $this->pdo= null;\n \n+        try\n+\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895185065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,8 @@\n     public function ConnectDatabase(){\n        \n         $this->pdo= null;\n \n-        try\n+        \n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895201878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,15 @@\n     public function ConnectDatabase(){\n        \n         $this->pdo= null;\n \n-        \n+        try {\n+            $this->pdo = new PDO(\"mysql:host=\" . $this->host . \";dbname=\" . $this->db_name, $this->username, $this->password);\n+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n+          } catch(PDOException $e) {\n+            echo \"Connection failed: \" . $e->getMessage();\n+          }\n+      \n+          return $this->conn;\n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895224038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,10 @@\n        \n         $this->pdo= null;\n \n         try {\n-            $this->pdo = new PDO(\"mysql:host=\" . $this->host . \";dbname=\" . $this->db_name, $this->username, $this->password);\n-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n+            $this->pdo = new PDO(\"mysql:host=\" . $this->dbhost . \";dbname=\" . $this->db_name, $this->username, $this->password);\n+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n           } catch(PDOException $e) {\n             echo \"Connection failed: \" . $e->getMessage();\n           }\n       \n"
+                },
+                {
+                    "date": 1681895241295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n        \n         $this->pdo= null;\n \n         try {\n-            $this->pdo = new PDO(\"mysql:host=\" . $this->dbhost . \";dbname=\" . $this->db_name, $this->username, $this->password);\n+            $this->pdo = new PDO(\"mysql:host=\" . $this->db_host . \";dbname=\" . $this->db_name, $this->, $this->password);\n             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n           } catch(PDOException $e) {\n             echo \"Connection failed: \" . $e->getMessage();\n           }\n"
+                },
+                {
+                    "date": 1681895246570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n        \n         $this->pdo= null;\n \n         try {\n-            $this->pdo = new PDO(\"mysql:host=\" . $this->db_host . \";dbname=\" . $this->db_name, $this->, $this->password);\n+            $this->pdo = new PDO(\"mysql:host=\" . $this->db_host . \";dbname=\" . $this->db_name, $this->db_user, $this->password);\n             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n           } catch(PDOException $e) {\n             echo \"Connection failed: \" . $e->getMessage();\n           }\n"
+                },
+                {
+                    "date": 1681895251849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n        \n         $this->pdo= null;\n \n         try {\n-            $this->pdo = new PDO(\"mysql:host=\" . $this->db_host . \";dbname=\" . $this->db_name, $this->db_user, $this->password);\n+            $this->pdo = new PDO(\"mysql:host=\" . $this->db_host . \";dbname=\" . $this->db_name, $this->db_user, $this->$db);\n             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n           } catch(PDOException $e) {\n             echo \"Connection failed: \" . $e->getMessage();\n           }\n"
+                },
+                {
+                    "date": 1681895312352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,40 +1,5 @@\n <?php\n \n class Database\n {\n-    private $db_name;\n-    private $db_user;\n-    private $db_pass;\n-\n-    private $db_host;\n-\n-    private $pdo;\n-\n-\n-    // le constructeur est une  methode special d'une classe , qui erst appelée automatiquement lorsq'un objet de cette classe est crée \n-    public function __construct($db_name= 'MagazineFoot', $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n-    {\n-\n-        $this->db_name = $db_name;\n-        $this->db_user = $db_user;\n-        $this->db_pass = $db_pass;\n-        $this->db_host = $db_host;\n-\n-\n-    }\n-\n-    public function ConnectDatabase(){\n-       \n-        $this->pdo= null;\n-\n-        try {\n-            $this->pdo = new PDO(\"mysql:host=\" . $this->db_host . \";dbname=\" . $this->db_name, $this->db_user, $this->$db);\n-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n-          } catch(PDOException $e) {\n-            echo \"Connection failed: \" . $e->getMessage();\n-          }\n-      \n-          return $this->conn;\n-\n-    }\n-}\n\\ No newline at end of file\n+   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895317790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,1 @@\n <?php\n-\n-class Database\n-{\n-   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895325827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,36 @@\n <?php\n+class Database {\n+    private $host = \"localhost\";\n+    private $db_name = \"mydatabase\";\n+    private $username = \"myusername\";\n+    private $password = \"mypassword\";\n+    private $conn;\n+  \n+    public function getConnection() {\n+      $this->conn = null;\n+  \n+      try {\n+        $this->conn = new PDO(\"mysql:host=\" . $this->host . \";dbname=\" . $this->db_name, $this->username, $this->password);\n+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n+      } catch(PDOException $e) {\n+        echo \"Connection failed: \" . $e->getMessage();\n+      }\n+  \n+      return $this->conn;\n+    }\n+  }\n+  \n+  // Création d'un objet de la classe Database\n+  $database = new Database();\n+  \n+  // Obtention de la connexion à la base de données\n+  $conn = $database->getConnection();\n+  \n+  // Utilisation de la connexion pour exécuter une requête\n+  $stmt = $conn->query(\"SELECT * FROM mytable\");\n+  \n+  // Boucle à travers les résultats de la requête\n+  while ($row = $stmt->fetch()) {\n+    echo $row['column1'] . \" - \" . $row['column2'] . \"<br>\";\n+  }\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895335136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,18 +19,5 @@\n       return $this->conn;\n     }\n   }\n   \n-  // Création d'un objet de la classe Database\n-  $database = new Database();\n-  \n-  // Obtention de la connexion à la base de données\n-  $conn = $database->getConnection();\n-  \n-  // Utilisation de la connexion pour exécuter une requête\n-  $stmt = $conn->query(\"SELECT * FROM mytable\");\n-  \n-  // Boucle à travers les résultats de la requête\n-  while ($row = $stmt->fetch()) {\n-    echo $row['column1'] . \" - \" . $row['column2'] . \"<br>\";\n-  }\n-  \n\\ No newline at end of file\n+  /\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895342596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n class Database {\n     private $host = \"localhost\";\n-    private $db_name = \"mydatabase\";\n+    private $db_name = \"Magaz\";\n     private $username = \"myusername\";\n     private $password = \"mypassword\";\n     private $conn;\n   \n@@ -19,5 +19,5 @@\n       return $this->conn;\n     }\n   }\n   \n-  /\n\\ No newline at end of file\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681895349764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n class Database {\n     private $host = \"localhost\";\n-    private $db_name = \"Magaz\";\n-    private $username = \"myusername\";\n+    private $db_name = \"MagazineFoot\";\n+    private $username = \"root\";\n     private $password = \"mypassword\";\n     private $conn;\n   \n     public function getConnection() {\n"
+                },
+                {
+                    "date": 1681895387865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n class Database {\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n-    private $password = \"mypassword\";\n+    private $password = \"root\";\n     private $conn;\n+    // \n   \n     public function getConnection() {\n       $this->conn = null;\n   \n"
+                },
+                {
+                    "date": 1681895397124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n     private $conn;\n-    // \n+    // pour stocker l'objet \n   \n     public function getConnection() {\n       $this->conn = null;\n   \n"
+                },
+                {
+                    "date": 1681895403304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n     private $conn;\n-    // pour stocker l'objet \n+    // pour stocker l'objet de coonection z\n   \n     public function getConnection() {\n       $this->conn = null;\n   \n"
+                },
+                {
+                    "date": 1681895412667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n     private $conn;\n-    // pour stocker l'objet de coonection z\n+    // pour stocker l'objet de connection a la base de données \n   \n     public function getConnection() {\n       $this->conn = null;\n   \n"
+                }
+            ],
+            "date": 1681894530788,
+            "name": "Commit-0",
+            "content": "\nclass Database\n{\n    private $db_name;\n    private $db_user;\n    private $db_pass;\n\n    private $db_host;\n\n    private $pdo;\n\n    public function __construct($db_name, $db_user = 'root', $db_pass = 'root', $db_host = 'localhost')\n    {\n\n        $this->db_name = $db_name;\n        $this->db_user = $db_user;\n        $this->db_pass = $db_pass;\n        $this->db_host = $db_host;\n\n\n    }\n"
+        }
+    ]
+}

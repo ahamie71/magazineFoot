@@ -1,0 +1,46 @@
+{
+    "sourceFile": "App/Model/Entity/Comment.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1681893051773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681893057105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n <?php\n \n class Comment{\n \n-    private $/**\n-     * \n-     */id;\n+    private $id;\n \n     private $text;\n \n \n"
+                },
+                {
+                    "date": 1681893072762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,13 @@\n \n class Comment{\n \n     private $id;\n-\n+/**\n+ * Undocumented variable\n+ *\n+ * @var [type]\n+ */\n     private $text;\n \n \n     public function getId(): int  {\n"
+                },
+                {
+                    "date": 1681893079559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,9 @@\n \n class Comment{\n \n     private $id;\n-/**\n- * Undocumented variable\n- *\n- * @var [type]\n- */\n+\n     private $text;\n \n \n     public function getId(): int  {\n"
+                },
+                {
+                    "date": 1681893087129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n <?php\n \n class Comment{\n-\n+/**\n+ * Undocumented variable\n+ *\n+ * @var [type]\n+ */\n     private $id;\n \n     private $text;\n \n"
+                },
+                {
+                    "date": 1681893095845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,8 @@\n <?php\n \n class Comment{\n-/**\n- * Undocumented variable\n- *\n- * @var [type]\n- */\n+\n     private $id;\n \n     private $text;\n \n"
+                },
+                {
+                    "date": 1681893101178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n class Comment{\n \n     private $id;\n \n-    private $text;\n+    private $t/**\n+     * \n+     */ext;\n \n \n     public function getId(): int  {\n         \n"
+                },
+                {
+                    "date": 1681893120846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,16 @@\n \n class Comment{\n \n     private $id;\n+/**\n+ * Undocumented variable\n+ *\n+ * @var [type]\n+ */\n+    private $text;\n \n-    private $t/**\n-     * \n-     */ext;\n \n-\n     public function getId(): int  {\n         \n         return $this->id;\n \n"
+                }
+            ],
+            "date": 1681893051773,
+            "name": "Commit-0",
+            "content": "<?php\n\nclass Comment{\n\n    private $/**\n     * \n     */id;\n\n    private $text;\n\n\n    public function getId(): int  {\n        \n        return $this->id;\n\n    }\n\n    public function getText(): string {\n\n        return $this->text;\n\n    }\n\n    public function setText($text) {\n\n        $this->text = $text;\n\n        return $this;\n    }\n}"
+        }
+    ]
+}
