@@ -1,0 +1,198 @@
+{
+    "sourceFile": "App/Autoader.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 45,
+            "patches": [
+                {
+                    "date": 1681903166089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681903172887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-<\n\\ No newline at end of file\n+<?php\n+\n"
+                },
+                {
+                    "date": 1681903594727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n <?php\n+sap\n \n"
+                },
+                {
+                    "date": 1681903601874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-sap\n+spl\n \n"
+                },
+                {
+                    "date": 1681903620328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl\n+spl-\n \n"
+                },
+                {
+                    "date": 1681903629854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl-\n+spl \n \n"
+                },
+                {
+                    "date": 1681903635451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl \n \n+\n"
+                },
+                {
+                    "date": 1681903641329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n+spl6\n \n-\n"
+                },
+                {
+                    "date": 1681903648473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl6\n+spl\n \n"
+                },
+                {
+                    "date": 1681903658534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl\n+spl-\n \n"
+                },
+                {
+                    "date": 1681903673388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl-\n+spl\n \n"
+                },
+                {
+                    "date": 1681903694305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl\n+spl_autoload_register()\n \n"
+                },
+                {
+                    "date": 1681903701501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl_autoload_register()\n+spl_autoload_register(fun)\n \n"
+                },
+                {
+                    "date": 1681903710417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl_autoload_register(fun)\n+spl_autoload_register(function ($class) u\n \n"
+                },
+                {
+                    "date": 1681903736044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n-spl_autoload_register(function ($class) u\n+spl_autoload_register(function ($class){}\n \n"
+                },
+                {
+                    "date": 1681903742912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n <?php\n-spl_autoload_register(function ($class){}\n+spl_autoload_register(function ($class){\n \n+    r\n+}\n+\n"
+                },
+                {
+                    "date": 1681903750642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    r\n+    require¡\n }\n \n"
+                },
+                {
+                    "date": 1681903759031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require¡\n+    require\n }\n \n"
+                },
+                {
+                    "date": 1681903768118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require\n+    require_once $class;\n }\n \n"
+                },
+                {
+                    "date": 1681903773565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require_once $class;\n+    require_once $class,\n }\n \n"
+                },
+                {
+                    "date": 1681903779736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require_once $class,\n+    require_once $class\n }\n \n"
+                },
+                {
+                    "date": 1681903785561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require_once $class\n+    require_once $class .\"\n }\n \n"
+                },
+                {
+                    "date": 1681903792741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require_once $class .\"\n+    require_once $class .\".php\n }\n \n"
+                },
+                {
+                    "date": 1681903799676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n spl_autoload_register(function ($class){\n \n-    require_once $class .\".php\n+    require_once $class .\".php\";\n+    \n }\n \n"
+                },
+                {
+                    "date": 1681903805704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n spl_autoload_register(function ($class){\n \n     require_once $class .\".php\";\n-    \n-}\n \n+});\n+\n"
+                },
+                {
+                    "date": 1681903811332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n spl_autoload_register(function ($class){\n \n     require_once $class .\".php\";\n-\n+  \n });\n \n"
+                },
+                {
+                    "date": 1681903913867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,2 @@\n <?php\n-spl_autoload_register(function ($class){\n \n-    require_once $class .\".php\";\n-  \n-});\n-\n"
+                },
+                {
+                    "date": 1681904035642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n <?php\n \n+ghkgkhjkhjhjk\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681904044626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,1 @@\n <?php\n-\n-ghkgkhjkhjhjk\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681904261488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<?php\n+<?php                                   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681904267661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<?php                                   \n\\ No newline at end of file\n+<?php                               \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681904274602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-<?php                               \n\\ No newline at end of file\n+<?php                   \n+6\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681904296051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n <?php                   \n-6\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905465564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n <?php                   \n+\n+class a\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905471693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php                   \n \n-class a\n\\ No newline at end of file\n+class autloader\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905484480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n <?php                   \n \n-class autloader\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905562656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,9 @@\n <?php                   \n+<?php\n+spl_autoload_register(function ($class_name) {\n+    include $class_name . '.php';\n+});\n \n+$obj  = new MaClasse1();\n+$obj2 = new MaClasse2();\n+?>\n"
+                },
+                {
+                    "date": 1681905569911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php                   \n-<?php\n+\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$obj  = new MaClasse1();\n+$obj  = new M();\n $obj2 = new MaClasse2();\n ?>\n"
+                },
+                {
+                    "date": 1681905575469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$obj  = new M();\n+$  = new ();\n $obj2 = new MaClasse2();\n ?>\n"
+                },
+                {
+                    "date": 1681905581833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$  = new ();\n+$user  = new ();\n $obj2 = new MaClasse2();\n ?>\n"
+                },
+                {
+                    "date": 1681905588621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$user  = new ();\n+$user  = new ser();\n $obj2 = new MaClasse2();\n ?>\n"
+                },
+                {
+                    "date": 1681905596638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$user  = new ser();\n+$user  = new User();\n $obj2 = new MaClasse2();\n-?>\n+?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905611277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     include $class_name . '.php';\n });\n \n $user  = new User();\n-$obj2 = new MaClasse2();\n+$ = new ();\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905617860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     include $class_name . '.php';\n });\n \n $user  = new User();\n-$ = new ();\n+$Comment = new ();\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905625502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     include $class_name . '.php';\n });\n \n $user  = new User();\n-$Comment = new ();\n+$Comment = new Comment  ();\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681905631566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n     include $class_name . '.php';\n });\n \n $user  = new User();\n-$Comment = new Comment  ();\n+$Comment = new Comment();\n+\n ?>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1681903166089,
+            "name": "Commit-0",
+            "content": "<"
+        }
+    ]
+}

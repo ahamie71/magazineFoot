@@ -1,0 +1,26 @@
+{
+    "sourceFile": "composer.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1681910188382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681910905384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n {\n     \"name\": \"ahmadhamieh/foot\",\n     \"autoload\": {\n         \"psr-4\": {\n-            \"Ahmadhamieh\\\\Foot\\\\\": \"src/\"\n+            \"Ahmadhamieh\\\\\\\\\": \"src/\"\n         }\n     },\n     \"authors\": [\n         {\n"
+                },
+                {
+                    "date": 1683793827060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n {\n     \"name\": \"ahmadhamieh/foot\",\n     \"autoload\": {\n         \"psr-4\": {\n-            \"Ahmadhamieh\\\\\\\\\": \"src/\"\n+            \"\\\\Foot\\\\\": \"src/\"\n         }\n     },\n     \"authors\": [\n         {\n"
+                }
+            ],
+            "date": 1681910188382,
+            "name": "Commit-0",
+            "content": "{\n    \"name\": \"ahmadhamieh/foot\",\n    \"autoload\": {\n        \"psr-4\": {\n            \"Ahmadhamieh\\\\Foot\\\\\": \"src/\"\n        }\n    },\n    \"authors\": [\n        {\n            \"name\": \"ahamie71\",\n            \"email\": \"ahmad.hamieh2002@hotmail.com\"\n        }\n    ],\n    \"require\": {}\n}\n"
+        }
+    ]
+}

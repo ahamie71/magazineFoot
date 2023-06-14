@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/view/Post/affichePost.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1686562385552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686562394961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,12 @@\n-htm\n\\ No newline at end of file\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+<head>\n+    <meta charset=\"UTF-8\">\n+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+    <title>Document</title>\n+</head>\n+<body>\n+    hello\n+</body>\n+</html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1686562385552,
+            "name": "Commit-0",
+            "content": "htm"
+        }
+    ]
+}

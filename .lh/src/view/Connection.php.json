@@ -1,0 +1,90 @@
+{
+    "sourceFile": "src/view/Connection.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1686226342890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686226483204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-<\n\\ No newline at end of file\n+<?php\n+\n+class ConnectionForm\n+\n+\n"
+                },
+                {
+                    "date": 1686226490394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,22 @@\n <?php\n \n-class ConnectionForm\n+class ConnectionForm{\n \n+   \n+        public function showLoginForm() {\n+            // Afficher le formulaire de connexion\n+            echo '\n+            <form method=\"post\" action=\"login.php\">\n+                <label for=\"username\">Nom d\\'utilisateur:</label>\n+                <input type=\"text\" id=\"username\" name=\"username\" required><br>\n+                \n+                <label for=\"password\">Mot de passe:</label>\n+                <input type=\"password\" id=\"password\" name=\"password\" required><br>\n+                \n+                <button type=\"submit\">Se connecter</button>\n+            </form>\n+            ';\n+        }\n+}\n \n+\n"
+                },
+                {
+                    "date": 1686226798463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n <?php\n \n class ConnectionForm{\n \n-   \n         public function showLoginForm() {\n             // Afficher le formulaire de connexion\n             echo '\n-            <form method=\"post\" action=\"login.php\">\n+            <form method=\"post\" action=\"\">\n                 <label for=\"username\">Nom d\\'utilisateur:</label>\n                 <input type=\"text\" id=\"username\" name=\"username\" required><br>\n                 \n                 <label for=\"password\">Mot de passe:</label>\n"
+                },
+                {
+                    "date": 1686226880896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+\n class ConnectionForm{\n \n         public function showLoginForm() {\n             // Afficher le formulaire de connexion\n"
+                },
+                {
+                    "date": 1686226899691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+names\n \n class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686226904752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-names\n+namespace \n \n class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686226922934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace \n+namespace Foot\\src\n \n class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686226930382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\\src\n+namespace Foot\\src\\vie\n \n class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686226966283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\\src\\vie\n+namespace Foot\\src\\view;\n \n class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686226986924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Foot\\src\\view;\n \n+\n class ConnectionForm{\n \n         public function showLoginForm() {\n             // Afficher le formulaire de connexion\n"
+                },
+                {
+                    "date": 1686227069092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n-namespace Foot\\src\\view;\n \n \n+\n class ConnectionForm{\n \n         public function showLoginForm() {\n             // Afficher le formulaire de connexion\n"
+                },
+                {
+                    "date": 1686227078871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n <?php\n \n \n+Class ConnectionForm{\n \n-\n-class ConnectionForm{\n-\n         public function showLoginForm() {\n             // Afficher le formulaire de connexion\n             echo '\n             <form method=\"post\" action=\"\">\n"
+                },
+                {
+                    "date": 1686227243057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n+ name\n \n-\n Class ConnectionForm{\n \n         public function showLoginForm() {\n             // Afficher le formulaire de connexion\n"
+                },
+                {
+                    "date": 1686227248908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- name\n+ namespace \n \n Class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686227257360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- namespace \n+ namespace Foot\\\n \n Class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686227263153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- namespace Foot\\\n+ namespace Foot\\src\n \n Class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686227352054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- namespace Foot\\src\n+ namespace Foot\\view;\n \n Class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                },
+                {
+                    "date": 1686227370080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n- namespace Foot\\view;\n+ namespace Foot\\View;\n \n Class ConnectionForm{\n \n         public function showLoginForm() {\n"
+                }
+            ],
+            "date": 1686226342890,
+            "name": "Commit-0",
+            "content": "<"
+        }
+    ]
+}

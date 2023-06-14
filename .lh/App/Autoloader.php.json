@@ -1,0 +1,42 @@
+{
+    "sourceFile": "App/Autoloader.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1681910520606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1683791357058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <?php                   \n \n+use User;\n+\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683791847526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,5 @@\n <?php                   \n-\n-use User;\n-\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683791852788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n \n $user = new User();\n $Comment = new Comment();\n \n-?>\n\\ No newline at end of file\n+?>\n"
+                },
+                {
+                    "date": 1683792134801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,7 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$user = new User();\n-$Comment = new Comment();\n \n+\n ?>\n"
+                },
+                {
+                    "date": 1683792427477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,8 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n+$user = new User();\n+$Comment = new Comment();\n \n-\n ?>\n"
+                },
+                {
+                    "date": 1683793752820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,4 @@\n spl_autoload_register(function ($class_name) {\n     include $class_name . '.php';\n });\n \n-$user = new User();\n-$Comment = new Comment();\n-\n-?>\n"
+                }
+            ],
+            "date": 1681910520606,
+            "name": "Commit-0",
+            "content": "<?php                   \n\nspl_autoload_register(function ($class_name) {\n    include $class_name . '.php';\n});\n\n$user = new User();\n$Comment = new Comment();\n\n?>"
+        }
+    ]
+}

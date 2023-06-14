@@ -1,0 +1,9 @@
+<?php
+ require_once 'User.php';
+ 
+ $username = $_POST['username'];
+ $password = $_POST['password'];
+ 
+
+
+

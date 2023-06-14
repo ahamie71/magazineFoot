@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Entity/Comment.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1683795752192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1683795799882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <?php\n+\n namespace Foot\\Entity;\n class Comment{\n \n     private $id;\n"
+                },
+                {
+                    "date": 1683795815018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n+\n class Comment{\n \n     private $id;\n \n"
+                }
+            ],
+            "date": 1683795752192,
+            "name": "Commit-0",
+            "content": "<?php\nnamespace Foot\\Entity;\nclass Comment{\n\n    private $id;\n\n    private $text;\n\n\n    public function getId(): int  {\n        \n        return $this->id;\n\n    }\n\n    public function getText(): string {\n\n        return $this->text;\n\n    }\n\n    public function setText($text) {\n\n        $this->text = $text;\n\n        return $this;\n    }\n} "
+        }
+    ]
+}

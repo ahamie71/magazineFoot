@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/Entity/User.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1683793869069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1683793875038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <?php\n \n+name\n+\n  class User extends Database {\n \n \n     private $id ;\n"
+                },
+                {
+                    "date": 1683793880348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-name\n+namespace Foot\n \n  class User extends Database {\n \n \n"
+                },
+                {
+                    "date": 1683793896288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\n+namespace Foot\\\n \n  class User extends Database {\n \n \n"
+                },
+                {
+                    "date": 1683793917948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n-namespace Foot\\\n+namespace Foot\\Entity;\n \n- class User extends Database {\n+ class User  {\n \n \n     private $id ;\n \n"
+                },
+                {
+                    "date": 1686228615256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n-namespace Foot\\Entity;\n+namespace Foot\\\n+;\n \n  class User  {\n \n \n"
+                },
+                {
+                    "date": 1686228621871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <?php\n \n-namespace Foot\\\n-;\n+namespace Foot\\View;\n \n  class User  {\n \n \n"
+                },
+                {
+                    "date": 1686228630969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\\View;\n+namespace Foot\\Entity;\n \n  class User  {\n \n \n"
+                },
+                {
+                    "date": 1686661276574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n \n     private $id ;\n \n-    private $username ;\n+    public $username ;\n \n     private $email ;\n \n     private $password ;\n"
+                },
+                {
+                    "date": 1686661283139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n \n     private $id ;\n \n-    public $username ;\n+    private $username ;\n \n     private $email ;\n \n     private $password ;\n"
+                },
+                {
+                    "date": 1686729105462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,14 +71,9 @@\n         return $this->admin;\n      }\n    \n \n-     public function SearchUser(){\n-       \n-      \n+     \n \n-\n-     }\n-\n     \n  }\n \n"
+                }
+            ],
+            "date": 1683793869069,
+            "name": "Commit-0",
+            "content": "<?php\n\n class User extends Database {\n\n\n    private $id ;\n\n    private $username ;\n\n    private $email ;\n\n    private $password ;\n\n    private $admin;\n\n\n    public function getId():int  {\n\n        return  $this->id;\n     }\n \n     public function setUsername($username) {     \n      \n         $this->username = $username;\n\n         return $this;\n \n     }\n     public function getUsername():string  {\n\n        return $this->username;\n \n     }\n\n     public function setEmail($email) {\n\n        $this->email = $email;\n\n        return $this;   \n     }\n\n     public function getEmail(): string {\n\n        return $this->email;\n     }\n\n     public function setPassword($password) {\n\n        $this->password = $password;\n\n        return $this;\n     }\n\n     public function getPassword() {\n\n        return $this->password;\n\n     }\n\n     public function setAdmin($admin) {\n\n        $this->admin = $admin;\n\n        return $this;\n     }\n\n     public function isAdmin(): bool  {\n\n        return $this->admin;\n     }\n   \n\n     public function SearchUser(){\n       \n      \n\n\n     }\n\n    \n }\n\n"
+        }
+    ]
+}

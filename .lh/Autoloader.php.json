@@ -1,0 +1,258 @@
+{
+    "sourceFile": "Autoloader.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 60,
+            "patches": [
+                {
+                    "date": 1683794613666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1683794621981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <?php                   \n spl_autoload_register(function ($class_name) {\n-     $class_name . '.php';\n+ $class_name . '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794632715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <?php                   \n spl_autoload_register(function ($class_name) {\n- $class_name . '.php';\n+    \n+      $class_name . '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794642270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($class_name) {\n-    \n-      $class_name . '.php';\n+\n+      $classname= . '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794648895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n-spl_autoload_register(function ($class_name) {\n+spl_autoload_register(function ($classame) {\n \n-      $classname= . '.php';\n+      $className= . '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794656416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n-spl_autoload_register(function ($classame) {\n+spl_autoload_register(function ($className) {\n \n-      $className= . '.php';\n+      $className= str '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794663519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str '.php';\n+      $className= str_replace() '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794671070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace() '.php';\n+      $className= str_replace(\"\") '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794678078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace(\"\") '.php';\n+      $className= str_replace(\"Foot\") '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794684469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace(\"Foot\") '.php';\n+      $className= str_replace(\"Foot\\\\\") '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794692806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace(\"Foot\\\\\") '.php';\n+      $className= str_replace(\"Foot\\\\\",) '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794698047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace(\"Foot\\\\\",) '.php';\n+      $className= str_replace(\"Foot\\\\\",'') '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794704043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace(\"Foot\\\\\",'') '.php';\n+      $className= str_replace(\"Foot\\\\\",'',$) '.php';\n });\n \n"
+                },
+                {
+                    "date": 1683794718552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-      $className= str_replace(\"Foot\\\\\",'',$) '.php';\n+      $className= str_replace(\"Foot\\\\\",'',$className);\n });\n \n"
+                },
+                {
+                    "date": 1683794727222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n+      require\n });\n \n"
+                },
+                {
+                    "date": 1683794736705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n-      require\n+      require_once \n });\n \n"
+                },
+                {
+                    "date": 1683794742992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n-      require_once \n+      require_once(__DIR__)\n });\n \n"
+                },
+                {
+                    "date": 1683794748744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n-      require_once(__DIR__)\n+      require_once(__DIR__.\"/)\n });\n \n"
+                },
+                {
+                    "date": 1683794761823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n-      require_once(__DIR__.\"/)\n+      require_once(__DIR__.\"/src)\n });\n \n"
+                },
+                {
+                    "date": 1683794769477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n-      require_once(__DIR__.\"/src)\n+      require_once(__DIR__.\"/src/$clas)\n });\n \n"
+                },
+                {
+                    "date": 1683794858916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n       $className= str_replace(\"Foot\\\\\",'',$className);\n-      require_once(__DIR__.\"/src/$clas)\n+\n+      \n+      require_once(__DIR__.\"/src/$className.php\");\n });\n \n"
+                },
+                {
+                    "date": 1683794864411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n+    var\n       $className= str_replace(\"Foot\\\\\",'',$className);\n \n-      \n+    \n       require_once(__DIR__.\"/src/$className.php\");\n });\n \n"
+                },
+                {
+                    "date": 1683794870191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php                   \n spl_autoload_register(function ($className) {\n \n-    var\n+    var_dump($className);\n       $className= str_replace(\"Foot\\\\\",'',$className);\n \n     \n       require_once(__DIR__.\"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683794879057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n spl_autoload_register(function ($className) {\n \n     var_dump($className);\n       $className= str_replace(\"Foot\\\\\",'',$className);\n-\n+       var_dump($class)\n     \n       require_once(__DIR__.\"/src/$className.php\");\n });\n \n"
+                },
+                {
+                    "date": 1683794884549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n spl_autoload_register(function ($className) {\n \n     var_dump($className);\n       $className= str_replace(\"Foot\\\\\",'',$className);\n-       var_dump($class)\n+       var_dump($className);\n     \n       require_once(__DIR__.\"/src/$className.php\");\n });\n \n"
+                },
+                {
+                    "date": 1683795264489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-<?php                   \n+<?php\n+die()\n spl_autoload_register(function ($className) {\n \n     var_dump($className);\n-      $className= str_replace(\"Foot\\\\\",'',$className);\n-       var_dump($className);\n-    \n-      require_once(__DIR__.\"/src/$className.php\");\n-});\n+    $className = str_replace(\"Foot\\\\\", '', $className);\n+    var_dump($className);\n \n+    require_once(__DIR__ . \"/src/$className.php\");\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795282515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-die()\n+\n spl_autoload_register(function ($className) {\n \n     var_dump($className);\n     $className = str_replace(\"Foot\\\\\", '', $className);\n"
+                },
+                {
+                    "date": 1683795292566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n spl_autoload_register(function ($className) {\n-\n+   \n     var_dump($className);\n     $className = str_replace(\"Foot\\\\\", '', $className);\n     var_dump($className);\n \n"
+                },
+                {
+                    "date": 1683795298088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n spl_autoload_register(function ($className) {\n    \n     var_dump($className);\n+    \n     $className = str_replace(\"Foot\\\\\", '', $className);\n     var_dump($className);\n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795311138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n+    \n     var_dump($className);\n-    \n+\n     $className = str_replace(\"Foot\\\\\", '', $className);\n     var_dump($className);\n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795336330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n spl_autoload_register(function ($className) {\n    \n     \n     var_dump($className);\n+    \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n     var_dump($className);\n \n"
+                },
+                {
+                    "date": 1683795358713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n     var_dump($className);\n+   \n \n     require_once(__DIR__ . \"/src/$className.php\");\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795366518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,6 @@\n     var_dump($className);\n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n+    die('hello');\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795381414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n     $className = str_replace(\"Foot\\\\\", '', $className);\n     var_dump($className);\n    \n \n-    require_once(__DIR__ . \"/src/$className.php\");\n+    var(__DIR__ . \"/src/$className.php\");\n     die('hello');\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795388002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n \n spl_autoload_register(function ($className) {\n    \n     \n-    var_dump($className);\n+ \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    var_dump($className);\n+    \n    \n \n-    var(__DIR__ . \"/src/$className.php\");\n+    var_dump(__DIR__ . \"/src/$className.php\");\n     die('hello');\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795413682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n \n spl_autoload_register(function ($className) {\n    \n     \n- \n+    var_dump($className);\n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    \n+    var_dump($className);\n    \n \n     var_dump(__DIR__ . \"/src/$className.php\");\n     die('hello');\n"
+                },
+                {
+                    "date": 1683795420187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n \n spl_autoload_register(function ($className) {\n    \n     \n-    var_dump($className);\n+\n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    var_dump($className);\n+    \n    \n \n-    var_dump(__DIR__ . \"/src/$className.php\");\n+    require_once(__DIR__ . \"/src/$className.php\");\n     die('hello');\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795469001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     \n \n     \n \n-    $className = str_replace(\"Foot\\\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\\", '', $className);$\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795474550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     \n \n     \n \n-    $className = str_replace(\"Foot\\\\\", '', $className);$\n+    $className = str_replace(\"Foot\\\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\\", '', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795553698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    $className = str_replace(\"Foot\\\\\", '', $className);\n+    $className = str_replace(\"\\\\\", '', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795562548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    $className = str_replace(\"\\\\\", '', $className);\n+    $className = str_replace(\", '', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795571661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    $className = str_replace(\", '', $className);\n+    $className = str_replace(\"\\\\\", '', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795578059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    $className = str_replace(\"\\\\\", '', $className);\n+    $className = str_replace(\"\\\\\", '\\', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795593566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    $className = str_replace(\"\\\\\", '\\', $className);\n+    $className = str_replace(\"\\\\\", '', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n"
+                },
+                {
+                    "date": 1683795678357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n \n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    $className = str_replace(\"\\\\\", '', $className);\n+    $className = str_replace(\"\\\\\", '/', $className);\n     \n    \n \n     require_once(__DIR__ . \"/src/$className.php\");\n-    die('hello');\n+    \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683795712672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,7 @@\n     \n \n     $className = str_replace(\"Foot\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n-    \n-   \n-\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686209243474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,10 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n+    $className = str_replace(\"Foot\\\\\", '', $className);\n     \n-\n-    \n-\n-    $className = str_replace(\"Foot\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686209248984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n \n spl_autoload_register(function ($className) {\n    \n     $className = str_replace(\"Foot\\\\\", '', $className);\n-    \n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227800604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\View\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227820572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\View\", '', $className);\n+    $className = str_replace(\"Foot\\\\View\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227828713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\View\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227835866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\View\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227841464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\View\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\View\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227847926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\View\\\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\View\\\\Entity\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686227858518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\View\\\\Entity\", '', $className);\n+    $className = str_replace(\"Foot\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228567458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\\", '', $className);\n+    $className = str_replace(\"Foot\\\\fo\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228581097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\fo\", '', $className);\n+    $className = str_replace(\"\\\\View\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228586897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"\\\\View\", '', $className);\n+    $className = str_replace(\"Foot\\\\View\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228600457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"Foot\\\\View\", '', $className);\n+    $className = str_replace(\"oot\\\\View\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686228646638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n spl_autoload_register(function ($className) {\n    \n-    $className = str_replace(\"oot\\\\View\", '', $className);\n+    $className = str_replace(\"Foot\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n     require_once(__DIR__ . \"/src/$className.php\");\n     \n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686661511864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+\n spl_autoload_register(function ($className) {\n    \n     $className = str_replace(\"Foot\\\\\", '', $className);\n     $className = str_replace(\"\\\\\", '/', $className);\n"
+                }
+            ],
+            "date": 1683794613666,
+            "name": "Commit-0",
+            "content": "<?php                   \nspl_autoload_register(function ($class_name) {\n     $class_name . '.php';\n});\n\n"
+        }
+    ]
+}

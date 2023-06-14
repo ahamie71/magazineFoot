@@ -1,0 +1,142 @@
+{
+    "sourceFile": "src/Controlleurs/HomeController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1686643299310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686643305106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +0,0 @@\n-<?php\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686643312039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+<?php\n+\n"
+                },
+                {
+                    "date": 1686643608381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n <?php\n \n+Class \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686643632162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,7 @@\n <?php\n \n-Class \n\\ No newline at end of file\n+Class Homepage{\n+\n+     function \n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686643639002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n Class Homepage{\n \n-     function \n+     function H\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686643652420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n <?php\n \n Class Homepage{\n \n-     function H\n+     function Home{\n \n+\n+     }\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686643659500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,11 @@\n Class Homepage{\n \n      function Home{\n \n-\n+        \n      }\n \n+\n+    \n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686643760118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n Class Homepage{\n \n      function Home{\n \n+          require_once(dirname(__FILE__, 2) . '/templates/homepage.phtml');\n         \n      }\n \n \n"
+                },
+                {
+                    "date": 1686643795863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n Class Homepage{\n \n      function Home{\n \n-          require_once(dirname(__FILE__, 2) . '/templates/homepage.phtml');\n+          \n         \n      }\n \n \n"
+                },
+                {
+                    "date": 1686643815538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n Class Homepage{\n \n      function Home{\n \n+\n           \n+          \n         \n      }\n \n \n"
+                },
+                {
+                    "date": 1686643827570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \n      function Home{\n \n \n+          require('./../src/View/CForm.php');\n           \n-          \n         \n      }\n \n \n"
+                },
+                {
+                    "date": 1686643839026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n      function Home{\n \n \n-          require('./../src/View/CForm.php');\n+          require('./../src/View/.php');\n           \n         \n      }\n \n"
+                },
+                {
+                    "date": 1686643850874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n      function Home{\n \n \n-          require('./../src/View/.php');\n+          require('./../src/View/Home.php');\n           \n         \n      }\n \n"
+                },
+                {
+                    "date": 1686643858262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n      function Home{\n \n \n-          require('./../src/View/Home.php');\n+          require('./../src/View/HomePage.php');\n           \n         \n      }\n \n"
+                },
+                {
+                    "date": 1686644026487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+n\n Class Homepage{\n \n      function Home{\n \n"
+                },
+                {
+                    "date": 1686644040572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-n\n+na\n Class Homepage{\n \n      function Home{\n \n"
+                },
+                {
+                    "date": 1686644056224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-na\n+namespace Foot\n Class Homepage{\n \n      function Home{\n \n"
+                },
+                {
+                    "date": 1686644066472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\n+namespace Foot\\Controlleurs\n Class Homepage{\n \n      function Home{\n \n"
+                },
+                {
+                    "date": 1686644079993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\\Controlleurs\n+namespace Foot\\Controleurs;\n Class Homepage{\n \n      function Home{\n \n"
+                },
+                {
+                    "date": 1686644092642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n \n-namespace Foot\\Controleurs;\n+namespace Foot\\Controlleurs;\n Class Homepage{\n \n      function Home{\n \n"
+                },
+                {
+                    "date": 1686644100749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n <?php\n \n namespace Foot\\Controlleurs;\n-Class Homepage{\n \n+Class Homepage\n+{\n+\n      function Home{\n \n \n           require('./../src/View/HomePage.php');\n"
+                },
+                {
+                    "date": 1686644566272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n \n Class Homepage\n {\n \n-     function Home{\n+     function Home\n+     {\n \n \n           require('./../src/View/HomePage.php');\n           \n"
+                },
+                {
+                    "date": 1686644575624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n Class Homepage\n {\n \n-     function Home\n+     public function Home\n      {\n \n \n           require('./../src/View/HomePage.php');\n"
+                },
+                {
+                    "date": 1686644684915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n Class Homepage\n {\n \n-     public function Home\n+     public function Home()\n      {\n \n \n           require('./../src/View/HomePage.php');\n"
+                },
+                {
+                    "date": 1686646025742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-Class Homepage\n+Class HomeControl\n {\n \n      public function Home()\n      {\n"
+                },
+                {
+                    "date": 1686646328924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-Class HomeControl\n+Class HomeController\n {\n \n      public function Home()\n      {\n \n \n           require('./../src/View/HomePage.php');\n+          require('./../src/View/HomePage.php');\n           \n         \n      }\n \n"
+                },
+                {
+                    "date": 1686646334546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n      {\n \n \n           require('./../src/View/HomePage.php');\n-          require('./../src/View/HomePage.php');\n+          require('./../src/View/.php');\n           \n         \n      }\n \n"
+                },
+                {
+                    "date": 1686646348568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,10 @@\n {\n \n      public function Home()\n      {\n-\n-\n           require('./../src/View/HomePage.php');\n-          require('./../src/View/.php');\n+          require('./../src/View/Navbar.php');\n           \n         \n      }\n \n"
+                },
+                {
+                    "date": 1686646535084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,8 @@\n      public function Home()\n      {\n           require('./../src/View/HomePage.php');\n           require('./../src/View/Navbar.php');\n-          \n-        \n      }\n \n \n     \n"
+                },
+                {
+                    "date": 1686646652399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n \n      public function Home()\n      {\n           require('./../src/View/HomePage.php');\n+          \n           require('./../src/View/Navbar.php');\n      }\n \n \n"
+                },
+                {
+                    "date": 1686647290482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n \n      public function Home()\n      {\n           require('./../src/View/HomePage.php');\n+\n           \n-          require('./../src/View/Navbar.php');\n      }\n \n \n     \n"
+                }
+            ],
+            "date": 1686643299310,
+            "name": "Commit-0",
+            "content": "<?php"
+        }
+    ]
+}

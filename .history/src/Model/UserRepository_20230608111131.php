@@ -1,0 +1,28 @@
+<?php
+
+use Foot\Entity\Database;
+use Foot\Entity\User;
+
+class UserRepository
+{
+    private $db;
+
+   public function findUser(){
+     
+    $bdd= new Database();
+
+  
+    $stmt = $bdd->getPDO()->prepare("SELECT * FROM User WHERE username= :username");
+    var_dump($stmt);
+    $stmt->execute();
+  
+
+    return $stmt->fetch(\PDO::FETCH_OBJ);
+
+   
+
+
+       
+   }  
+
+}

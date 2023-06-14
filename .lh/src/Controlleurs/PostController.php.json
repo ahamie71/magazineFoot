@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/Controlleurs/PostController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1686647599453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686647608045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n <?php\n \n+namespace Foot\\Controlleurs;\n \n-\n"
+                },
+                {
+                    "date": 1686647615956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n+class \n+\n"
+                },
+                {
+                    "date": 1686647622525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-class \n+class PostControlle\n \n"
+                },
+                {
+                    "date": 1686647636635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-class PostControlle\n+class PostController{\n \n+     \n+\n+}\n+\n"
+                },
+                {
+                    "date": 1686647951131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n \n class PostController{\n \n      \n+    \n \n }\n \n"
+                },
+                {
+                    "date": 1686648029301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n+    require\n      \n-    \n \n+\n }\n \n"
+                },
+                {
+                    "date": 1686648042848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n-    require\n+    require('./../src/View/HomePage.php');\n      \n \n \n }\n"
+                },
+                {
+                    "date": 1686648048679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n+    \n     require('./../src/View/HomePage.php');\n      \n \n \n"
+                },
+                {
+                    "date": 1686648056521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n-    \n+   public function dipaly \n     require('./../src/View/HomePage.php');\n      \n \n \n"
+                },
+                {
+                    "date": 1686648065141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n-   public function dipaly \n+   public function  DisplayP \n     require('./../src/View/HomePage.php');\n      \n \n \n"
+                },
+                {
+                    "date": 1686648072293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,12 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n-   public function  DisplayP \n+   public function  DisplayPost(){ \n     require('./../src/View/HomePage.php');\n      \n \n \n }\n+}\n \n"
+                },
+                {
+                    "date": 1686648078675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n \n class PostController{\n \n    public function  DisplayPost(){ \n-    require('./../src/View/HomePage.php');\n+\n+    require('./../src/View/.php');\n      \n \n \n }\n"
+                },
+                {
+                    "date": 1686648085693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n class PostController{\n \n    public function  DisplayPost(){ \n \n-    require('./../src/View/.php');\n+    require('./../src/View/Posts.php');\n      \n \n \n }\n"
+                },
+                {
+                    "date": 1686648091944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n class PostController{\n \n    public function  DisplayPost(){ \n \n-    require('./../src/View/Posts.php');\n+    require('./../src/View/Posts/Displ.php');\n      \n \n \n }\n"
+                },
+                {
+                    "date": 1686648097210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n class PostController{\n \n    public function  DisplayPost(){ \n \n-    require('./../src/View/Posts/Displ.php');\n+    require('./../src/View/Posts/DisplayPosts.php');\n      \n \n \n }\n"
+                },
+                {
+                    "date": 1686648375454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n-   public function  DisplayPost(){ \n+   public function  DisplayPosts(){ \n \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n"
+                }
+            ],
+            "date": 1686647599453,
+            "name": "Commit-0",
+            "content": "<?php\n\n\n\n"
+        }
+    ]
+}

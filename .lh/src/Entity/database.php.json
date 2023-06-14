@@ -1,0 +1,438 @@
+{
+    "sourceFile": "src/Entity/database.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 105,
+            "patches": [
+                {
+                    "date": 1683795748828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1683795811239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n namespace Foot\\Entity;\n+\n class Database {\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n"
+                },
+                {
+                    "date": 1683796437464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <?php\n+\n namespace Foot\\Entity;\n \n class Database {\n     private $host = \"localhost\";\n"
+                },
+                {
+                    "date": 1683796624850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <?php\n \n-namespace Foot\\Entity;\n \n class Database {\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n"
+                },
+                {
+                    "date": 1683796726984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n+namespace Foot\\Entity;\n \n-\n class Database {\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n"
+                },
+                {
+                    "date": 1683796734853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?php\n-namespace Foot\\Entity;\n \n+\n class Database {\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n"
+                },
+                {
+                    "date": 1683799181355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+namespace Foot\\Entity;\n \n class Database {\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n"
+                },
+                {
+                    "date": 1683799187753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace Foot\\Entity;\n \n class Database {\n+  \n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n"
+                },
+                {
+                    "date": 1683799192838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace Foot\\Entity;\n \n class Database {\n-  \n+  private $pdo\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n"
+                },
+                {
+                    "date": 1683799199218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace Foot\\Entity;\n \n class Database {\n-  private $pdo\n+  private $pdo;\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n"
+                },
+                {
+                    "date": 1683799206514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace Foot\\Entity;\n \n class Database {\n-  private $pdo;\n+   private $pdo;\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n"
+                },
+                {
+                    "date": 1683799218997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n <?php\n \n-namespace Foot\\Entity;\n \n+\n+\n class Database {\n-   private $pdo;\n+  \n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n"
+                },
+                {
+                    "date": 1683799227625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n+namespace Foot\\Entity;\n+namespace Foot\\Entity;\n \n-\n-\n class Database {\n   \n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n"
+                },
+                {
+                    "date": 1683799240613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n-namespace Foot\\Entity;\n+namespace Foot\\Entity\\PDO;\n \n class Database {\n   \n     private $host = \"localhost\";\n"
+                },
+                {
+                    "date": 1683799252082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace Foot\\Entity;\n-namespace Foot\\Entity\\PDO;\n \n+\n class Database {\n   \n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n"
+                },
+                {
+                    "date": 1683799305067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n+use PDO;\n \n \n class Database {\n   \n"
+                },
+                {
+                    "date": 1683799310827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Foot\\Entity;\n use PDO;\n+use PDOException;\n \n \n class Database {\n   \n"
+                },
+                {
+                    "date": 1683807076380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,19 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function getConnection() {\n-      $this->conn = null;\n-  \n-      try {\n-        $this->conn = new PDO(\"mysql:host=\" . $this->host . \";dbname=\" . $this->db_name, $this->username, $this->password);\n-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n-      } catch(PDOException $e) {\n-        echo \"Connection failed: \" . $e->getMessage();\n-      }\n-  \n-      return $this->conn;\n-    }\n+    \n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807081919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    \n+    public function __construct()\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807088740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct()\n+    public function __construct($)\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807095543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($)\n+    public function __construct($db_name,)\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807101599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,)\n+    public function __construct($db_name,$username)\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807113414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,$username)\n+    public function __construct($db_name,$username='root')\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807121621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,$username='root')\n+    public function __construct($db_name,$username='root',$password='root')\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807126941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,$username='root',$password='root')\n+    public function __construct($db_name,$username='root',$password='root',$ho)\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807133042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,$username='root',$password='root',$ho)\n+    public function __construct($db_name,$username='root',$password='root',$host=)\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807138972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,$username='root',$password='root',$host=)\n+    public function __construct($db_name,$username='root',$password='root',$host='localhost',$db)\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807145236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n     private $password = \"root\";\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n-    public function __construct($db_name,$username='root',$password='root',$host='localhost',$db)\n+    public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n+\n+\n+      \n+    }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807157540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,12 @@\n     private $conn;\n     // pour stocker l'objet de connection a la base de données \n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n+      \n+      $thi\n \n \n-      \n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807162720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     // pour stocker l'objet de connection a la base de données \n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n-      $thi\n+      $this->db_name = $db_name;\n+      \n \n \n     }\n   }\n"
+                },
+                {
+                    "date": 1683807168439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->db_name = $db_name;\n+      $this->username = $username;\n       \n \n \n     }\n"
+                },
+                {
+                    "date": 1683807175211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->db_name = $db_name;\n       $this->username = $username;\n-      \n+      $password\n \n \n     }\n   }\n"
+                },
+                {
+                    "date": 1683807185950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->db_name = $db_name;\n       $this->username = $username;\n-      $password\n+      $this->password = $password\n \n \n     }\n   }\n"
+                },
+                {
+                    "date": 1683807192614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->db_name = $db_name;\n       $this->username = $username;\n-      $this->password = $password\n+      $this->password = $password;\n+      $this\n \n \n     }\n   }\n"
+                },
+                {
+                    "date": 1683807203445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       \n       $this->db_name = $db_name;\n       $this->username = $username;\n       $this->password = $password;\n-      $this\n+      $this->host = $host;\n \n \n     }\n   }\n"
+                },
+                {
+                    "date": 1683807217922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     // pour stocker l'objet de connection a la base de données \n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n-      $this->db_name = $db_name;\n+      $this->$db_name = $db_name;\n       $this->username = $username;\n       $this->password = $password;\n       $this->host = $host;\n \n"
+                },
+                {
+                    "date": 1683807223128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->$db_name = $db_name;\n-      $this->username = $username;\n-      $this->password = $password;\n+      $this->$username = $username;\n+      $this->$password = $password;\n       $this->host = $host;\n \n \n     }\n"
+                },
+                {
+                    "date": 1683807237254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,17 +10,17 @@\n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n-    private $conn;\n+    private $pdo;\n     // pour stocker l'objet de connection a la base de données \n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->$db_name = $db_name;\n       $this->$username = $username;\n       $this->$password = $password;\n-      $this->host = $host;\n+      $this->$host = $host;\n \n \n     }\n   }\n"
+                },
+                {
+                    "date": 1683807378411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     private $db_name = \"MagazineFoot\";\n     private $username = \"root\";\n     private $password = \"root\";\n     private $pdo;\n-    // pour stocker l'objet de connection a la base de données \n+     \n   \n     public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n       \n       $this->$db_name = $db_name;\n"
+                },
+                {
+                    "date": 1683807545425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,9 @@\n       $this->$host = $host;\n \n \n     }\n+\n+    public function\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807551781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n \n \n     }\n \n-    public function\n+    public function getP\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807561222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n \n \n     }\n \n-    public function getP\n+    public function getPDO():\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807566718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n \n \n     }\n \n-    public function getPDO():\n+    public function getPDO():PDO\n+\n+    {}\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807589311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,12 @@\n \n \n     }\n \n-    public function getPDO():PDO\n+    public function getPDO(): PDO\n \n-    {}\n+    {\n+\n+    }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807599008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n <?php\n \n namespace Foot\\Entity;\n use PDO;\n-use PDOException;\n \n \n+\n class Database {\n   \n     private $host = \"localhost\";\n     private $db_name = \"MagazineFoot\";\n@@ -26,9 +26,9 @@\n \n     public function getPDO(): PDO\n \n     {\n-\n+        \n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807609464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n     public function getPDO(): PDO\n \n     {\n-        \n+        if($this)\n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807615858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n     public function getPDO(): PDO\n \n     {\n-        if($this)\n+        if($this->pdo==null)\n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807621573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,12 @@\n \n     public function getPDO(): PDO\n \n     {\n-        if($this->pdo==null)\n+        if($this->pdo==null){\n+\n+          \n+        }\n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807628971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,11 @@\n \n     {\n         if($this->pdo==null){\n \n-          \n+\n         }\n+        return\n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807813890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,12 +27,12 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n+           new \n \n-\n         }\n-        return\n+        return $this->pdo;\n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683807847784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new \n+           new ;\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807863199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new ;\n+           new PDO\";\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807886869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO\";\n+           new PDO();\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807912209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO();\n+           new PDO(\"mysql\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807918907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql\");\n+           new PDO(\"mysql:db\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807929743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db\");\n+           new PDO(\"mysql :d\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807940372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql :d\");\n+           new PDO(\"mysql:d\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807946718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:d\");\n+           new PDO(\"mysql:db_name\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807968057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name\");\n+           new PDO(\"mysql:db_name=[\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807975129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name=[\");\n+           new PDO(\"mysql:db_name={$thi\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807988501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$thi\");\n+           new PDO(\"mysql:db_name={$this->db_name}\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683807995351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name}\");\n+           new PDO(\"mysql:db_name={$this->db_name} ;\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808004102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name} ;\");\n+           new PDO(\"mysql:db_name={$this->db_name};hos\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808009853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};hos\");\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host};port={$this->port\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808042112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host};port={$this->port\");\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host},\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808059386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host},\");\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\");\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808069275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\");\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808077688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$);\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this-);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808085104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this-);\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->user);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808093079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->user);\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808099337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username);\n+           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808143522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     public function getPDO(): PDO\n \n     {\n         if($this->pdo==null){\n-           new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->);\n+          $this new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808215357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,9 @@\n \n     public function getPDO(): PDO\n \n     {\n-        if($this->pdo==null){\n-          $this new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n+          $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808223234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n     public function getPDO(): PDO\n \n     {\n-          $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n+         return $this $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808231838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n     public function getPDO(): PDO\n \n     {\n-         return $this $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n+         return $this->pdo ??  $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n \n         }\n         return $this->pdo;\n     }\n"
+                },
+                {
+                    "date": 1683808241410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     {\n          return $this->pdo ??  $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n \n         }\n-        return $this->pdo;\n+     \n     }\n   }\n   \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808256217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,8 @@\n       $this->$username = $username;\n       $this->$password = $password;\n       $this->$host = $host;\n \n-\n     }\n \n     public function getPDO(): PDO\n \n@@ -31,7 +30,7 @@\n \n         }\n      \n     }\n-  }\n   \n+  \n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808267428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,34 @@\n <?php\n \n namespace Foot\\Entity;\n+\n use PDO;\n \n \n \n-class Database {\n-  \n-    private $host = \"localhost\";\n-    private $db_name = \"MagazineFoot\";\n-    private $username = \"root\";\n-    private $password = \"root\";\n-    private $pdo;\n-     \n-  \n-    public function __construct($db_name,$username='root',$password='root',$host='localhost'){\n-      \n-      $this->$db_name = $db_name;\n-      $this->$username = $username;\n-      $this->$password = $password;\n-      $this->$host = $host;\n+class Database\n+{\n \n-    }\n+  private $host = \"localhost\";\n+  private $db_name = \"MagazineFoot\";\n+  private $username = \"root\";\n+  private $password = \"root\";\n+  private $pdo;\n \n-    public function getPDO(): PDO\n \n-    {\n\\ No newline at end of file\n-         return $this->pdo ??  $this->pdo=  new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\",$this->username,$this->password);\n+  public function __construct($db_name, $username = 'root', $password = 'root', $host = 'localhost')\n+  {\n \n-        }\n-     \n-    }\n-  \n-  \n-  \n+    $this->$db_name = $db_name;\n+    $this->$username = $username;\n+    $this->$password = $password;\n+    $this->$host = $host;\n+  }\n+\n+  public function getPDO(): PDO\n+  {\n+    return $this->pdo ?? $this->pdo = new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\", $this->username, $this->password);\n+\n+  }\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683808480102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n     $this->$password = $password;\n     $this->$host = $host;\n   }\n \n+  \n   public function getPDO(): PDO\n   {\n     return $this->pdo ?? $this->pdo = new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\", $this->username, $this->password);\n \n"
+                },
+                {
+                    "date": 1683808485970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n     $this->$password = $password;\n     $this->$host = $host;\n   }\n \n-  \n+  Il s'agit de ce qu'on appelle les ternaires. Un ternaire est une condition condensée qui fait deux choses sur une seule ligne : on teste la valeur d'une variable dans une condition ; on affecte une valeur à une variable selon que la condition est vraie ou non.\n+\n   public function getPDO(): PDO\n   {\n     return $this->pdo ?? $this->pdo = new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\", $this->username, $this->password);\n \n"
+                },
+                {
+                    "date": 1683808493101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n     $this->$password = $password;\n     $this->$host = $host;\n   }\n \n-  Il s'agit de ce qu'on appelle les ternaires. Un ternaire est une condition condensée qui fait deux choses sur une seule ligne : on teste la valeur d'une variable dans une condition ; on affecte une valeur à une variable selon que la condition est vraie ou non.\n-\n+  \n+  \n   public function getPDO(): PDO\n   {\n     return $this->pdo ?? $this->pdo = new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\", $this->username, $this->password);\n \n"
+                },
+                {
+                    "date": 1683808500003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,12 @@\n     $this->$password = $password;\n     $this->$host = $host;\n   }\n \n+  // Il s'agit de ce qu'on appelle les ternaires.\n+  ` Un ternaire est une condition condensée qui fait deux choses sur une seule ligne : on teste la valeur d'une variable dans une condition ; on affecte une valeur à une variable selon que la condition est vraie ou non.\n+\n   \n-  \n   public function getPDO(): PDO\n   {\n     return $this->pdo ?? $this->pdo = new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\", $this->username, $this->password);\n \n"
+                },
+                {
+                    "date": 1683809241475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,14 +25,8 @@\n     $this->$host = $host;\n   }\n \n   // Il s'agit de ce qu'on appelle les ternaires.\n-  ` Un ternaire est une condition condensée qui fait deux choses sur une seule ligne : on teste la valeur d'une variable dans une condition ; on affecte une valeur à une variable selon que la condition est vraie ou non.\n+  //  Un ternaire est une condition condensée qui fait deux choses sur une seule ligne : on teste la valeur d'une variable dans une condition ; on affecte une valeur à une variable selon que la condition est vraie ou non.\n \n   \n-  public function getPDO(): PDO\n-  {\n-    return $this->pdo ?? $this->pdo = new PDO(\"mysql:db_name={$this->db_name};host={$this->host}\", $this->username, $this->password);\n-\n-  }\n-\n\\ No newline at end of file\n-}\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683809247814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,6 @@\n     $this->$password = $password;\n     $this->$host = $host;\n   }\n \n-  // Il s'agit de ce qu'on appelle les ternaires.\n-  //  Un ternaire est une condition condensée qui fait deux choses sur une seule ligne : on teste la valeur d'une variable dans une condition ; on affecte une valeur à une variable selon que la condition est vraie ou non.\n-\n-  \n- \n\\ No newline at end of file\n+ \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810458920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,8 @@\n     $this->$password = $password;\n     $this->$host = $host;\n   }\n \n+\n+     private \n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810466642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,7 +25,7 @@\n     $this->$host = $host;\n   }\n \n \n-     private \n+     private function getPDO\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810471828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,7 +25,10 @@\n     $this->$host = $host;\n   }\n \n \n-     private function getPDO\n+     private function getPDO(){\n+\n+      \n+     }\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810477956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n \n \n      private function getPDO(){\n \n-      \n+      if($this)\n      }\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810487691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n \n \n      private function getPDO(){\n \n-      if($this)\n+      if($this->pdo=)\n      }\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810494596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,10 @@\n \n \n      private function getPDO(){\n \n-      if($this->pdo=)\n+      if($this->pdo==null){\n+\n+      }\n      }\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810501718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,10 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n+        $\n+\n       }\n      }\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810508262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $\n+        $pdo= new \n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810516269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $pdo= new \n+        $pdo= new PDO('mysql'\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810522665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $pdo= new PDO('mysql'\n+        $pdo= new PDO('mysql:dbname='\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810533363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $pdo= new PDO('mysql:dbname='\n+        $pdo= new PDO('mysql:dbname=MagazineFoot '\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810538590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $pdo= new PDO('mysql:dbname=MagazineFoot '\n+        $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost'); '\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810546127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost'); '\n+        $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root'); '\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810557036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n      private function getPDO(){\n \n       if($this->pdo==null){\n \n-        $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root'); '\n+        $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810564109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n \n       if($this->pdo==null){\n \n         $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n+        $pdo->\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810571372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n       if($this->pdo==null){\n \n         $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n-        $pdo->\n+        $pdo->setAttribute(PDO)\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810576425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n       if($this->pdo==null){\n \n         $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n-        $pdo->setAttribute(PDO)\n+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE)\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810582687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n       if($this->pdo==null){\n \n         $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE)\n+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::)\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810590167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n \n       if($this->pdo==null){\n \n         $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::)\n+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n+        \n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810596088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n       if($this->pdo==null){\n \n         $pdo= new PDO('mysql:dbname=MagazineFoot;host=localhost','root','root'); \n         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n-        \n+        $this->pdo = $pdo;\n \n       }\n      }\n  \n"
+                },
+                {
+                    "date": 1683810603405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,7 +34,8 @@\n         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n         $this->pdo = $pdo;\n \n       }\n+      return\n      }\n  \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1683810609082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,8 @@\n         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n         $this->pdo = $pdo;\n \n       }\n-      return $this\n+      return $this-\n      }\n  \n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1683795748828,
+            "name": "Commit-0",
+            "content": "<?php\nnamespace Foot\\Entity;\nclass Database {\n    private $host = \"localhost\";\n    private $db_name = \"MagazineFoot\";\n    private $username = \"root\";\n    private $password = \"root\";\n    private $conn;\n    // pour stocker l'objet de connection a la base de données \n  \n    public function getConnection() {\n      $this->conn = null;\n  \n      try {\n        $this->conn = new PDO(\"mysql:host=\" . $this->host . \";dbname=\" . $this->db_name, $this->username, $this->password);\n        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);\n      } catch(PDOException $e) {\n        echo \"Connection failed: \" . $e->getMessage();\n      }\n  \n      return $this->conn;\n    }\n  }\n  \n  "
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/Entity/Post.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1683794095392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1683795735306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-\n+namespace Foot\\Entity;\n class Post{\n     private $id;\n     private $title;\n     private $content;\n"
+                },
+                {
+                    "date": 1683795785681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <?php\n+\n namespace Foot\\Entity;\n class Post{\n     private $id;\n     private $title;\n"
+                },
+                {
+                    "date": 1683796473384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n <?php\n \n namespace Foot\\Entity;\n+\n+use Foot\\Entity\\Post;\n+\n class Post{\n     private $id;\n     private $title;\n     private $content;\n"
+                },
+                {
+                    "date": 1683796628885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php\n \n-namespace Foot\\Entity;\n \n-use Foot\\Entity\\Post;\n \n+\n+\n class Post{\n     private $id;\n     private $title;\n     private $content;\n"
+                },
+                {
+                    "date": 1683796688660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <?php\n+namespace Foot\\Entity;\n \n \n \n \n-\n class Post{\n     private $id;\n     private $title;\n     private $content;\n"
+                },
+                {
+                    "date": 1683796721369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,7 @@\n <?php\n namespace Foot\\Entity;\n \n-\n-\n-\n class Post{\n     private $id;\n     private $title;\n     private $content;\n"
+                },
+                {
+                    "date": 1683796738952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n namespace Foot\\Entity;\n \n+\n class Post{\n     private $id;\n     private $title;\n     private $content;\n"
+                },
+                {
+                    "date": 1683799059793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n <?php\n-namespace Foot\\Entity;\n \n \n class Post{\n     private $id;\n"
+                },
+                {
+                    "date": 1683799069638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+namespace Foot\\Entity;\n \n class Post{\n     private $id;\n     private $title;\n"
+                },
+                {
+                    "date": 1683799323008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n+use DateTime;\n \n class Post{\n     private $id;\n     private $title;\n@@ -45,9 +46,9 @@\n \n         return $this;\n     }\n \n-    public function getCreatedAt(): datetime{\n+    public function getCreatedAt(): DateTime{\n \n         return $this->createdAt;\n     }\n }\n"
+                },
+                {
+                    "date": 1686210314859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n+\n use DateTime;\n \n class Post{\n     private $id;\n"
+                }
+            ],
+            "date": 1683794095391,
+            "name": "Commit-0",
+            "content": "<?php\n\nclass Post{\n    private $id;\n    private $title;\n    private $content;\n    private $image;\n    private $createdAt;\n\n    public function getId():int{\n\n        return $this->id;\n    }\n    \n    public function setTitle($title){\n\n        $this->title = $title;\n\n        return $this;\n    }\n\n    public function getTitle():string{\n        \n        return $this->title;\n    }\n\n    public function setContent($content){\n\n        $this->content = $content;\n\n        return $this;\n    }\n\n    public function getContent():string{\n\n        return $this->content;\n\n    }\n\n    public function setCreatedAt($createdAt){\n\n        $this->createdAt = $createdAt;\n\n        return $this;\n    }\n\n    public function getCreatedAt(): datetime{\n\n        return $this->createdAt;\n    }\n}\n"
+        }
+    ]
+}

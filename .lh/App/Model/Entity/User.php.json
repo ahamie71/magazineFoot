@@ -1,0 +1,158 @@
+{
+    "sourceFile": "App/Model/Entity/User.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 35,
+            "patches": [
+                {
+                    "date": 1681897193547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681897198868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,7 @@\n         return $this->admin;\n      }\n    \n \n-     public function\n+     public function login()\n }\n \n"
+                },
+                {
+                    "date": 1681897204684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,11 @@\n         return $this->admin;\n      }\n    \n \n-     public function login()\n+     public function login($username, $password){\n+\n+\n+      \n+     }\n }\n \n"
+                },
+                {
+                    "date": 1681897323264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?\n \n- class User{\n+ class User {\n \n \n     private $id ;\n \n@@ -72,8 +72,8 @@\n \n      public function login($username, $password){\n \n \n-      \n+\n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897392848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,7 +73,9 @@\n      public function login($username, $password){\n \n \n \n+      \n+\n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897421760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?\n \n- class User {\n+ class User  {\n \n \n     private $id ;\n \n@@ -73,9 +73,8 @@\n      public function login($username, $password){\n \n \n \n-      \n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897429760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?\n \n- class User  {\n+ class User extends data {\n \n \n     private $id ;\n \n"
+                },
+                {
+                    "date": 1681897438158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <?\n \n- class User extends data {\n+ class User extends Database {\n \n \n     private $id ;\n \n"
+                },
+                {
+                    "date": 1681897467113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,11 +70,12 @@\n      }\n    \n \n      public function login($username, $password){\n+   \n+      $conn\n \n \n \n-\n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897474109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n    \n \n      public function login($username, $password){\n    \n-      $conn\n+      $conn= $this->\n \n \n \n      }\n"
+                },
+                {
+                    "date": 1681897482931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n    \n \n      public function login($username, $password){\n    \n-      $conn= $this->\n+      $conn= $this->getConnection\n \n \n \n      }\n"
+                },
+                {
+                    "date": 1681897499595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n    \n \n      public function login($username, $password){\n    \n-      $conn= $this->getConnection\n+      $conn= $this->getConnection();\n \n \n \n      }\n"
+                },
+                {
+                    "date": 1681897520282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n+       ^\n \n-\n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897526027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       ^\n+       $req= \"\"\n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897532082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"\"\n+       $req= \"SELECT * FROM\"\n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897543355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT * FROM\"\n+       $req= \"SELECT id, user\"\n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897550202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,11 +71,5 @@\n    \n \n      public function login($username, $password){\n    \n-      $conn= $this->getConnection();\n-\n-       $req= \"SELECT id, user\"\n-\n-     }\n-}\n-\n+   \n"
+                },
+                {
+                    "date": 1681897556145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,6 +70,7 @@\n      }\n    \n \n      public function login($username, $password){\n+\n    \n-   \n+     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1681897579406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,7 +70,12 @@\n      }\n    \n \n      public function login($username, $password){\n+   \n+      $conn= $this->getConnection();\n \n\\ No newline at end of file\n-   \n-     }\n+       $req= \"SELECT id, username\"\n+\n+     }\n+}\n+\n"
+                },
+                {
+                    "date": 1681897632644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,8 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT id, username\"\n+       $req= \"SELECT  username, \"\n \n      }\n }\n+\n"
+                },
+                {
+                    "date": 1681897639170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT  username, \"\n+       $req= \"SELECT  username, password FROM \"\n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897685535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT  username, password FROM \"\n+       $req= \"SELECT  username, password FROM 'user'\"\n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897714455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT  username, password FROM 'user'\"\n+       $req= \"SELECT  username, password FROM 'User'WHERE username = :username \"\n \n      }\n }\n \n"
+                },
+                {
+                    "date": 1681897886772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,10 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT  username, password FROM 'User'WHERE username = :username \"\n+       $req= \"SELECT  username, password FROM 'User' WHERE username = :username \"\n \n      }\n+     \n }\n \n"
+                },
+                {
+                    "date": 1681897902256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,10 +73,10 @@\n      public function login($username, $password){\n    \n       $conn= $this->getConnection();\n \n-       $req= \"SELECT  username, password FROM 'User' WHERE username = :username \"\n+       $req= \"SELECT  username, password FROM 'User' WHERE username = :username \";\n \n-     }\n      \n+\n }\n \n"
+                },
+                {
+                    "date": 1681897909902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,12 +71,10 @@\n    \n \n      public function login($username, $password){\n    \n-      $conn= $this->getConnection();\n-\n-       $req= \"SELECT  username, password FROM 'User' WHERE username = :username \";\n-\n      \n+     \n \n }\n+ }\n \n"
+                },
+                {
+                    "date": 1681897958384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,12 +69,7 @@\n         return $this->admin;\n      }\n    \n \n-     public function login($username, $password){\n-   \n-     \n-     \n-\n-}\n+    \n  }\n \n"
+                },
+                {
+                    "date": 1681898773498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,9 @@\n         return $this->admin;\n      }\n    \n \n+     publiv\n+\n     \n  }\n \n"
+                },
+                {
+                    "date": 1681898782904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n         return $this->admin;\n      }\n    \n \n-     publiv\n+     public \n \n     \n  }\n \n"
+                },
+                {
+                    "date": 1681898791994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n         return $this->admin;\n      }\n    \n \n-     public \n+     public function login()\n \n     \n  }\n \n"
+                },
+                {
+                    "date": 1681898797537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,12 @@\n         return $this->admin;\n      }\n    \n \n-     public function login()\n+     public function login(){\n \n+      \n+     }\n+\n     \n  }\n \n"
+                },
+                {
+                    "date": 1681898811544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,10 +70,10 @@\n      }\n    \n \n      public function login(){\n+       \n \n-      \n      }\n \n     \n  }\n"
+                },
+                {
+                    "date": 1681898919716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,8 +71,9 @@\n    \n \n      public function login(){\n        \n+      \n \n      }\n \n     \n"
+                },
+                {
+                    "date": 1681899662783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,12 +69,12 @@\n         return $this->admin;\n      }\n    \n \n-     public function login(){\n+     public function verif(){\n        \n-      \n \n+\n      }\n \n     \n  }\n"
+                },
+                {
+                    "date": 1681899671717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n         return $this->admin;\n      }\n    \n \n-     public function verif(){\n+     public function Searc(){\n        \n \n \n      }\n"
+                },
+                {
+                    "date": 1681899677715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,10 +69,11 @@\n         return $this->admin;\n      }\n    \n \n-     public function Searc(){\n+     public function SearchUser(){\n        \n+      \n \n \n      }\n \n"
+                }
+            ],
+            "date": 1681897193547,
+            "name": "Commit-0",
+            "content": "<?\n\n class User{\n\n\n    private $id ;\n\n    private $username ;\n\n    private $email ;\n\n    private $password ;\n\n    private $admin;\n\n\n    public function getId():int  {\n\n        return  $this->id;\n     }\n \n     public function setUsername($username) {     \n      \n         $this->username = $username;\n\n         return $this;\n \n     }\n     public function getUsername():string  {\n\n        return $this->username;\n \n     }\n\n     public function setEmail($email) {\n\n        $this->email = $email;\n\n        return $this;   \n     }\n\n     public function getEmail(): string {\n\n        return $this->email;\n     }\n\n     public function setPassword($password) {\n\n        $this->password = $password;\n\n        return $this;\n     }\n\n     public function getPassword() {\n\n        return $this->password;\n\n     }\n\n     public function setAdmin($admin) {\n\n        $this->admin = $admin;\n\n        return $this;\n     }\n\n     public function isAdmin(): bool  {\n\n        return $this->admin;\n     }\n   \n\n     public function\n}\n\n"
+        }
+    ]
+}

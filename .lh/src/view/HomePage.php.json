@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/View/HomePage.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1686643441219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686646843586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,20 @@\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n  \n+<header>\n+    <div class=\"logo\">\n+        <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n+\n+    </div>\n+    <ul class=\"nav\">\n+            <li><a href=\"\" style=\"color:white;\">Home</a></li>\n+            <li><a href=\"\"style=\"color:white;\">S'inscrire</a></li>\n+            <li><a href=\"\" style=\"color:white;\">Se connecter</a></li>     \n+    </ul>  \n+</header>\n  \n- \n \n \n \n <section class=\"articles\">\n"
+                },
+                {
+                    "date": 1686646857135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,20 +10,10 @@\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n  \n-<header>\n-    <div class=\"logo\">\n-        <h1 class=\"logo-text\"><span>READ</span>BLog</h1>\n-\n-    </div>\n-    <ul class=\"nav\">\n-            <li><a href=\"\" style=\"color:white;\">Home</a></li>\n-            <li><a href=\"\"style=\"color:white;\">S'inscrire</a></li>\n-            <li><a href=\"\" style=\"color:white;\">Se connecter</a></li>     \n-    </ul>  \n-</header>\n  \n+ \n \n \n \n <section class=\"articles\">\n"
+                },
+                {
+                    "date": 1686647224578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,34 +75,4 @@\n </body>\n </html>\n <style>\n \n-.articles{\n-  margin-top: 30px;\n-}\n-.articles .article{\n-  display: flex;\n-  flex-wrap:wrap;\n-  margin-bottom: 30px;\n-}\n-.articles .article .left img{\n-  height: 300px;\n-  width: 500px;\n-  margin: 10px;\n-}\n-.articles .article .right {\n-  margin-left: 40px;\n-  max-width: 50%;\n-}\n-.articles .article .right p.date{\n-  color: #7f7e7e;\n-}\n-.articles .article .right p.description{\n-  color: #2d2d2d;\n-}\n-\n-body{\n-  margin:0px;\n-  font-family: 'Noto Sans JP', sans-serif;\n-}\n-\n-</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686647244605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n  \n  \n- \n+ <\n \n \n \n <section class=\"articles\">\n@@ -73,6 +73,6 @@\n   \n   \n </body>\n </html>\n-<style>\n \n+\n"
+                },
+                {
+                    "date": 1686647252833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n  \n  \n- <\n+ <?php\n+ \n \n \n \n <section class=\"articles\">\n"
+                },
+                {
+                    "date": 1686647260677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n </head>\n  \n  \n  <?php\n- \n+ require()\n \n \n \n <section class=\"articles\">\n"
+                },
+                {
+                    "date": 1686647268661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n </head>\n  \n  \n  <?php\n- require()\n+ require('nav')\n \n \n \n <section class=\"articles\">\n"
+                },
+                {
+                    "date": 1686647274429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n </head>\n  \n  \n  <?php\n- require('nav')\n+ require('Navbar.php')\n \n \n \n <section class=\"articles\">\n"
+                }
+            ],
+            "date": 1686643441219,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html>\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Untitled</title>\n    <script type=\"text/javascript\" src=\"script.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n    <link rel=\"stylesheet\" href=\"css/style.css\">\n</head>\n \n \n \n\n\n\n<section class=\"articles\">\n    \n     <div class=\"article\">\n      <div class=\"left\">\n        <img src=\"https://cdn.pixabay.com/photo/2016/11/18/19/01/paris-1836415_1280.jpg\" alt=\"\">\n      </div>\n      <div class=\"right\">\n\n      <h1>Catégorie: Culture</h1>\n        <h1>Paris - La ville des lumières, pourquoi ?</h1>\n        <p class=\"description\">\n        Paris Ville Lumière… Si le surnom de la capitale est bien connu, son origine l’est moins. Et il faut remonter bien loin, à l’heure où l’électricité n’était pas encore d’actualité, pour en trouver la signification. Petit retour en arrière sur cette anecdote !\n\nSi aujourd’hui Paris est loin d’être la métropole la plus éclairée, cela n’a pas toujours été le cas. Les origines supposées du surnom “Ville Lumière” pour notre belle capitale sont multiples, mais on doit sans aucun doute ce sobriquet aux étrangers et provinciaux venus faire une halte ici.\n\n\n        </p>\n        <p class=\"auteur\">Julie Lablonde</p>\n        <p class=\"date\">Juillet, 24, 2020</p>\n      </div>\n    </div> \n    \n    \n    <div class=\"article\">\n      <div class=\"left\">\n        <img src=\"public/image/symfony.png\"alt=\"\">\n      </div>\n      <div class=\"right\">\n       \n        <h1>Catégorie: Informatique</h1>\n        <h1>Symfony - Le meilleur Framework PHP</h1>\n        <p class=\"description\">Symfony est un ensemble de composants PHP ainsi qu'un framework MVC libre écrit en PHP. Il fournit des fonctionnalités modulables et adaptables qui permettent de faciliter et d’accélérer le développement d'un site web.\n\n\nL'agence web française SensioLabs est à l'origine du framework Sensio Framework2. À force de toujours recréer les mêmes fonctionnalités de gestion d'utilisateurs, gestion ORM, etc., elle a développé ce framework pour ses propres besoins3. Comme ces problématiques étaient souvent les mêmes pour d'autres développeurs, le code a été par la suite partagé avec la communauté des développeurs PHP.</p>\n        <p class=\"auteur\">Ahmed</p>\n        <p class=\"date\">Août, 24, 2021</p>\n      </div>\n    </div>\n    \n    <div class=\"article\">\n      <div class=\"left\">\n        <img src=\"public/image/porugal.jpeg\" alt=\"\">\n      </div>\n      <div class=\"right\">\n        <p class=\"date\">Juillet, 16, 2016</p>\n        <h1>Catégorie: Sports </h1>\n        <h1>Portugal - Champions d'europe</h1>\n        <p class=\"description\">Le Portugal soulève son premier international malgré une place de troisième de poule, seulement une victoire dans le temps réglementaire et un style de jeu jugé par beaucoup ennuyeux. Mais son sélectionneur avait prévenu : « Si le Portugal gagne sans le mériter, je vais rentrer très content chez moi ». Et ça tombe bien, l'Histoire ne retient que le nom des vainqueurs.</p>\n        <p class=\"auteur\">Diogo</p>\n        <p class=\"date\">Juillet, 16, 2016</p>\n      </div>\n    </div>\n  </section>\n  \n  \n</body>\n</html>\n<style>\n\n.articles{\n  margin-top: 30px;\n}\n.articles .article{\n  display: flex;\n  flex-wrap:wrap;\n  margin-bottom: 30px;\n}\n.articles .article .left img{\n  height: 300px;\n  width: 500px;\n  margin: 10px;\n}\n.articles .article .right {\n  margin-left: 40px;\n  max-width: 50%;\n}\n.articles .article .right p.date{\n  color: #7f7e7e;\n}\n.articles .article .right p.description{\n  color: #2d2d2d;\n}\n\nbody{\n  margin:0px;\n  font-family: 'Noto Sans JP', sans-serif;\n}\n\n</style>"
+        }
+    ]
+}

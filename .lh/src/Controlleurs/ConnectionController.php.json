@@ -1,0 +1,330 @@
+{
+    "sourceFile": "src/Controlleurs/ConnectionController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 78,
+            "patches": [
+                {
+                    "date": 1686217424924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686217431051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n <?Php\n-use User;\n+use ;\n \n class UserController\n {\n     public function Connect()\n     {\n         $user = new User();\n+\n         \n-        \n          \n \n         \n \n"
+                },
+                {
+                    "date": 1686217451113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?Php\n-use ;\n+use Foot\\Entity\\User; ;\n \n class UserController\n {\n     public function Connect()\n"
+                },
+                {
+                    "date": 1686217472360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     public function Connect()\n     {\n         $user = new User();\n \n-        \n+          \n          \n \n         \n \n"
+                },
+                {
+                    "date": 1686217615281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n {\n     public function Connect()\n     {\n         $user = new User();\n-\n-          \n          \n+         \n+         \n \n         \n \n     }\n"
+                },
+                {
+                    "date": 1686217683436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n+        $user->\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217688642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        $user->\n+        $user->user\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217700747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        $user->user\n+        $user->UserRepository->\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217706883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        $user->UserRepository->\n+        $user->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217719156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?Php\n use Foot\\Entity\\User; ;\n+use Foot\\Model\\UserRepository;\n \n class UserController\n {\n     public function Connect()\n"
+                },
+                {
+                    "date": 1686217734489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        $user->UserRepository->findUser();\n+        ->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217742175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        ->UserRepository->findUser();\n+        $user->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217748690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        $user->UserRepository->findUser();\n+        $user=UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217754643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-        $user=UserRepository->findUser();\n+         $user->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217802895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user->UserRepository->findUser();\n+         $user->UserRepo->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217808701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user->UserRepo->findUser();\n+         $user->User->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217829544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n <?Php\n-use Foot\\Entity\\User; ;\n+use Foot\\Entity\\User; \n use Foot\\Model\\UserRepository;\n \n class UserController\n {\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user->User->findUser();\n+         $user->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217897851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user->UserRepository->findUser();\n+         $user->$userepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217907972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user->$userepository->findUser();\n+         $user->UserRepos->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217928129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user->UserRepos->findUser();\n+         $this->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217933319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $this->UserRepository->findUser();\n          \n          \n+         \n \n         \n \n     }\n"
+                },
+                {
+                    "date": 1686217938614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n+         $user= \n          \n          \n-         \n \n         \n \n     }\n"
+                },
+                {
+                    "date": 1686217945417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user= \n+         $user= $this->UserRepository->\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217950552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function Connect()\n     {\n         $user = new User();\n          \n-         $user= $this->UserRepository->\n+         $user= $this->UserRepository->findUser()\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217957526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,14 @@\n \n class UserController\n {\n     public function Connect()\n+\n+    $user\n     {\n         $user = new User();\n          \n-         $user= $this->UserRepository->findUser()\n+         $user= $this->UserRepository->findUser();\n          \n          \n \n         \n"
+                },
+                {
+                    "date": 1686217972664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n class UserController\n {\n     public function Connect()\n \n-    $user\n+    $username = $_POST['username'];\n+    $password = $_POST['password'];\n     {\n         $user = new User();\n          \n          $user= $this->UserRepository->findUser();\n"
+                },
+                {
+                    "date": 1686217979200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n class UserController\n {\n     public function Connect()\n \n-    $username = $_POST['username'];\n-    $password = $_POST['password'];\n+           \n     {\n+        \n         $user = new User();\n          \n          $user= $this->UserRepository->findUser();\n          \n"
+                },
+                {
+                    "date": 1686217985987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,21 @@\n <?Php\n-use Foot\\Entity\\User; \n+use Foot\\Entity\\User;\n use Foot\\Model\\UserRepository;\n \n class UserController\n {\n     public function Connect()\n-\n-           \n     {\n-        \n+        $username = $_POST['username'];\n+        $password = $_POST['password'];\n         $user = new User();\n-         \n-         $user= $this->UserRepository->findUser();\n-         \n-         \n \n-        \n+        $user = $this->UserRepository->findUser();\n \n+\n+\n+\n+\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686217993757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,13 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n+        $user = $this->UserRepository->findUser($user);\n \n-        $user = $this->UserRepository->findUser();\n \n \n \n \n-\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686218012991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n-        $user = $this->UserRepository->findUser($user);\n+        $ = $this->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686218020653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n-        $ = $this->UserRepository->findUser($username, $password);\n+        s->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686218034763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n-        s->UserRepository->findUser($username, $password);\n+        $user->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686218041394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n+        \n         $user->UserRepository->findUser($username, $password);\n \n \n \n"
+                },
+                {
+                    "date": 1686218062855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n <?Php\n use Foot\\Entity\\User;\n-use Foot\\Model\\UserRepository;\n \n+\n class UserController\n {\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n-        \n+\n         $user->UserRepository->findUser($username, $password);\n \n \n \n"
+                },
+                {
+                    "date": 1686218510003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user->UserRepository->findUser($username, $password);\n+        $user= UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686218525679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n+        \n \n         $user= UserRepository->findUser($username, $password);\n \n \n"
+                },
+                {
+                    "date": 1686218533967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,23 @@\n <?Php\n use Foot\\Entity\\User;\n+use Foot\\Model\\UserRepository;\n \n \n class UserController\n {\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        $user = new User();\n-        \n+        $user = new UserRepository();\n \n-        $user= UserRepository->findUser($username, $password);\n \n+        $user->UserRepository->findUser($username, $password);\n \n \n \n \n+\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686218539327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,21 @@\n <?Php\n use Foot\\Entity\\User;\n-use Foot\\Model\\UserRepository;\n \n \n class UserController\n {\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        $user = new UserRepository();\n+        $user = new User();\n \n+        $user= UserRepository->findUser($username, $password);\n \n-        $user->UserRepository->findUser($username, $password);\n \n \n \n \n-\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686224382437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?Php\n use Foot\\Entity\\User;\n+use Foot\\Model\\UserRepository;\n \n \n class UserController\n {\n@@ -9,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user= UserRepository->findUser($username, $password);\n+        $user->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224497401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user->UserRepository->findUser($username, $password);\n+        $user->UserRepository::->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224505676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user->UserRepository::->findUser($username, $password);\n+        $user->UserRepository()::->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224512488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user->UserRepository()::->findUser($username, $password);\n+        $user->UserRepository::->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224523724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user->UserRepository::->findUser($username, $password);\n+        $user->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224581273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user->UserRepository->findUser($username, $password);\n+        $user= UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224591260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $user= UserRepository->findUser($username, $password);\n+        $user= $this->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224602974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        $user = new User();\n+        \n \n         $user= $this->UserRepository->findUser($username, $password);\n \n \n"
+                },
+                {
+                    "date": 1686224622406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,11 @@\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        \n+        $user = new User();\n \n-        $user= $this->UserRepository->findUser($username, $password);\n+        $user = $this->UserRepository->findUser($username, $password);\n \n \n \n \n"
+                },
+                {
+                    "date": 1686224692235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n         $user = new User();\n \n         $user = $this->UserRepository->findUser($username, $password);\n \n+      \n \n \n \n-\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686224699528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        $username = $_POST['username'];\n-        $password = $_POST['password'];\n+        \n         $user = new User();\n \n         $user = $this->UserRepository->findUser($username, $password);\n \n"
+                },
+                {
+                    "date": 1686224741333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n <?Php\n+\n use Foot\\Entity\\User;\n use Foot\\Model\\UserRepository;\n \n \n class UserController\n {\n     public function Connect()\n     {\n-        \n+        $username = $_POST['username'];\n+        $password = $_POST['password'];\n         $user = new User();\n \n         $user = $this->UserRepository->findUser($username, $password);\n \n"
+                },
+                {
+                    "date": 1686224791201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        $user = new User();\n+        $user = new ();\n \n         $user = $this->UserRepository->findUser($username, $password);\n \n       \n"
+                },
+                {
+                    "date": 1686224811979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        $user = new ();\n+        $user = new User();\n \n         $user = $this->UserRepository->findUser($username, $password);\n \n       \n"
+                },
+                {
+                    "date": 1686224817374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n+        $userrepository =\n+\n         $user = $this->UserRepository->findUser($username, $password);\n \n       \n \n"
+                },
+                {
+                    "date": 1686224837000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,11 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         $user = new User();\n \n-        $userrepository =\n+        $userrepository = new UserRepository;\n \n-        $user = $this->UserRepository->findUser($username, $password);\n+        $user = $this->userRepository->findUser($username, $password);\n \n       \n \n \n"
+                },
+                {
+                    "date": 1686224846849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         $user = new User();\n \n         $userrepository = new UserRepository;\n \n-        $user = $this->userRepository->findUser($username, $password);\n+        $user = $this->$userrepository->findUser($username, $password);\n \n       \n \n \n"
+                },
+                {
+                    "date": 1686224858373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-        $user = new User();\n+       \n \n         $userrepository = new UserRepository;\n \n         $user = $this->$userrepository->findUser($username, $password);\n"
+                },
+                {
+                    "date": 1686224864899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,10 @@\n     public function Connect()\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n-       \n \n         $userrepository = new UserRepository;\n-\n         $user = $this->$userrepository->findUser($username, $password);\n \n       \n \n"
+                },
+                {
+                    "date": 1686224873839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n+        $user \n+\n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n \n       \n"
+                },
+                {
+                    "date": 1686224879968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n-        $user \n+        $user = new User \n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n \n"
+                },
+                {
+                    "date": 1686224888829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     {\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n-        $user = new User \n+        $user = new User();\n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n \n"
+                },
+                {
+                    "date": 1686224906965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n         $password = $_POST['password'];\n \n         $user = new User();\n \n+        if\n+\n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n \n       \n"
+                },
+                {
+                    "date": 1686224936161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         $password = $_POST['password'];\n \n         $user = new User();\n \n-        if\n+       \n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n \n"
+                },
+                {
+                    "date": 1686224941974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n-\n+          \n+        if\n        \n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n"
+                },
+                {
+                    "date": 1686224950801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,11 @@\n         $password = $_POST['password'];\n \n         $user = new User();\n           \n-        if\n+        if($user){\n+            \n+        }\n        \n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n"
+                },
+                {
+                    "date": 1686224985490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,8 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n-          \n-        if($user){\n-            \n-        }\n-       \n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n \n"
+                },
+                {
+                    "date": 1686224991009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n         $user = new User();\n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n+        \n+        \n \n-      \n \n \n-\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686225005165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n         \n+        if\n         \n \n \n \n"
+                },
+                {
+                    "date": 1686225073681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,18 +7,19 @@\n class UserController\n {\n     public function Connect()\n     {\n+        if(isset)\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n         \n-        if\n         \n+        \n \n \n \n     }\n"
+                },
+                {
+                    "date": 1686225078719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset)\n+        if(isset($_))\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n"
+                },
+                {
+                    "date": 1686225085199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_))\n+        if(isset($_POST['']))\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n"
+                },
+                {
+                    "date": 1686225092512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_POST['']))\n+        if(isset($_POST['usernames']) && $_POST['password)\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n"
+                },
+                {
+                    "date": 1686225097644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_POST['usernames']) && $_POST['password)\n+        if(isset($_POST['usernames']) && $_POST['password'){}\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n"
+                },
+                {
+                    "date": 1686225103769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_POST['usernames']) && $_POST['password'){}\n+        if(isset($_POST['usernames']) && $_POST['password'){\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n@@ -23,5 +23,4 @@\n \n \n     }\n \n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686225109806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,12 @@\n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n         \n+        }\n         \n-        \n \n \n \n     }\n \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686225115472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,19 +7,19 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_POST['usernames']) && $_POST['password'){\n+        if(isset($_POST['usernames']) && $_POST['password')){\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n \n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n         \n-        }\n         \n+        \n \n \n \n     }\n"
+                },
+                {
+                    "date": 1686225121464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_POST['usernames']) && $_POST['password')){\n+        if(isset($_POST['usernames']) && $_POST['password'])){\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n"
+                },
+                {
+                    "date": 1686225129744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        if(isset($_POST['usernames']) && $_POST['password'])){\n+        if(isset($_POST['username']) && $_POST['password']){\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n         $user = new User();\n@@ -17,9 +17,9 @@\n         $userrepository = new UserRepository;\n         $user = $this->$userrepository->findUser($username, $password);\n         \n         \n-        \n+        }\n \n \n \n     }\n"
+                },
+                {
+                    "date": 1686225146484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class UserController\n {\n     public function Connect()\n     {\n-        \n+        /\n         if(isset($_POST['username']) && $_POST['password']){\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n \n"
+                },
+                {
+                    "date": 1686295974899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         $username = $_POST['username'];\n         $password = $_POST['password'];\n         }\n          else {\n-             e\n+             eh\n          }\n         $user = new User();\n         $userRepository = new UserRepository;\n         $user= $userRepository->findUser($username);\n"
+                }
+            ],
+            "date": 1686217424924,
+            "name": "Commit-0",
+            "content": "<?Php\nuse User;\n\nclass UserController\n{\n    public function Connect()\n    {\n        $user = new User();\n        \n        \n         \n\n        \n\n    }\n\n}"
+        }
+    ]
+}

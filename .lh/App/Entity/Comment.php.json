@@ -1,0 +1,18 @@
+{
+    "sourceFile": "App/Entity/Comment.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1681995491682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1681995491682,
+            "name": "Commit-0",
+            "content": "<?php\n\nclass Comment{\n\n    private $id;\n\n    private $text;\n\n\n    public function getId(): int  {\n        \n        return $this->id;\n\n    }\n\n    public function getText(): string {\n\n        return $this->text;\n\n    }\n\n    public function setText($text) {\n\n        $this->text = $text;\n\n        return $this;\n    }\n} "
+        }
+    ]
+}

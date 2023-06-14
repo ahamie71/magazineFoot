@@ -1,0 +1,98 @@
+{
+    "sourceFile": "src/View/Posts/DisplayPosts.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1686658526184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686658539327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n+  \n+<?php\n+    require('Navbar.php');\n+    ?>\n     \n-    hello\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686658559579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n   \n <?php\n-    require('Navbar.php');\n+    require('./../Navbar.php');\n     ?>\n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686659888540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n   \n <?php\n-    require('./../Navbar.php');\n+    require('Navbar.php');\n     ?>\n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686659897619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n   \n <?php\n-    require('Navbar.php');\n+    require('PostsNavbar.php');\n     ?>\n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686659903802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n   \n <?php\n-    require('PostsNavbar.php');\n+    require('./Posts/Navbar.php');\n     ?>\n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686659909353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n   \n <?php\n-    require('./Posts/Navbar.php');\n+    require('Navbar.php');\n     ?>\n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686661863781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,7 @@\n     <title>Document</title>\n </head>\n <body>\n   \n-<?php\n-    require('Navbar.php');\n-    ?>\n-    \n+\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686661968861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     <title>Document</title>\n </head>\n <body>\n   \n-\n+Please ensure that the class definition \"Foot\\Entity\\User\" of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide an autoloader to load the class definition in /Applications/MAMP/htdocs/foot/src/View/Navbar.php:36 Stack trace: #0\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686662825072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n     <title>Document</title>\n </head>\n <body>\n   \n-Please ensure that the class definition \"Foot\\Entity\\User\" of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide an autoloader to load the class definition in /Applications/MAMP/htdocs/foot/src/View/Navbar.php:36 Stack trace: #0\n+\n+    \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686663253301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-  \n+  kkk\n \n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686663418662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-  kkk\n+ \n \n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664240553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,12 @@\n     <title>Document</title>\n </head>\n <body>\n  \n+<h1>BIENVENUE <?php\n+                \n+                echo $_SESSION['user']->getUsername();\n+                ?></h1>\n \n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664290171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\n+\n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n     <meta charset=\"UTF-8\">\n"
+                },
+                {
+                    "date": 1686664297235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n+<?php\n \n \n+\n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n     <meta charset=\"UTF-8\">\n"
+                },
+                {
+                    "date": 1686664304380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n+session_start\n \n-\n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n     <meta charset=\"UTF-8\">\n"
+                },
+                {
+                    "date": 1686664327103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n-session_start\n+session_start();\n+?>\n \n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n@@ -13,8 +14,9 @@\n <body>\n  \n <h1>BIENVENUE <?php\n                 \n+                \n                 echo $_SESSION['user']->getUsername();\n                 ?></h1>\n \n     \n"
+                },
+                {
+                    "date": 1686664335086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,9 @@\n </head>\n <body>\n  \n <h1>BIENVENUE <?php\n-                \n-                \n+        \n                 echo $_SESSION['user']->getUsername();\n                 ?></h1>\n \n     \n"
+                },
+                {
+                    "date": 1686664342099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n <?php\n-\n-session_start();\n ?>\n \n <!DOCTYPE html>\n <html lang=\"en\">\n@@ -13,9 +11,9 @@\n </head>\n <body>\n  \n <h1>BIENVENUE <?php\n-        \n+\n                 echo $_SESSION['user']->getUsername();\n                 ?></h1>\n \n     \n"
+                },
+                {
+                    "date": 1686664359303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-<?php\n-?>\n \n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n@@ -9,13 +7,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n- \n-<h1>BIENVENUE <?php\n-\n-                echo $_SESSION['user']->getUsername();\n-                ?></h1>\n-\n     \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664458581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    \n+       \n </body>\n </html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1686658526184,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n</head>\n<body>\n    \n    hello\n</body>\n</html>"
+        }
+    ]
+}

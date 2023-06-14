@@ -1,0 +1,454 @@
+{
+    "sourceFile": "src/Controlleurs/RegistrationController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 109,
+            "patches": [
+                {
+                    "date": 1686664542533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686664552321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n <?php\n \n+namespace Foot\\Controlleurs;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664558895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n <?php\n \n-namespace Foot\\Controlleurs;\n\\ No newline at end of file\n+namespace Foot\\Controlleurs;\n+\n+Class \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664565073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-Class \n\\ No newline at end of file\n+Class Registra\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664570659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-Class Registra\n\\ No newline at end of file\n+Class RegistrationController\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664579122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n-Class RegistrationController\n\\ No newline at end of file\n+Class RegistrationController{\n+\n+\n+    public function \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664586122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n \n Class RegistrationController{\n \n \n-    public function \n+    public function Register\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686664591232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,8 @@\n \n Class RegistrationController{\n \n \n-    public function Register\n+    public function Register(\n+        \n+    )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665054074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n \n Class RegistrationController{\n \n \n-    public function Register(\n+    public function Register(){\n+\n         \n-    )\n+\n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665148318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,12 @@\n \n \n     public function Register(){\n \n-        \n+        if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n+            $prenom = $_POST['prenom'];\n+            $email = $_POST['email'];\n+            $password = $_POST['password'];\n+            $password2 = $_POST['password2'];\n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665210195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n             $prenom = $_POST['prenom'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-\n+           \n     }\n+}\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665216315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n             $prenom = $_POST['prenom'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-           \n+            if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n+                $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n     }\n\\ No newline at end of file\n }\n-}\n+}\n"
+                },
+                {
+                    "date": 1686665249067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n+                \n     }\n }\n+}\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665256236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                \n+            \n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665286614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-            \n+                $user = new User();\n+                $userRepository = new UserRepository;\n+                $user = $userRepository->findUser($username)\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665295563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n+use Foot\\Entity\\User;\n+\n Class RegistrationController{\n \n \n     public function Register(){\n"
+                },
+                {
+                    "date": 1686665304961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace Foot\\Controlleurs;\n \n use Foot\\Entity\\User;\n+use Foot\\Model\\UserRepository;\n \n Class RegistrationController{\n \n \n@@ -17,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->findUser($username)\n+                $user = $userRepository->findUser($username,)\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665310934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->findUser($username,)\n+                $user = $userRepository->findUser($username,$password,)\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665317357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->findUser($username,$password,)\n+                $user = $userRepository->findUser($username,$password,$e)\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665344553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->findUser($username,$password,$e)\n+                $user = $userRepository->($username,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665355436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->($username,$password,$email);\n+                $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665367232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     public function Register(){\n \n         if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n-            $prenom = $_POST['prenom'];\n+            $username = $_POST['prenom'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n"
+                },
+                {
+                    "date": 1686665374196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     public function Register(){\n \n         if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n-            $username = $_POST['prenom'];\n+            $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n"
+                },
+                {
+                    "date": 1686665400236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user = new User();\n+                \n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686665409893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                \n+    \n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686665418147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-    \n+                $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686665687451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user = new User();\n+              \n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686665700309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n               \n-                $userRepository = new UserRepository;\n+                $Repository = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686665705465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n               \n-                $Repository = new UserRepository;\n+                $ = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686665710884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n               \n-                $ = new UserRepository;\n+                $UserRepo = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686665721760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n               \n                 $UserRepo = new UserRepository;\n-                $user = $userRepository->AddUser($username,$password,$email);\n+                $user = $USerRepo->AddUser($username,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665735574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-              \n-                $UserRepo = new UserRepository;\n-                $user = $USerRepo->AddUser($username,$password,$email);\n+                $user = new User();\n+                $userRepository = new UserRepository;\n+                $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686665745141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,8 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser($username,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686666040278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser($username,$password,$email);\n+                $user = $userRepository->AddUser(strin$username,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666046205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser(strin$username,$password,$email);\n+                $user = $userRepository->AddUser(string $username, $password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666053988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser(string $username, $password,$email);\n+                $user = $userRepository->AddUser(string $username, string $password, string $email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666062504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser(string $username, string $password, string $email);\n+                $user = $userRepository->AddUser( $username  string $password, string $email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666069436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser( $username  string $password, string $email);\n+                $user = $userRepository->AddUser( $username ,$password,  $email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666379418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser( $username ,$password,  $email);\n+                $user = $userRepository->AddUser();\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666385077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser();\n+                $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666461954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n+            \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n"
+                },
+                {
+                    "date": 1686666470778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,12 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-            \n+\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n+                \n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686666476434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                \n+                user\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686666482157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                user\n+                $user\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686666489380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user\n+                $user= new User\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686666495686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $password2 = $_POST['password2'];\n \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user= new User\n+                $user= new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686666514748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user= new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser( $username ,$password,$email);\n+                $result = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666611411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n Class RegistrationController{\n \n \n-    public function Register(){\n+    public function Register():void{\n \n         if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n"
+                },
+                {
+                    "date": 1686666621574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n Class RegistrationController{\n \n \n-    public function Register():void{\n+    public function Register(){\n \n         if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n@@ -19,9 +19,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user= new User();\n                 $userRepository = new UserRepository;\n-                $result = $userRepository->AddUser( $username ,$password,$email);\n+                $result = $userRepository->AddUser( $username ,$password,$email):void;\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666635741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user= new User();\n                 $userRepository = new UserRepository;\n-                $result = $userRepository->AddUser( $username ,$password,$email):void;\n+                $result = $userRepository->AddUser( $username ,$password,$email)void;\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666668428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,14 +14,13 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user= new User();\n                 $userRepository = new UserRepository;\n-                $result = $userRepository->AddUser( $username ,$password,$email)void;\n+                $result = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666815749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user= new User();\n                 $userRepository = new UserRepository;\n-                $result = $userRepository->AddUser( $username ,$password,$email);\n+                $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686666844762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user= new User();\n+                $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->AddUser( $username ,$password,$email);\n     }\n }\n"
+                },
+                {
+                    "date": 1686667154774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->AddUser( $username ,$password,$email);\n+                $user = $userRepository->addUser( $username ,$password,$email);\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686667467859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n+                header\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686667474000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                header\n+                header()\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686667482836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                header()\n+                header('location:')\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686667488390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                header('location:')\n+                header('location:');\n+                exit;\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686727829441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                header('location:');\n+               \n                 exit;\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727854895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-               \n+                if()\n                 exit;\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727861439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                if()\n+                if($user{})\n                 exit;\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727866841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,12 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                if($user{})\n+                if($user){\n+\n+                    \n+                }\n                 exit;\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727882001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                if($user){\n+                if$user){\n \n-                    \n+\n                 }\n                 exit;\n     }\n }\n"
+                },
+                {
+                    "date": 1686727887613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,12 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                if$user){\n+                \n \n \n-                }\n+                \n                 exit;\n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727892734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,13 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                \n+                if($user)\n \n \n                 \n-                exit;\n+                \n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686727912595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                if($user)\n+                \n \n \n                 \n                 \n"
+                },
+                {
+                    "date": 1686727921367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,11 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n+            \n                 \n-\n-\n                 \n-                \n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686727928621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,11 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser( $username ,$password,$email);\n-            \n-                \n-                \n+                $user = $userRepository->addUser( $username ,$password,$email);$\n+                require\n+                      \n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686727960513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);$\n-                require\n+                \n                       \n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727967940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser( $username ,$password,$email);$\n-                \n+                $user = $userRepository->addUser( $username ,$password,$email);\n+                header('Location:./../src/View/Posts/DisplayPosts.php');\n                       \n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686727974643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,11 @@\n                 $user = $userRepository->addUser( $username ,$password,$email);\n                 header('Location:./../src/View/Posts/DisplayPosts.php');\n                       \n     }\n+    else{\n+\n+        \n+    }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686727990012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,12 @@\n                       \n     }\n     else{\n \n+\n+\n         \n+\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686728005859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,12 @@\n                       \n     }\n     else{\n \n+        $error = 'erreur';\n+        require('./../src/View/ConnectionForm.php'); \n \n \n-        \n \n     }\n }\n }\n"
+                },
+                {
+                    "date": 1686728013118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                header('Location:./../src/View/Posts/DisplayPosts.php');\n+                header('Location:./../src/View/Posts/.php');\n                       \n     }\n     else{\n \n"
+                },
+                {
+                    "date": 1686728022147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser( $username ,$password,$email);\n-                header('Location:./../src/View/Posts/.php');\n+                header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n \n"
+                },
+                {
+                    "date": 1686728036161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     }\n     else{\n \n         $error = 'erreur';\n-        require('./../src/View/ConnectionForm.php'); \n+        require('./../src/View/RegistrationForm.php'); \n \n \n \n     }\n"
+                },
+                {
+                    "date": 1686728087496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n \n     public function Register(){\n \n-        if (isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n+        if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n@@ -28,9 +28,8 @@\n         $error = 'erreur';\n         require('./../src/View/RegistrationForm.php'); \n \n \n-\n     }\n }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686728159026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser( $username ,$password,$email);\n+                $user = $userRepository->addUser($username ,$password,$email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728169083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser($username ,$password,$email);\n+                $user = $userRepository->addUser(string $username,$password,$email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728182262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser(string $username,$password,$email);\n+                $user = $userRepository->addUser(string$username,$password,$email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728188514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser(string$username,$password,$email);\n+                $user = $userRepository->addUser(string  $username,$password, strin,g $email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728205246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser(string  $username,$password, strin,g $email);\n+                $user = $userRepository->addUser($username,$password,$email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728293321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \n \n     public function Register(){\n \n+        $error= '';\n         if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n"
+                },
+                {
+                    "date": 1686728430234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser($username,$password,$email);\n+                // $user = $userRepository->addUser($username,$password,$email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728455660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n+            \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n"
+                },
+                {
+                    "date": 1686728461157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-            \n+            else\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n"
+                },
+                {
+                    "date": 1686728474409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,13 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-            else\n+            else{\n+\n+\n+            }\n+        }\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n"
+                },
+                {
+                    "date": 1686728484331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-            else{\n+            \n \n-\n+              \n             }\n         }\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n"
+                },
+                {
+                    "date": 1686728489679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             $password2 = $_POST['password2'];\n             \n \n               \n-            }\n+            }else\n         }\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n"
+                },
+                {
+                    "date": 1686728498049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,4 +40,5 @@\n     }\n }\n }\n }\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686728511573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,12 @@\n             $password2 = $_POST['password2'];\n             \n \n               \n-            }else\n-        }\n+            }else{\n+              \n+            }\n+        \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n@@ -37,6 +39,4 @@\n \n     }\n }\n }\n-}\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686728518176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,12 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-            \n-\n-              \n+               \n             }else{\n               \n+\n             }\n         \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n"
+                },
+                {
+                    "date": 1686728534340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,8 @@\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n                \n-            }else{\n-              \n-\n-            }\n         \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n"
+                },
+                {
+                    "date": 1686728663335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                // $user = $userRepository->addUser($username,$password,$email);\n+                 $user = $userRepository->addUser($username,$password,$email);\n                 header('Location:./../src/View/Posts/ConnectionForm.php');\n                       \n     }\n     else{\n"
+                },
+                {
+                    "date": 1686728693760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,8 @@\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n                \n-        \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n"
+                },
+                {
+                    "date": 1686728702728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-               \n+        }   \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n"
+                },
+                {
+                    "date": 1686728707825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-        }   \n+           \n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n@@ -32,5 +32,5 @@\n \n \n     }\n }\n-}\n+\n"
+                },
+                {
+                    "date": 1686728722461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,6 +31,8 @@\n         require('./../src/View/RegistrationForm.php'); \n \n \n     }\n-}\n+        }\n+    }\n+    \n \n"
+                },
+                {
+                    "date": 1686728801585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n                  $user = $userRepository->addUser($username,$password,$email);\n-                header('Location:./../src/View/Posts/ConnectionForm.php');\n+                header('Location:./../src/View/ConnectionForm.php');\n                       \n     }\n     else{\n \n@@ -33,6 +33,6 @@\n \n     }\n         }\n     }\n-    \n+}\n \n"
+                },
+                {
+                    "date": 1686728854633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n \n \n     public function Register(){\n \n+\n+        \n         $error= '';\n         if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n"
+                },
+                {
+                    "date": 1686728861736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     public function Register(){\n \n \n-        \n+\n         $error= '';\n         if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n@@ -26,8 +26,9 @@\n                  $user = $userRepository->addUser($username,$password,$email);\n                 header('Location:./../src/View/ConnectionForm.php');\n                       \n     }\n+    \n     else{\n \n         $error = 'erreur';\n         require('./../src/View/RegistrationForm.php'); \n"
+                },
+                {
+                    "date": 1686728996057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,38 +4,35 @@\n \n use Foot\\Entity\\User;\n use Foot\\Model\\UserRepository;\n \n-Class RegistrationController{\n+class RegistrationController\n+{\n \n \n-    public function Register(){\n+    public function Register()\n+    {\n \n-\n-\n-        $error= '';\n+        $error = '';\n         if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password2'])) {\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-           \n+\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                 $user = $userRepository->addUser($username,$password,$email);\n+                $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n-                      \n-    }\n-    \n-    else{\n \n-        $error = 'erreur';\n-        require('./../src/View/RegistrationForm.php'); \n+            } else {\n \n+                $error = 'erreur';\n+                require('./../src/View/RegistrationForm.php');\n \n-    }\n+\n+            }\n         }\n     }\n-}\n-\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686729074999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser($username, $password, $email);\n+                $user = $userRepository->addUser($sername, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n             } else {\n \n"
+                },
+                {
+                    "date": 1686729081285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser($sername, $password, $email);\n+                $user = $userRepository->addUser($Username, $assword, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n             } else {\n \n"
+                },
+                {
+                    "date": 1686729109873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser($Username, $assword, $email);\n+                $user = $userRepository->addUser($username, $assword, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n             } else {\n \n"
+                },
+                {
+                    "date": 1686729174611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,14 +17,13 @@\n             $username = $_POST['username'];\n             $email = $_POST['email'];\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n-\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n                 $userRepository = new UserRepository;\n-                $user = $userRepository->addUser($username, $assword, $email);\n+                $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n             } else {\n \n"
+                },
+                {
+                    "date": 1686729400126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n-                $userRepository = new UserRepository;\n+               \n                 $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n             } else {\n"
+                },
+                {
+                    "date": 1686729413137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $user = new User();\n-               \n+                $use = new User();\n+                $userRepository = new UserRepository;\n                 $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n             } else {\n"
+                },
+                {
+                    "date": 1686729426259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n             $password = $_POST['password'];\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n-                $use = new User();\n+                $user = new User();\n+                \n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n"
+                },
+                {
+                    "date": 1686729433073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n-                var_dump($us)\n+                var_dump($use)\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n"
+                }
+            ],
+            "date": 1686664542533,
+            "name": "Commit-0",
+            "content": "<?php\n\n"
+        }
+    ]
+}

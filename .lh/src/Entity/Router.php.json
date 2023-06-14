@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/Entity/Router.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1686645360136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686645381529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-<\n\\ No newline at end of file\n+<?php\n+namespace Foot\\Entity;\n+\n+\n+class Routert\n"
+                },
+                {
+                    "date": 1686645387268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n <?php\n namespace Foot\\Entity;\n \n \n-class Routert\n+class Router{\n+\n+\n+    \n+}\n"
+                }
+            ],
+            "date": 1686645360136,
+            "name": "Commit-0",
+            "content": "<"
+        }
+    ]
+}
