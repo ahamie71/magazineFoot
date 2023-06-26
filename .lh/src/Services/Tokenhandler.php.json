@@ -1,0 +1,202 @@
+{
+    "sourceFile": "src/Services/Tokenhandler.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 46,
+            "patches": [
+                {
+                    "date": 1687439065810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1687439090696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-<?p\n\\ No newline at end of file\n+<?php\n+\n+\n"
+                },
+                {
+                    "date": 1687439097574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n <?php\n \n \n+class \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439104485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,9 @@\n <?php\n \n \n-class \n\\ No newline at end of file\n+class Tokenhandler{\n+\n+\n+\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439109890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n \n class Tokenhandler{\n \n \n+    public\n \n-    \n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439116892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \n class Tokenhandler{\n \n \n-    public\n+    public function creat\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439126435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n \n class Tokenhandler{\n \n \n-    public function creat\n+    public function createToken\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439315687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,12 @@\n \n class Tokenhandler{\n \n \n-    public function createToken\n+    public function createToken(){\n \n \n+        \n+    }\n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439338886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,16 @@\n class Tokenhandler{\n \n \n     public function createToken(){\n+   \n+        if(!isset($_SESSION['token'])){\n+   \n+            $_SESSION['token'] = md5(time()*rand(175,658));\n+            \n+         \n+          }\n \n-\n         \n     }\n \n \n"
+                },
+                {
+                    "date": 1687439346546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,9 @@\n    \n         if(!isset($_SESSION['token'])){\n    \n             $_SESSION['token'] = md5(time()*rand(175,658));\n-            \n-         \n+  \n           }\n \n         \n     }\n"
+                },
+                {
+                    "date": 1687439352570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n     public function createToken(){\n    \n         if(!isset($_SESSION['token'])){\n-   \n+        \n             $_SESSION['token'] = md5(time()*rand(175,658));\n   \n           }\n \n"
+                },
+                {
+                    "date": 1687439394275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,8 @@\n           }\n \n         \n     }\n+   \n+    \n \n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439404275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \n         \n     }\n    \n-    \n+    public function \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439414340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \n         \n     }\n    \n-    public function \n+    public function verify\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439422128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \n         \n     }\n    \n-    public function verify\n+    public function verifyToken\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439535304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n \n         \n     }\n    \n-    public function verifyToken\n+    public function verifyToken()\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439545653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n \n class Tokenhandler{\n \n \n-    public function createToken(){\n+    public function createToken()\n+    {\n    \n         if(!isset($_SESSION['token'])){\n         \n             $_SESSION['token'] = md5(time()*rand(175,658));\n@@ -16,5 +17,10 @@\n     }\n    \n     public function verifyToken()\n \n+    {\n+\n+\n+    }\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439551486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n \n     public function createToken()\n     {\n-   \n+\n         if(!isset($_SESSION['token'])){\n         \n             $_SESSION['token'] = md5(time()*rand(175,658));\n   \n"
+                },
+                {
+                    "date": 1687439556872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,10 @@\n \n \n     public function createToken()\n     {\n-\n         if(!isset($_SESSION['token'])){\n-        \n             $_SESSION['token'] = md5(time()*rand(175,658));\n-  \n           }\n \n         \n     }\n"
+                },
+                {
+                    "date": 1687439564838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,16 @@\n     public function createToken()\n     {\n         if(!isset($_SESSION['token'])){\n             $_SESSION['token'] = md5(time()*rand(175,658));\n-          }\n-\n-        \n+          }   \n     }\n    \n     public function verifyToken()\n \n     {\n+      \n+        \n \n-\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439656683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,7 @@\n     public function verifyToken()\n \n     {\n       \n-        \n-\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439667362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,20 @@\n <?php\n \n \n-class Tokenhandler{\n+class Tokenhandler\n+{\n \n \n     public function createToken()\n     {\n-        if(!isset($_SESSION['token'])){\n-            $_SESSION['token'] = md5(time()*rand(175,658));\n-          }   \n+        if (!isset($_SESSION['token'])) {\n+            $_SESSION['token'] = md5(time() * rand(175, 658));\n+        }\n     }\n-   \n+\n     public function verifyToken()\n+    {\n \n-    {\n-      \n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439674760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n     }\n \n     public function verifyToken()\n     {\n-\n+      \n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439849627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n     }\n \n     public function verifyToken()\n     {\n-      \n+        if(isset($_GET['token']) && $_GET['token']!= $_SESSION['token']){\n+\n+            die (\"jeton de securité périmé\");\n+        }\n+        \n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687439859806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n \n+\n class Tokenhandler\n {\n \n \n"
+                },
+                {
+                    "date": 1687439868593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n+<\n \n \n-\n class Tokenhandler\n {\n \n \n"
+                },
+                {
+                    "date": 1687439876384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n-<\n \n \n+\n+\n class Tokenhandler\n {\n \n \n"
+                },
+                {
+                    "date": 1687443627327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,8 @@\n \n \n class Tokenhandler\n {\n-\n-\n     public function createToken()\n     {\n         if (!isset($_SESSION['token'])) {\n             $_SESSION['token'] = md5(time() * rand(175, 658));\n"
+                },
+                {
+                    "date": 1687444809452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n \n class Tokenhandler\n {\n-    public function createToken()\n+    public function GeeToken()\n     {\n         if (!isset($_SESSION['token'])) {\n             $_SESSION['token'] = md5(time() * rand(175, 658));\n         }\n"
+                },
+                {
+                    "date": 1687444816469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n \n class Tokenhandler\n {\n-    public function GeeToken()\n+    public function generateToken()\n     {\n         if (!isset($_SESSION['token'])) {\n             $_SESSION['token'] = md5(time() * rand(175, 658));\n         }\n"
+                },
+                {
+                    "date": 1687445010379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n+namespace Foot\\Entity;\n \n \n \n-\n class Tokenhandler\n {\n     public function generateToken()\n     {\n"
+                },
+                {
+                    "date": 1687445017363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-namespace Foot\\Entity;\n+namespace Foot\\services;\n \n \n \n class Tokenhandler\n"
+                },
+                {
+                    "date": 1687445174390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?php\n-namespace Foot\\services;\n+namespace Foot\\Services;\n \n \n \n class Tokenhandler\n"
+                },
+                {
+                    "date": 1687509931140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             $_SESSION['token'] = md5(time() * rand(175, 658));\n         }\n     }\n \n-    public function verifyToken()\n+    public function verifyToken($token)\n     {\n         if(isset($_GET['token']) && $_GET['token']!= $_SESSION['token']){\n \n             die (\"jeton de securité périmé\");\n"
+                },
+                {
+                    "date": 1687509946773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     }\n \n     public function verifyToken($token)\n     {\n-        if(isset($_GET['token']) && $_GET['token']!= $_SESSION['token']){\n+        if( && $_GET['token']!= $_SESSION['token']){\n \n             die (\"jeton de securité périmé\");\n         }\n         \n"
+                },
+                {
+                    "date": 1687509957805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     }\n \n     public function verifyToken($token)\n     {\n-        if( && $_GET['token']!= $_SESSION['token']){\n+        if( $toekn== $_GET['token']!= $_SESSION['token']){\n \n             die (\"jeton de securité périmé\");\n         }\n         \n"
+                },
+                {
+                    "date": 1687509964912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     }\n \n     public function verifyToken($token)\n     {\n-        if( $toekn== $_GET['token']!= $_SESSION['token']){\n+        if( $toekn === $_SESSION['token']){\n \n             die (\"jeton de securité périmé\");\n         }\n         \n"
+                },
+                {
+                    "date": 1687509970339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     }\n \n     public function verifyToken($token)\n     {\n-        if( $toekn === $_SESSION['token']){\n+        if( $token === $_SESSION['token']){\n \n             die (\"jeton de securité périmé\");\n         }\n         \n"
+                },
+                {
+                    "date": 1687509979476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function verifyToken($token)\n     {\n         if( $token === $_SESSION['token']){\n \n-            die (\"jeton de securité périmé\");\n+            \n         }\n         \n     }\n \n"
+                },
+                {
+                    "date": 1687509988010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public function verifyToken($token)\n     {\n         if( $token === $_SESSION['token']){\n \n-            \n+            return 'true';\n         }\n         \n     }\n \n"
+                },
+                {
+                    "date": 1687510004427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     public function verifyToken($token)\n     {\n         if( $token === $_SESSION['token']){\n \n-            return 'true';\n-        }\n+            return true;\n         \n+         } \n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687510011657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,8 @@\n \n             return true;\n         \n          } \n+         re\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687510019203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n \n             return true;\n         \n          } \n-         re\n+         return false;\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687510462151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n namespace Foot\\Services;\n \n \n \n+\n class Tokenhandler\n {\n     public function generateToken()\n     {\n"
+                },
+                {
+                    "date": 1687526225656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n <?php\n namespace Foot\\Services;\n \n \n-\n-\n class Tokenhandler\n {\n     public function generateToken()\n     {\n"
+                },
+                {
+                    "date": 1687526232389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,13 @@\n     }\n \n     public function verifyToken($token)\n     {\n-        if( $token === $_SESSION['token']){\n+        if ($token === $_SESSION['token']) {\n \n             return true;\n-        \n-         } \n-         return false;\n+\n+        }\n+        return false;\n     }\n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687526238521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <?php\n namespace Foot\\Services;\n \n-\n class Tokenhandler\n {\n     public function generateToken()\n     {\n"
+                }
+            ],
+            "date": 1687439065810,
+            "name": "Commit-0",
+            "content": "<?p"
+        }
+    ]
+}

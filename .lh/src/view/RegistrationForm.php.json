@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1686666947211,
@@ -36,6 +36,42 @@
                 {
                     "date": 1686731005493,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,11 @@\n <body>\n     \n \n     <div class=\"register-photo\">\n-        \n+\n         <div class=\"form-container\">\n+   \n             <div class=\"image-holder\"></div>\n             <form action=\"index.php?action=Register\" method=\"POST\">\n                 <h2 class=\"text-center\"><strong>Create</strong> an account.</h2>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"text\" required=\"required\" name=\"username\"\n"
+                },
+                {
+                    "date": 1686838013166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"form-group\">\n                     <input class=\"form-control\" type=\"password\" required=\"required\" name=\"password\" id=\"pass\"\n                         placeholder=\"Password\">\n                     <div class=\"image\">\n-                        <img src=\"./public/image/red.png\" style=\"width:30px\" id=\"eye\" onClick=\"changer()\" />\n+                        <img src=\".//image/red.png\" style=\"width:30px\" id=\"eye\" onClick=\"changer()\" />\n                     </div>\n                 </div>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"password\" required=\"required\" name=\"password2\"\n                         placeholder=\"Confirmer votre mot de passe\"></div>\n"
+                },
+                {
+                    "date": 1686838023082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"form-group\">\n                     <input class=\"form-control\" type=\"password\" required=\"required\" name=\"password\" id=\"pass\"\n                         placeholder=\"Password\">\n                     <div class=\"image\">\n-                        <img src=\".//image/red.png\" style=\"width:30px\" id=\"eye\" onClick=\"changer()\" />\n+                        <img src=\"./src/View/image/red.png\" style=\"width:30px\" id=\"eye\" onClick=\"changer()\" />\n                     </div>\n                 </div>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"password\" required=\"required\" name=\"password2\"\n                         placeholder=\"Confirmer votre mot de passe\"></div>\n"
+                },
+                {
+                    "date": 1686838032163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <div class=\"form-group\">\n                     <input class=\"form-control\" type=\"password\" required=\"required\" name=\"password\" id=\"pass\"\n                         placeholder=\"Password\">\n                     <div class=\"image\">\n-                        <img src=\"./src/View/image/red.png\" style=\"width:30px\" id=\"eye\" onClick=\"changer()\" />\n+                        <img src=\"./../src/View/image/red.png\" style=\"width:30px\" id=\"eye\" onClick=\"changer()\" />\n                     </div>\n                 </div>\n                 <div class=\"form-group\"><input class=\"form-control\" type=\"password\" required=\"required\" name=\"password2\"\n                         placeholder=\"Confirmer votre mot de passe\"></div>\n"
+                },
+                {
+                    "date": 1686838141035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <script type=\"text/javascript\" src=\"public/js/script.js\"></script>\n+    <script type=\"text/javascript\" src=\"/js/script.js\"></script>\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n \n <body>\n"
+                },
+                {
+                    "date": 1686838148866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <script type=\"text/javascript\" src=\"/js/script.js\"></script>\n+    <script type=\"text/javascript\" src=\"./../src/js/script.js\"></script>\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n \n <body>\n"
+                },
+                {
+                    "date": 1686838491225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <script type=\"text/javascript\" src=\"./../src/js/script.js\"></script>\n+    <script type=\"text/javascript\" src=\"./src/View/js/script.js\"></script>\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n \n <body>\n"
+                },
+                {
+                    "date": 1686838498196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n-    <script type=\"text/javascript\" src=\"./src/View/js/script.js\"></script>\n+    <script type=\"text/javascript\" src=\"./../src/View/js/script.js\"></script>\n     <link rel=\"stylesheet\" href=\"css/style.css\">\n </head>\n \n <body>\n"
+                },
+                {
+                    "date": 1686839876022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n     <script type=\"text/javascript\" src=\"./../src/View/js/script.js\"></script>\n-    <link rel=\"stylesheet\" href=\"css/style.css\">\n+   \n </head>\n \n <body>\n     \n"
+                },
+                {
+                    "date": 1686839890132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n     <title>Untitled</title>\n     <script type=\"text/javascript\" src=\"script.js\"></script>\n     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css\">\n     <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"./../src/View/css/style.css\">\n     <script type=\"text/javascript\" src=\"./../src/View/js/script.js\"></script>\n    \n </head>\n \n"
                 }
             ],
             "date": 1686666947211,

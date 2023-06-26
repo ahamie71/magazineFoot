@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/Controllers/PostController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1687524560194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1687525774906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n     $id = $_GET['id'];\n     $postRepo = new PostRepository();\n     $post = $postRepo->getPostById($_GET['id']);\n     if ($post->getUserId() === $_SESSION['user']->getId())\n-      $post = $postRepo->movePost($id);\n+      $post = $postRepo->RemovePost($id);\n     header('Location:index.php?action=Display');\n     exit();\n   }\n   \n"
+                },
+                {
+                    "date": 1687525782867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n       $post = $postRepo->RemovePost($id);\n     header('Location:index.php?action=Display');\n     exit();\n   }\n-  \n+\n   public function UpdatePost()\n   {\n     if (isset($_POST['content']) && isset($_POST['title'])) {\n       $content = $_POST['content'];\n"
+                },
+                {
+                    "date": 1687527654126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n session_start();\n if (!$_SESSION['user']) {\n   header('location:index.php?action=Login');\n }\n-class PostController\n+class PostController extend \n {\n   public function DisplayPosts()\n   {\n \n"
+                },
+                {
+                    "date": 1687527660312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n session_start();\n if (!$_SESSION['user']) {\n   header('location:index.php?action=Login');\n }\n-class PostController extend \n+class PostController extend AbstractController\n {\n   public function DisplayPosts()\n   {\n \n"
+                },
+                {
+                    "date": 1687527665992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n session_start();\n if (!$_SESSION['user']) {\n   header('location:index.php?action=Login');\n }\n-class PostController extend AbstractController\n+class PostController extens AbstractController\n {\n   public function DisplayPosts()\n   {\n \n"
+                },
+                {
+                    "date": 1687527676400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n session_start();\n if (!$_SESSION['user']) {\n   header('location:index.php?action=Login');\n }\n-class PostController extens AbstractController\n+class PostController extends AbstractController\n {\n   public function DisplayPosts()\n   {\n-\n+     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n"
+                },
+                {
+                    "date": 1687527686483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n class PostController extends AbstractController\n {\n   public function DisplayPosts()\n   {\n-     \n+    $this->render\n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n"
+                },
+                {
+                    "date": 1687527701764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n class PostController extends AbstractController\n {\n   public function DisplayPosts()\n   {\n-    $this->render\n+    $this->render();\n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n"
+                },
+                {
+                    "date": 1687527726962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n class PostController extends AbstractController\n {\n   public function DisplayPosts()\n   {\n-    $this->render();\n+    \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n"
+                },
+                {
+                    "date": 1687527742146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   {\n     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n-    require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+    $this->render(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n   }\n \n   public function DisplayOnePost()\n"
+                },
+                {
+                    "date": 1687527747331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   {\n     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n-    $this->render(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+    $this->render( . '/View/Posts/DisplayPosts.php');\n \n   }\n \n   public function DisplayOnePost()\n"
+                },
+                {
+                    "date": 1687527753680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   {\n     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n-    $this->render( . '/View/Posts/DisplayPosts.php');\n+    $this->render('/View/Posts/DisplayPosts.php');\n \n   }\n \n   public function DisplayOnePost()\n"
+                },
+                {
+                    "date": 1687527812173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   {\n     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n-    $this->render('/View/Posts/DisplayPosts.php');\n+    $this->render(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n   }\n \n   public function DisplayOnePost()\n"
+                },
+                {
+                    "date": 1687527849620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   {\n     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n-    $this->render(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+    $this->render\n \n   }\n \n   public function DisplayOnePost()\n"
+                },
+                {
+                    "date": 1687527891872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   {\n     \n     $postRepository = new PostRepository;\n     $posts = $postRepository->displayPosts();\n-    $this->render\n+    $this->render($posts);\n \n   }\n \n   public function DisplayOnePost()\n"
+                },
+                {
+                    "date": 1687528714598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       $commentRepo = new CommentRepository();\n       $comments = $commentRepo->getComments($_GET['id']);\n       $postRepository = new PostRepository;\n       $post = $postRepository->getPostById($id);\n-      require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n+      $\n     }\n   }\n \n   public function CreatePost()\n"
+                },
+                {
+                    "date": 1687528724326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       $commentRepo = new CommentRepository();\n       $comments = $commentRepo->getComments($_GET['id']);\n       $postRepository = new PostRepository;\n       $post = $postRepository->getPostById($id);\n-      $\n+      $this->render()\n     }\n   }\n \n   public function CreatePost()\n"
+                },
+                {
+                    "date": 1687528731936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       $commentRepo = new CommentRepository();\n       $comments = $commentRepo->getComments($_GET['id']);\n       $postRepository = new PostRepository;\n       $post = $postRepository->getPostById($id);\n-      $this->render('DisplayOnePO')\n+      $this->render('DisplayOnePOs')\n     }\n   }\n \n   public function CreatePost()\n"
+                },
+                {
+                    "date": 1687529155222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       $commentRepo = new CommentRepository();\n       $comments = $commentRepo->getComments($_GET['id']);\n       $postRepository = new PostRepository;\n       $post = $postRepository->getPostById($id);\n-      $this->render('DisplayOne')\n+      $this->render('DisplayOneP')\n     }\n   }\n \n   public function CreatePost()\n"
+                }
+            ],
+            "date": 1687524560194,
+            "name": "Commit-0",
+            "content": "<?php\nnamespace Foot\\Controllers;\n\n\nuse Foot\\Entity\\Post;\nuse Foot\\Model\\PostRepository;\nuse Foot\\Model\\CommentRepository;\n\nsession_start();\nif (!$_SESSION['user']) {\n  header('location:index.php?action=Login');\n}\nclass PostController\n{\n  public function DisplayPosts()\n  {\n\n    $postRepository = new PostRepository;\n    $posts = $postRepository->displayPosts();\n    require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n\n  }\n\n  public function DisplayOnePost()\n  {\n    if (isset($_GET['id']) && is_numeric($_GET['id'])) {\n      $id = $_GET['id'];\n      $commentRepo = new CommentRepository();\n      $comments = $commentRepo->getComments($_GET['id']);\n      $postRepository = new PostRepository;\n      $post = $postRepository->getPostById($id);\n      require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n    }\n  }\n\n  public function CreatePost()\n  {\n    $error = '';\n    if (!isset($_POST['content']) && !isset($_POST['title']) && !isset($_FILES['image'])) {\n      $error;\n    } else {\n      $imgPath = $this->uploadPicture($_FILES['image']);\n      $content = $_POST['content'];\n      $title = $_POST['title'];\n      $user_id = $_SESSION['user']->getId();\n      $createdAt = date('Y-m-d H:i:s');\n      $image = $imgPath;\n      $post = new Post();\n      $postRepository = new PostRepository;\n      $post = $postRepository->addPost($user_id, $title, $content, $image, $createdAt);\n      header('Location:index.php?action=Display');\n      exit();\n    }\n    require_once(dirname(__FILE__, 2) . '/View/Posts/AddPost.php');\n  }\n\n  function uploadPicture($image)\n  {\n    $target_dir = \"./../src/View/image\";\n    $target_file = $target_dir . basename($image[\"name\"]);\n    $uploadOk = 1;\n    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));\n    // Check if image file is a actual image or fake image\n    $check = getimagesize($image[\"tmp_name\"]);\n    if ($check !== false) {\n      $uploadOk = 1;\n    } else {\n      echo \"1\";\n      $uploadOk = 0;\n    }\n    // Check file size\n    if ($image[\"size\"] > 5000000) {\n      echo \"2\";\n      $uploadOk = 0;\n    }\n    // Allow certain file formats\n    if (\n      $imageFileType != \"jpg\" && $imageFileType != \"png\" && $imageFileType != \"jpeg\"\n    ) {\n      echo \"3\";\n      $uploadOk = 0;\n    }\n    // Check if $uploadOk is set to 0 by an error\n    if ($uploadOk == 0) {\n      echo \"Sorry, your file was not uploaded.\";\n      // if everything is ok, try to upload file\n    } else {\n      if (move_uploaded_file($image[\"tmp_name\"], $target_file)) {\n        return $target_file;\n      } else {\n        return false;\n      }\n    }\n  }\n\n  public function DeletePost()\n  {\n    $id = $_GET['id'];\n    $postRepo = new PostRepository();\n    $post = $postRepo->getPostById($_GET['id']);\n    if ($post->getUserId() === $_SESSION['user']->getId())\n      $post = $postRepo->movePost($id);\n    header('Location:index.php?action=Display');\n    exit();\n  }\n  \n  public function UpdatePost()\n  {\n    if (isset($_POST['content']) && isset($_POST['title'])) {\n      $content = $_POST['content'];\n      $title = $_POST['title'];\n      $id = $_GET['id'];\n      $postRepo = new PostRepository();\n      $post = $postRepo->getPostById($_GET['id']);\n      if ($post->getUserId() === $_SESSION['user']->getId()) {\n        $post = $postRepo->editPost($content, $id, $title);\n        header(\"location:index.php?action=Display\");\n      } else {\n        header('location:index.php?action=Logout');\n      }\n    }\n    $repo = new PostRepository();\n    $post = $repo->getPostById($_GET['id']);\n    require_once(dirname(__FILE__, 2) . '/View/Posts/EditForm.php');\n  }\n}"
+        }
+    ]
+}

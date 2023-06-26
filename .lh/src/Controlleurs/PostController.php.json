@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 34,
             "patches": [
                 {
                     "date": 1686647599453,
@@ -72,6 +72,78 @@
                 {
                     "date": 1686648375454,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controlleurs;\n \n class PostController{\n \n-   public function  DisplayPost(){ \n+   public function  DisplayPosts(){ \n \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n"
+                },
+                {
+                    "date": 1686732775156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n    public function  DisplayPosts(){ \n \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n+   \n \n-\n }\n }\n \n"
+                },
+                {
+                    "date": 1686734700125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n    public function  DisplayPosts(){ \n \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n+    \n    \n \n }\n }\n"
+                },
+                {
+                    "date": 1686734712637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,13 @@\n class PostController{\n \n    public function  DisplayPosts(){ \n \n+\n+    \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n-    \n+\n    \n \n }\n }\n"
+                },
+                {
+                    "date": 1686734718119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n    public function  DisplayPosts(){ \n \n \n-    \n+    $post= \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734723226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n    public function  DisplayPosts(){ \n \n \n-    $post= \n+    $post= New Post();\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734730595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n    public function  DisplayPosts(){ \n \n \n     $post= New Post();\n+    $\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734735709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n    public function  DisplayPosts(){ \n \n \n     $post= New Post();\n-    $\n+    $post= \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734742183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n    public function  DisplayPosts(){ \n \n \n     $post= New Post();\n-    $post= \n+    $post= new User\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734749639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n    public function  DisplayPosts(){ \n \n \n     $post= New Post();\n-    $post= new User\n+    $post= new Post\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734755705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n <?php\n \n namespace Foot\\Controlleurs;\n+use Foot\\Model\\PostRepository;\n \n class PostController{\n \n    public function  DisplayPosts(){ \n \n \n     $post= New Post();\n-    $post= new Post\n+    $post= new PostRepository();\n+    \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734765903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Controlleurs;\n+use Foot\\Entity\\Post;\n use Foot\\Model\\PostRepository;\n \n class PostController{\n \n"
+                },
+                {
+                    "date": 1686734772281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n \n \n     $post= New Post();\n     $post= new PostRepository();\n+    $post\n     \n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n"
+                },
+                {
+                    "date": 1686734796967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,11 @@\n \n    public function  DisplayPosts(){ \n \n \n-    $post= New Post();\n-    $post= new PostRepository();\n-    $post\n-    \n+    $userRepository = new UserRepository;\n+    $user = new User();\n+    $user = $userRepository->findUser($username);\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686734803344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n    public function  DisplayPosts(){ \n \n \n-    $userRepository = new UserRepository;\n+    $ = new UserRepository;\n     $user = new User();\n     $user = $userRepository->findUser($username);\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n"
+                },
+                {
+                    "date": 1686734808452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n    public function  DisplayPosts(){ \n \n \n-    $ = new UserRepository;\n+    $postRepository = new UserRepository;\n     $user = new User();\n     $user = $userRepository->findUser($username);\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n"
+                },
+                {
+                    "date": 1686734817421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \n    public function  DisplayPosts(){ \n \n \n-    $postRepository = new UserRepository;\n-    $user = new User();\n+    $postRepository = new PostRepository;\n+    $user = new Post();\n     $user = $userRepository->findUser($username);\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n"
+                },
+                {
+                    "date": 1686734824111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n \n     $postRepository = new PostRepository;\n     $user = new Post();\n-    $user = $postRepository->f($username);\n+    $user = $postRepository->($username);\n     require('./../src/View/Posts/DisplayPosts.php');\n      \n \n    \n"
+                },
+                {
+                    "date": 1686738718894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     public function DisplayPosts()\n     {\n         $postRepository = new PostRepository;\n         $posts = $postRepository->displayPosts();\n-         require('location:./../publicindex.php?action=Display');\n+         require('location:./../public/index.php?action=Display');\n           \n     }\n \n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1686647599453,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 20,
+            "activePatchIndex": 123,
             "patches": [
                 {
                     "date": 1686658526184,
@@ -88,6 +88,418 @@
                 {
                     "date": 1686664458581,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-    \n+       \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732496546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-       \n+      hello \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732765391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-      hello \n+      \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686734956382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,27 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <title>Document</title>\n </head>\n <body>\n-      \n+<!DOCTYPE html>\n+<html lang=\"fr\">\n+\n+<head>\n+    <meta charset=\"UTF-8\">\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n+    <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n+    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n+     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n+    <title>Mini | Blog</title>\n+</head>\n+\n+<body>\n+\n+<h1 class=\"posts-title\">Articles</h1>\n+<div class=\"container-fluid\">\n+                <div class=\"button-group\">\n+            <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n+                    \n+                </div>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686734986286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,6 +28,14 @@\n                 <div class=\"button-group\">\n             <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n                     \n                 </div>\n+                <section class=\"articles\">\n+<?php foreach($articles as $post):?>\n+    <div class =\"card-group\">\n+     <div class=\"article\">\n+      <div class=\"left\">\n+        <img src=\"<?php echo $post['image']?>\" alt=\"\">\n+      </div>\n+      <div class=\"right\">\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686734996696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n                     \n                 </div>\n                 <section class=\"articles\">\n-<?php foreach($articles as $post):?>\n+<?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n         <img src=\"<?php echo $post['image']?>\" alt=\"\">\n"
+                },
+                {
+                    "date": 1686735010025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post['image']?>\" alt=\"\">\n+        <img src=\"<?php echo $post->['image']?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686735015573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->['image']?>\" alt=\"\">\n+        <img src=\"<?php echo $post->get?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686735023078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->get?>\" alt=\"\">\n+        <img src=\"<?php echo $post->getImage()?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686735029640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->getImage()?>\" alt=\"\">\n+        <img src=\"<?php echo  $post->getImage()?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686735077424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post->getImage()?>\" alt=\"\">\n+        <img src=\"<?php echo $post->getImage()?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686735126524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,6 +36,7 @@\n       <div class=\"left\">\n         <img src=\"<?php echo $post->getImage()?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n+      <?php endforeach; ?>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686735404223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->getImage()?>\" alt=\"\">\n+        <img src=\"<?php $post->getImage()?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686735510493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php $post->getImage()?>\" alt=\"\">\n+        <img src=\"<?php echo  $post->getImage()?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686735517180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post->getImage()?>\" alt=\"\">\n+        <img src=\"<?php echo  $pos?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686735523408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $pos?>\" alt=\"\">\n+        <img src=\"<?php echo  $post['?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686735529754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post['?>\" alt=\"\">\n+        <img src=\"<?php echo  $post['image']?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686736524110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post['image']?>\" alt=\"\">\n+        <img src=\"<?php ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686736530399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php ?>\" alt=\"\">\n+        <img src=\"<? $post->?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686736535580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? $post->?>\" alt=\"\">\n+        <img src=\"<? $post->getImage(?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686736558964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,13 +29,13 @@\n             <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n                     \n                 </div>\n                 <section class=\"articles\">\n-<?php foreach($posts as $post):?>\n+<?php foreach($post as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? $post->getImage(?>\" alt=\"\">\n+        <img src=\"<? $post->getImage();?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744114392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,14 +29,7 @@\n             <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n                     \n                 </div>\n                 <section class=\"articles\">\n-<?php foreach($post as $post):?>\n-    <div class =\"card-group\">\n-     <div class=\"article\">\n-      <div class=\"left\">\n-        <img src=\"<? $post->getImage();?>\" alt=\"\">\n-      </div>\n-      <div class=\"right\">\n-      <?php endforeach; ?>\n+hhh\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686744120935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,14 @@\n             <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n                     \n                 </div>\n                 <section class=\"articles\">\n-hhh\n+<?php foreach($posts as $post):?>\n+    <div class =\"card-group\">\n+     <div class=\"article\">\n+      <div class=\"left\">\n+        <img src=\"<? $post->getImage();?>\" alt=\"\">\n+      </div>\n+      <div class=\"right\">\n+      <?php endforeach; ?>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686744222524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? $post->getImage();?>\" alt=\"\">\n+        <img src=\"<? $post->);?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744230386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? $post->);?>\" alt=\"\">\n+        <img src=\"<? echo $pos);?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744236233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? echo $pos);?>\" alt=\"\">\n+        <img src=\"<? echo $posts['image']);?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744242217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? echo $posts['image']);?>\" alt=\"\">\n+        <img src=\"<? echo $post['image'];?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744250519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? echo $post['image'];?>\" alt=\"\">\n+        <img src=\"<? echo $post['t'];?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744349865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? echo $post['t'];?>\" alt=\"\">\n+        <img src=\"<?php echo $post['title'];?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744396012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post['title'];?>\" alt=\"\">\n+        <img src=\"<?php echo $post->;?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744476198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n-    <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n+\n     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n      <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n     <title>Mini | Blog</title>\n </head>\n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->;?>\" alt=\"\">\n+        <img src=\"<?php echo $post->getTitle();?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686744498426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n-            <a href=\"index.php?action=createArticle\" class=\"btn btn-primary\">Ajouter un article</a>\n+            <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n                     \n                 </div>\n                 <section class=\"articles\">\n <?php foreach($posts as $post):?>\n"
+                },
+                {
+                    "date": 1686745104061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->getTitle();?>\" alt=\"\">\n+        <img src=\"<?php  $post->getTitle();?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745110275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php  $post->getTitle();?>\" alt=\"\">\n+        <img src=\"<?php $ $post->getTitle();?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745116402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php $ $post->getTitle();?>\" alt=\"\">\n+        <img src=\"<?php $post=  $post->getTitle();?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745123709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,10 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php $post=  $post->getTitle();?>\" alt=\"\">\n+        <img src=\"<?php $post=  $post->getTitle();\n+        ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745129666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n         <img src=\"<?php $post=  $post->getTitle();\n-        ?>\" alt=\"\">\n+        echo $?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745168381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,10 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php $post=  $post->getTitle();\n-        echo $?>\" alt=\"\">\n+        <img src=\"<?php $post=  $post->getTite();\n+        echo $post?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745176662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php $post=  $post->getTite();\n+        <img src=\"<?php $post= $post->getImage();\n         echo $post?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1686745182359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php $post= $post->getImage();\n+        <img src=\"<?php echo  $post->getImage();\n         echo $post?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1686745189440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post->getImage();\n+        <img src=\"<?php echo  $post['image'();\n         echo $post?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n"
+                },
+                {
+                    "date": 1686745196493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,10 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post['image'();\n-        echo $post?>\" alt=\"\">\n+        <img src=\"<?php echo  $post['image']();\n+       \" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745202893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post['image']();\n-       \" alt=\"\">\n+        <img src=\"<?php echo  $post['image'](); ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745234344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo  $post['image'](); ?>\" alt=\"\">\n+        <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745328086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n+        <img src=\"<?php echo $post; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745335220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post; ?>\" alt=\"\">\n+        <img src=\"<?php echo $post->getImage(); ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745345259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<?php echo $post->getImage(); ?>\" alt=\"\">\n+        <img src=\"<? $post->getImage(); ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745353093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<? $post->getImage(); ?>\" alt=\"\">\n+        <img src=\"<$post->getImage(); ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745367025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n <?php foreach($posts as $post):?>\n     <div class =\"card-group\">\n      <div class=\"article\">\n       <div class=\"left\">\n-        <img src=\"<$post->getImage(); ?>\" alt=\"\">\n+        <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <?php endforeach; ?>\n </body>\n"
+                },
+                {
+                    "date": 1686745380419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n-\n+     \n     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n      <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n     <title>Mini | Blog</title>\n </head>\n"
+                },
+                {
+                    "date": 1686745399034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n-     \n+    <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n      <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n     <title>Mini | Blog</title>\n </head>\n"
+                },
+                {
+                    "date": 1686745414663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n-    <link rel=\"stylesheet\" href=\"./public/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"./View/css/style.css\">\n     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n      <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n     <title>Mini | Blog</title>\n </head>\n"
+                },
+                {
+                    "date": 1686745429476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n <head>\n     <meta charset=\"UTF-8\">\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n     <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n-    <link rel=\"stylesheet\" href=\"./View/css/style.css\">\n+    <link rel=\"stylesheet\" href=\"./../View/css/style.css\">\n     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n      <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\"></script>\n     <title>Mini | Blog</title>\n </head>\n"
+                },
+                {
+                    "date": 1686745473146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,7 @@\n       <div class=\"left\">\n         <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n-      <?php endforeach; ?>\n+      \n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686745488687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,77 @@\n       <div class=\"left\">\n         <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n+      <h1><?= $post['title']?>.....</h1>\n+        <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n+        <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n+        <a href=\"index.php?action=displayonepost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n+\n+        <?php\n+          if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n+            echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n+            echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n+          }\n+          ?>\n+        \n+\n+       \n+       \n+      </div>\n       \n+\n+    </div> \n+    </div>\n+<?php endforeach; ?>\n+\n+\n+\n+\n+\n+\n+\n+\n+\n+\n+\n+\n+                   \n+                \n+                        <style>\n+\n+.articles{\n+  margin-top: 30px;\n+}\n+.articles .article{\n+  display: flex;\n+  flex-wrap:wrap;\n+  margin-bottom: 30px;\n+}\n+.articles .article .left img{\n+  height: 300px;\n+  width: 500px;\n+}\n+.articles .article .right {\n+  margin-left: 40px;\n+  max-width: 50%;\n+}\n+.articles .article .right p.date{\n+  color: #7f7e7e;\n+}\n+.articles .article .right p.description{\n+  color: #2d2d2d;\n+}\n+\n+body{\n+  margin:0px;\n+  font-family: 'Noto Sans JP', sans-serif;\n+  background-color: whitesmoke;;\n+}\n+\n+</style>            \n+               \n+               \n+\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686745502279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       <h1><?= $post['title']?>.....</h1>\n         <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n-        <a href=\"index.php?action=displayonepost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n+        <a href=\"=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n           if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n             echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n"
+                },
+                {
+                    "date": 1686745511654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       <h1><?= $post['title']?>.....</h1>\n         <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n-        <a href=\"=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n+        <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n           if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n             echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n"
+                },
+                {
+                    "date": 1686745542828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,12 +43,12 @@\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n-          if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n-            echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n-            echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n-          }\n+        //   if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n+        //     echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n+        //     echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n+        //   }\n           ?>\n         \n \n        \n"
+                },
+                {
+                    "date": 1686745560927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n         <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n-        <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n+        \n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>\n \n"
+                },
+                {
+                    "date": 1686747265483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       <h1><?= $post['title']?>.....</h1>\n         \n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n-        <a href=\"\" class=\"btn btn-primary\">Lire la suite</a>\n+        <a href=\"x\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n         //   if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n         //     echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n"
+                },
+                {
+                    "date": 1686747271445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,18 +37,18 @@\n         <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n-        \n+        <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n-        <a href=\"x\" class=\"btn btn-primary\">Lire la suite</a>\n+        <a href=\"index.php?action=displayonepost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n-        //   if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n-        //     echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n-        //     echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n-        //   }\n+          if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n+            echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n+            echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n+          }\n           ?>\n         \n \n        \n"
+                },
+                {
+                    "date": 1686747294203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       <h1><?= $post['title']?>.....</h1>\n         <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n-        <a href=\"index.php?action=displayonepost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n+        <a href=\"index.php?action=displaypost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n           if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n             echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n"
+                },
+                {
+                    "date": 1686747308323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       <h1><?= $post['title']?>.....</h1>\n         <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n-        <a href=\"index.php?action=displaypost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n+        <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n         <?php\n           if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n             echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n"
+                },
+                {
+                    "date": 1686747317846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n         <img src=\"<?php echo $post['image']; ?>\" alt=\"\">\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n-        <p class=\"description\">Cette article a été ecrit dans la  categorie <strong><?php echo $post['name']?></strong></p>\n+        \n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n"
+                },
+                {
+                    "date": 1686747508394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,14 +42,14 @@\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n-        <?php\n+        <!-- <?php\n           if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n             echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n             echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n           }\n-          ?>\n+          ?> -->\n         \n \n        \n        \n"
+                },
+                {
+                    "date": 1686747513980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,14 +42,14 @@\n         <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n-        <!-- <?php\n+         <?php\n           if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n             echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n             echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n           }\n-          ?> -->\n+          ?> \n         \n \n        \n        \n"
+                },
+                {
+                    "date": 1686747638377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,17 +38,17 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post->get?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n-          if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n-            echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n-            echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n-          }\n+        //   if (isset($_SESSION['user']['id']) && ($_SESSION['user']['id']) == $post['user_id']) {\n+        //     echo '<a href=\"index.php?action=Delete&id=' . $post['id'] . '\"class=\"btn btn-danger\">Delete</a>';\n+        //     echo '<a href=\"index.php?action=Edit&id=' . $post['id'] . '\"class=\"btn btn-success\">Edit</a>';\n+        //   }\n           ?> \n         \n \n        \n"
+                },
+                {
+                    "date": 1686747644078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post->get?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post->getUsername()?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686747656316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post->getUsername()?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748290135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748298257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post->getUsername?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748304090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post->getUsername?> </p>\n+        <p class=\"auteur\"> Auteur:< $post->getUsername()?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748317699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:< $post->getUsername()?> </p>\n+        <p class=\"auteur\"> Auteur:<? echo $post->getUsername()?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748325818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<? echo $post->getUsername()?> </p>\n+        <p class=\"auteur\"> Auteur:<?php  echo $post->getUsername()?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748351720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php  echo $post->getUsername()?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post->getUsername()?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748545522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n </head>\n \n <body>\n \n+\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n@@ -38,9 +39,9 @@\n       </div>\n       <div class=\"right\">\n       <h1><?= $post['title']?>.....</h1>\n         \n-        <p class=\"auteur\"> Auteur:<?php echo $post->getUsername()?> </p>\n+        <p class=\"auteur\"> Auteur:<?php echo $post['username']?> </p>\n         <p class=\"date\"><?php echo date( 'd F,Y',strtotime($post['created_at']));?></p>\n         <a href=\"index.php?action=DisplayOnePost&id=<?php echo $post['id']?>\" class=\"btn btn-primary\">Lire la suite</a>\n \n          <?php\n"
+                },
+                {
+                    "date": 1686748551072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-\n+<r\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748560222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<r\n+<?p\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748565960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?p\n+<?php require \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748571822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?php require \n+<?php require 'navbar.php';?>\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748581761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?php require 'navbar.php';?>\n+<?php require './../navbar.php';?>\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748590498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?php require './../navbar.php';?>\n+<?php require 'view/navbar.php';?>\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748600727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?php require 'view/navbar.php';?>\n+<?php require './../View/navbar.php';?>\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748615072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?php require './../View/navbar.php';?>\n+\n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748630435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,12 @@\n </head>\n \n <body>\n \n-\n+<?php\n+    require('Navbar.php');\n+    ?>\n+  \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n             <a href=\"\" class=\"btn btn-primary\">Ajouter un article</a>\n"
+                },
+                {
+                    "date": 1686748641337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    require('Navbar.php');\n+    require('View/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748651728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    require('View/Navbar.php');\n+    require('./View/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748687801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    require('./View/Navbar.php');\n+    require_once('./View/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748699032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n \n <body>\n \n <?php\n-    require_once('./View/Navbar.php');\n+    require_once('./\n+    /Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748709135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,9 @@\n \n <body>\n \n <?php\n-    require_once('./\n-    /Navbar.php');\n+    require_once('./Posts/ViewNavbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748722931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    require_once('./Posts/ViewNavbar.php');\n+    ('./../Posts/View/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748756121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    ('./../Posts/View/Navbar.php');\n+    requirePosts/View/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748762951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    requirePosts/View/Navbar.php');\n+    require'./.Posts/View/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748768733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    require'./.Posts/View/Navbar.php');\n+    require'Posts/View/Navbar.php';\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748836889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-    require'Posts/View/Navbar.php';\n+     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748843218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+     require_once(dirname(__FILE__, 2) . '/View/Posts/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748853521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n <?php\n-     require_once(dirname(__FILE__, 2) . '/View/Posts/Navbar.php');\n+     require_once(dirname(__FILE__, 2) . '/Posts/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748874768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n </head>\n \n <body>\n \n-<?php\n+     <?php\n      require_once(dirname(__FILE__, 2) . '/Posts/Navbar.php');\n     ?>\n   \n <h1 class=\"posts-title\">Articles</h1>\n"
+                },
+                {
+                    "date": 1686748880817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,9 @@\n </head>\n \n <body>\n \n-     <?php\n-     require_once(dirname(__FILE__, 2) . '/Posts/Navbar.php');\n-    ?>\n+    \n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n                 <div class=\"button-group\">\n"
+                },
+                {
+                    "date": 1686748893770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n </head>\n \n <body>\n \n+\n     \n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748925485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,11 @@\n </head>\n \n <body>\n \n-\n+<?php\n+    require('Navbar.php');\n+    ?> \n     \n   \n <h1 class=\"posts-title\">Articles</h1>\n <div class=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1686748945642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n </head>\n \n <body>\n \n-<?php\n-    require('Navbar.php');\n+   <?php\n+    require('PoNavbar.php');\n     ?> \n     \n   \n <h1 class=\"posts-title\">Articles</h1>\n"
+                },
+                {
+                    "date": 1686748966181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n    <?php\n-    require('./.Posts/Navbar.php');\n+    require('./..Posts/Navbar.php');\n     ?> \n     \n   \n <h1 class=\"posts-title\">Articles</h1>\n"
+                },
+                {
+                    "date": 1686749946618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n <body>\n \n    <?php\n-     include('/ViNavbar.php');\n+     include('/VNavbar.php');\n     ?> \n     \n   \n <h1 class=\"posts-title\">Articles</h1>\n"
                 }
             ],
             "date": 1686658526184,

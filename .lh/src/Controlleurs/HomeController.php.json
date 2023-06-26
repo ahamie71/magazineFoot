@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 31,
+            "activePatchIndex": 35,
             "patches": [
                 {
                     "date": 1686643299310,
@@ -132,6 +132,22 @@
                 {
                     "date": 1686647290482,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n \n      public function Home()\n      {\n           require('./../src/View/HomePage.php');\n+\n           \n-          require('./../src/View/Navbar.php');\n      }\n \n \n     \n"
+                },
+                {
+                    "date": 1687523155868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n namespace Foot\\Controlleurs;\n \n Class HomeController\n {\n-\n      public function Home()\n      {\n           require('./../src/View/HomePage.php');\n \n"
+                },
+                {
+                    "date": 1687523163055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,7 @@\n Class HomeController\n {\n      public function Home()\n      {\n-          require('./../src/View/HomePage.php');\n-\n-          \n+          require('./../src/View/HomePage.php');   \n      }\n-\n-\n-    \n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687523168674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Foot\\Controlleurs;\n \n+\n Class HomeController\n {\n      public function Home()\n      {\n"
+                },
+                {
+                    "date": 1687523174263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n \n namespace Foot\\Controlleurs;\n \n \n-Class HomeController\n+class HomeController\n {\n      public function Home()\n      {\n-          require('./../src/View/HomePage.php');   \n+          require('./../src/View/HomePage.php');\n      }\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1686643299310,

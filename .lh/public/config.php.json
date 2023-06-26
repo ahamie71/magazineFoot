@@ -1,0 +1,30 @@
+{
+    "sourceFile": "public/config.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1687437868752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1687437875504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,7 @@\n <?php\n \n+if(!isset($_SESSION['token'])){\n+   \n+   $_SESSION['token'] = md5(time()*rand(175,658));\n+ \n+ }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687437897718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n \n-session_\n+session_s\n if(!isset($_SESSION['token'])){\n    \n    $_SESSION['token'] = md5(time()*rand(175,658));\n    \n"
+                },
+                {
+                    "date": 1687437972262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n session_start();\n \n if(isset($_GET['token']) && $_GET['token']!= $_SESSION['token']){\n \n-    \n+    die\n }\n \n if(!isset($_SESSION['token'])){\n    \n"
+                }
+            ],
+            "date": 1687437868752,
+            "name": "Commit-0",
+            "content": "<?php\n\n"
+        }
+    ]
+}

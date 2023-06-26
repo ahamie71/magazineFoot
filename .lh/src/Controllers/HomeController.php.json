@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/Controllers/HomeController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1687524548569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1687524548569,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Foot\\Controlleu;\n\n\nclass HomeController\n{\n     public function Home()\n     {\n          require('./../src/View/HomePage.php');\n     }\n}"
+        }
+    ]
+}

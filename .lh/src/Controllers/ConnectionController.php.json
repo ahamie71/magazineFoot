@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/Controllers/ConnectionController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1687524544950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1687524544949,
+            "name": "Commit-0",
+            "content": "<?Php\n\nnamespace Foot\\Controllers;\n\n\nuse Foot\\Services\\Tokenhandler;\nuse Foot\\Entity\\User;\nuse Foot\\Model\\UserRepository;\n\nsession_start();\nclass ConnectionController\n{\n    public function Connect()\n    {\n        $error = '';\n        // on verifie si il a bien rentrer les informations et a bien rempli les informations\n        if (isset($_POST['username']) && $_POST['password']) {\n            $username = $_POST['username'];\n            $password = $_POST['password'];\n            $userRepository = new UserRepository;\n            $user = new User();\n            $user = $userRepository->findUser($username);\n            if (!$user || !password_verify($password, $user->getPassword())) {\n                $error = 'erreur';\n                require('./../src/View/ConnectionForm.php');\n            } else {\n                $_SESSION['user'] = $user;\n                $tokenHandler = new Tokenhandler();\n                $tokenHandler->generateToken();\n                header('Location:index.php?action=Display');\n                exit();\n            }\n        } else {\n            require('./../src/View/ConnectionForm.php');\n        }\n\n    }\n\n    public function Logout()\n    {\n        session_destroy();\n        header('location:index.php?action=Home');\n        exit();\n    }\n}"
+        }
+    ]
+}

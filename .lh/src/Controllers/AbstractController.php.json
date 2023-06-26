@@ -1,0 +1,222 @@
+{
+    "sourceFile": "src/Controllers/AbstractController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 51,
+            "patches": [
+                {
+                    "date": 1687527550985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1687527557330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n <?php\n \n+nam\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527563598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n \n-nam\n\\ No newline at end of file\n+namespace Foot\\\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527571763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n <?php\n \n-namespace Foot\\\n\\ No newline at end of file\n+namespace Foot\\Controllers;\n+\n+class Abs\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527578372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n <?php\n \n namespace Foot\\Controllers;\n \n-class Abs\n\\ No newline at end of file\n+class AbstractController\n+{\n+\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527587277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,6 @@\n namespace Foot\\Controllers;\n \n class AbstractController\n {\n-\n-    \n+    Abs\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527596405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n namespace Foot\\Controllers;\n \n-class AbstractController\n+ Abstract class AbstractController\n {\n-    Abs\n+    \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527602717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n namespace Foot\\Controllers;\n \n  Abstract class AbstractController\n {\n-    \n+   public f \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527610962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n namespace Foot\\Controllers;\n \n  Abstract class AbstractController\n {\n-   public f \n+   public function render \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527617305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,10 @@\n namespace Foot\\Controllers;\n \n  Abstract class AbstractController\n {\n-   public function render \n+   public function render()\n+   {\n+\n+    \n+   } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527624178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,7 @@\n  Abstract class AbstractController\n {\n    public function render()\n    {\n-\n-    \n+      die() \n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527631630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n  Abstract class AbstractController\n {\n    public function render()\n    {\n-      die() \n+      die('coucou') ;\n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527766748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n  Abstract class AbstractController\n {\n    public function render()\n    {\n-      die('coucou') ;\n+      \n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527787503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n  Abstract class AbstractController\n {\n    public function render()\n    {\n-      \n+      require\n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527795458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n  Abstract class AbstractController\n {\n    public function render()\n    {\n-      require\n+      \n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527833616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n  Abstract class AbstractController\n {\n    public function render()\n    {\n-      \n+    require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527906034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n  Abstract class AbstractController\n {\n-   public function render()\n+   public function render($posts)\n    {\n     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687527911152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n {\n    public function render($posts)\n    {\n     require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+    \n    } \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687528007974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n <?php\n \n namespace Foot\\Controllers;\n \n- Abstract class AbstractController\n+abstract class AbstractController\n {\n-   public function render($posts)\n-   {\n-    require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n-    \n-   } \n+    public function render($posts)\n+    {\n+\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+\n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687528066767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-\n+         \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687528688642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-         \n+        \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n-\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php')\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687528701064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php')\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687528767897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts)\n+    public function render($posts, $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n     }\n"
+                },
+                {
+                    "date": 1687528799890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts, $post)\n+    public function render($posts,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n     }\n"
+                },
+                {
+                    "date": 1687528895344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts,$post)\n+    public function render($posts)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n+        \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529098425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php');\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529103777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529111934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529120283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts)\n+    public function render($posts, $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529195310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts, $post)\n+    public function render($posts $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529202975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts $post)\n+    public function render($posts  $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529215702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts  $post)\n+    public function render($posts , $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529222120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts , $post)\n+    public function render($posts $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529227844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts $post)\n+    public function render($postspost)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529237374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($postspost)\n+    public function render($posts ,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529320731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,8 @@\n {\n     public function render($posts ,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$post);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePosts.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529340902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts ,$post)\n+    public function render($posts,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePosts.php'.$post);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529349848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n {\n     public function render($posts,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n+        \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529355496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,12 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts,$post)\n+    public function render($posts$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n-        \n+\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529363871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts$post)\n+    public function render($posts $post,)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n"
+                },
+                {
+                    "date": 1687529399110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts $post,)\n+    public function render($posts,$post,)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n"
+                },
+                {
+                    "date": 1687529408531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,13 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts,$post,)\n+    public function render($posts,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n \n+        extract($post);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529417155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     public function render($posts,$post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n \n-        extract($post);\n+        \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529436186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,11 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts,$post)\n+    public function render($posts, $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n-\n-        \n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529553850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts, $post)\n+    public function render($posts)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529610189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts)\n+    public function render($posts, $post)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529661138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts, $post)\n+    public function render($posts ,)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529701198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts ,)\n+    public function render($posts)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n"
+                },
+                {
+                    "date": 1687529719830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'.$posts);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'. $posts);\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529989530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'. $posts);\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'.$post);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'. $posts =[]);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'. $post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687529998509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n abstract class AbstractController\n {\n     public function render($posts)\n     {\n-        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'. $posts =);\n+        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'. $posts );\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'. $post);\n         \n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687530004417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace Foot\\Controllers;\n \n abstract class AbstractController\n {\n-    public function render($posts , $pozt)\n+    public function render($posts , $poz)\n     {\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayPosts.php'. $posts );\n         require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'. $post);\n         \n"
+                }
+            ],
+            "date": 1687527550985,
+            "name": "Commit-0",
+            "content": "<?php\n\n"
+        }
+    ]
+}

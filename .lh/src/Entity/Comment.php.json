@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 25,
             "patches": [
                 {
                     "date": 1683795752192,
@@ -16,6 +16,98 @@
                 {
                     "date": 1683795815018,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n+\n class Comment{\n \n     private $id;\n \n"
+                },
+                {
+                    "date": 1687351957577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n     private $id;\n \n     private $text;\n \n+    \n \n+\n     public function getId(): int  {\n         \n         return $this->id;\n \n"
+                },
+                {
+                    "date": 1687353628268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     private $id;\n \n     private $text;\n \n-    \n+    pr\n \n \n     public function getId(): int  {\n         \n"
+                },
+                {
+                    "date": 1687353633662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     private $id;\n \n     private $text;\n \n-    pr\n+    private int user\n \n \n     public function getId(): int  {\n         \n"
+                },
+                {
+                    "date": 1687353641381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     private $id;\n \n     private $text;\n \n-    private int user\n+    private int $user_id;\n \n \n     public function getId(): int  {\n         \n"
+                },
+                {
+                    "date": 1687355201003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n \n     private int $user_id;\n \n \n+    \n+\n     public function getId(): int  {\n         \n         return $this->id;\n \n"
+                },
+                {
+                    "date": 1687355251386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,23 @@\n         $this->text = $text;\n \n         return $this;\n     }\n+\n+    /**\n+     * Get the value of user_id\n+     */\n+    public function getUserId(): int\n+    {\n+        return $this->user_id;\n+    }\n+\n+    /**\n+     * Set the value of user_id\n+     */\n+    public function setUserId(int $user_id): self\n+    {\n+        $this->user_id = $user_id;\n+\n+        return $this;\n+    }\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687355349273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,24 @@\n         $this->user_id = $user_id;\n \n         return $this;\n     }\n+\n+\n+     /**\n+     * Get the value of userName\n+     */\n+    public function getUsername(): string\n+    {\n+        return $this->username;\n+    }\n+\n+    /**\n+     * Set the value of userName\n+     */\n+    public function setUsername(string $username): self\n+    {\n+        $this->username = $username;\n+\n+        return $this;\n+    }\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687357553485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n \n     private int $user_id;\n \n \n+    private\n+\n+\n     \n \n     public function getId(): int  {\n         \n"
+                },
+                {
+                    "date": 1687357560409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,11 @@\n \n     private $text;\n \n     private int $user_id;\n+    private int \n \n \n-    private\n-\n-\n     \n \n     public function getId(): int  {\n         \n"
+                },
+                {
+                    "date": 1687357565551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n     private $text;\n \n     private int $user_id;\n-    private int \n+    private int $id_post\n \n \n     \n \n"
+                },
+                {
+                    "date": 1687357571777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n     private $text;\n \n     private int $user_id;\n-    private int $id_post\n+    private int $id_post;\n \n \n     \n \n@@ -68,5 +68,23 @@\n         $this->username = $username;\n \n         return $this;\n     }\n+\n+    /**\n+     * Get the value of id_post\n+     */\n+    public function getIdPost(): int\n+    {\n+        return $this->id_post;\n+    }\n+\n+    /**\n+     * Set the value of id_post\n+     */\n+    public function setIdPost(int $id_post): self\n+    {\n+        $this->id_post = $id_post;\n+\n+        return $this;\n+    }\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687358308557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n      * Get the value of id_post\n      */\n     public function getIdPost(): int\n     {\n-        return $this->id_post;\n+        return $this->idpost;\n     }\n \n     /**\n      * Set the value of id_post\n"
+                },
+                {
+                    "date": 1687358315773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,11 +72,11 @@\n \n     /**\n      * Get the value of id_post\n      */\n-    public function getIdPost(): int\n+    public function getidPost(): int\n     {\n-        return $this->idpost;\n+        return $this->id_post;\n     }\n \n     /**\n      * Set the value of id_post\n"
+                },
+                {
+                    "date": 1687358322547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n \n     /**\n      * Get the value of id_post\n      */\n-    public function getidPost(): int\n+    public function getidpost(): int\n     {\n         return $this->id_post;\n     }\n \n"
+                },
+                {
+                    "date": 1687358363351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n \n     /**\n      * Get the value of id_post\n      */\n-    public function getidpost(): int\n+    public function getid_post(): int\n     {\n         return $this->id_post;\n     }\n \n"
+                },
+                {
+                    "date": 1687358374746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n \n     /**\n      * Get the value of id_post\n      */\n-    public function getid_post(): int\n+    public function getIdPost(): int\n     {\n         return $this->id_post;\n     }\n \n"
+                },
+                {
+                    "date": 1687358379960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n \n class Comment{\n \n     private $id;\n-\n     private $text;\n \n     private int $user_id;\n     private int $id_post;\n"
+                },
+                {
+                    "date": 1687358403559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n <?php\n \n namespace Foot\\Entity;\n \n+use Foot\\Entity\\User;\n class Comment{\n \n     private $id;\n     private $text;\n-\n     private int $user_id;\n     private int $id_post;\n \n \n"
+                },
+                {
+                    "date": 1687422932163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n class Comment{\n \n     private $id;\n     private $text;\n-    private int $user_id;\n+    private int $id_id;\n     private int $id_post;\n \n \n     \n"
+                },
+                {
+                    "date": 1687422943083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n class Comment{\n \n     private $id;\n     private $text;\n-    private int $id_id;\n+    private int $id_user;\n     private int $id_post;\n \n \n     \n@@ -36,9 +36,9 @@\n      * Get the value of user_id\n      */\n     public function getUserId(): int\n     {\n-        return $this->user_id;\n+        return $this->id_id;\n     }\n \n     /**\n      * Set the value of user_id\n"
+                },
+                {
+                    "date": 1687422951737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,15 +36,15 @@\n      * Get the value of user_id\n      */\n     public function getUserId(): int\n     {\n-        return $this->id_id;\n+        return $this->id_user;\n     }\n \n     /**\n      * Set the value of user_id\n      */\n-    public function setUserId(int $user_id): self\n+    public function setUserId(int $id_user): self\n     {\n         $this->user_id = $user_id;\n \n         return $this;\n"
+                },
+                {
+                    "date": 1687524577567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n      * Set the value of user_id\n      */\n     public function setUserId(int $id_user): self\n     {\n-        $this->user_id = $user_id;\n+        $this->id_user = $id_user;\n \n         return $this;\n     }\n \n@@ -82,8 +82,7 @@\n      */\n     public function setIdPost(int $id_post): self\n     {\n         $this->id_post = $id_post;\n-\n         return $this;\n     }\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687524585065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,8 @@\n      */\n     public function setIdPost(int $id_post): self\n     {\n         $this->id_post = $id_post;\n+        \n         return $this;\n     }\n } \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1683795752192,

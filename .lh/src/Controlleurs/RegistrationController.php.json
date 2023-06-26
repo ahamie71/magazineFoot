@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 109,
+            "activePatchIndex": 110,
             "patches": [
                 {
                     "date": 1686664542533,
@@ -444,6 +444,10 @@
                 {
                     "date": 1686729433073,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             $password2 = $_POST['password2'];\n             if ($password === $password2 && strlen($password) >= 6 && preg_match(\"/[a-z][0-9]/\", $password)) {\n                 $pass = password_hash($_POST['password'], PASSWORD_ARGON2ID);\n                 $user = new User();\n-                var_dump($us)\n+                var_dump($use)\n                 $userRepository = new UserRepository;\n                 $user = $userRepository->addUser($username, $password, $email);\n                 header('Location:./../src/View/ConnectionForm.php');\n \n"
+                },
+                {
+                    "date": 1687266725863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n <?php\n namespace Foot\\Controlleurs;\n use Foot\\Entity\\User;\n use Foot\\Model\\UserRepository;\n-\n class RegistrationController\n {\n \n \n"
                 }
             ],
             "date": 1686664542533,

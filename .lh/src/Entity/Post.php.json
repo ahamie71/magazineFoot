@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 62,
             "patches": [
                 {
                     "date": 1683794095392,
@@ -52,6 +52,210 @@
                 {
                     "date": 1686210314859,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n+\n use DateTime;\n \n class Post{\n     private $id;\n"
+                },
+                {
+                    "date": 1686736455146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <?php\n \n namespace Foot\\Entity;\n-\n use DateTime;\n \n class Post{\n     private $id;\n@@ -51,5 +50,17 @@\n     public function getCreatedAt(): DateTime{\n \n         return $this->createdAt;\n     }\n+\n+    public function setCreatedAt($createdAt){\n+\n+        $this->createdAt = $createdAt;\n+\n+        return $this;\n+    }\n+\n+    public function getCreatedAt(): DateTime{\n+\n+        return $this->createdAt;\n+    }\n }\n"
+                },
+                {
+                    "date": 1686736460355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n \n         return $this->createdAt;\n     }\n \n-    public function setCreatedAt($createdAt){\n+    public function setImage($createdAt){\n \n         $this->createdAt = $createdAt;\n \n         return $this;\n"
+                },
+                {
+                    "date": 1686736469209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,11 +51,11 @@\n \n         return $this->createdAt;\n     }\n \n-    public function setImage($createdAt){\n+    public function setImage($image){\n \n-        $this->createdAt = $createdAt;\n+        $this->createdAt = $ima;\n \n         return $this;\n     }\n \n"
+                },
+                {
+                    "date": 1686736475100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     }\n \n     public function setImage($image){\n \n-        $this->createdAt = $ima;\n+        $this->image = $image;\n \n         return $this;\n     }\n \n"
+                },
+                {
+                    "date": 1686736480960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n \n         return $this;\n     }\n \n-    public function getCreatedAt(): DateTime{\n+    public function getImage(): DateTime{\n \n         return $this->createdAt;\n     }\n }\n"
+                },
+                {
+                    "date": 1686736491531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n \n         return $this;\n     }\n \n-    public function getImage(): DateTime{\n+    public function getImage():string{\n \n         return $this->createdAt;\n     }\n }\n"
+                },
+                {
+                    "date": 1686736500211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,7 +60,7 @@\n     }\n \n     public function getImage():string{\n \n-        return $this->createdAt;\n+        return $this->image;\n     }\n }\n"
+                },
+                {
+                    "date": 1686831934193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n     private $content;\n     private $image;\n     private $createdAt;\n \n+    \n+\n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686831941226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     private $content;\n     private $image;\n     private $createdAt;\n \n-    \n+    private $user\n \n     public function getId():int{\n \n         return $this->id;\n"
+                },
+                {
+                    "date": 1686831949162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,12 @@\n     private $title;\n     private $content;\n     private $image;\n     private $createdAt;\n+     \n+    \n+    private $user;\n \n-    private $user\n-\n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686831955831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n     private $content;\n     private $image;\n     private $createdAt;\n      \n-    \n-    private $user;\n \n+    private  $user;\n+\n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686831966284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n     private $content;\n     private $image;\n     private $createdAt;\n      \n+    \n+    private User $user;\n \n-    private  $user;\n-\n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686831981026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n      \n     \n     private User $user;\n \n+\n+    \n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686831993093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,13 @@\n      \n     \n     private User $user;\n \n+    public function getTitle():string{\n+        \n+        return $this->title;\n+    }\n \n-    \n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686832001334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      \n     \n     private User $user;\n \n-    public function getTitle():string{\n+    public function getuser():string{\n         \n         return $this->title;\n     }\n \n"
+                },
+                {
+                    "date": 1686832011624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     private User $user;\n \n     public function getuser():string{\n         \n-        return $this->title;\n+        return $this->$user;\n     }\n \n     public function getId():int{\n \n"
+                },
+                {
+                    "date": 1686832019730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n      \n     \n     private User $user;\n \n-    public function getuser():string{\n+    public function getuser():user{\n         \n-        return $this->$user;\n+        return $this->user;\n     }\n \n     public function getId():int{\n \n"
+                },
+                {
+                    "date": 1686832026971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,14 @@\n \n         return $this->id;\n     }\n     \n+\n+    public function getId():int{\n+\n+        return $this->id;\n+    }\n+    \n     public function setTitle($title){\n \n         $this->title = $title;\n \n"
+                },
+                {
+                    "date": 1686832033340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         \n         return $this->user;\n     }\n \n-    public function getId():int{\n+    public function ():int{\n \n         return $this->id;\n     }\n     \n"
+                },
+                {
+                    "date": 1686832040969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,14 +17,16 @@\n         \n         return $this->user;\n     }\n \n-    public function ():int{\n+    public function setTitle($title){\n \n-        return $this->id;\n+        $this->title = $title;\n+\n+        return $this;\n     }\n-    \n \n+\n     public function getId():int{\n \n         return $this->id;\n     }\n"
+                },
+                {
+                    "date": 1686832115086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         \n         return $this->user;\n     }\n \n-    public function setTitle($title){\n+    public function set($title){\n \n         $this->title = $title;\n \n         return $this;\n"
+                },
+                {
+                    "date": 1686832122997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n         \n         return $this->user;\n     }\n \n-    public function set($title){\n+    public function setUser($user){\n \n-        $this->title = $title;\n+        $this->user = $title;\n \n         return $this;\n     }\n \n"
+                },
+                {
+                    "date": 1686832129382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     }\n \n     public function setUser($user){\n \n-        $this->user = $title;\n+        $this->user = $user;\n \n         return $this;\n     }\n \n"
+                },
+                {
+                    "date": 1686832140176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      \n     \n     private User $user;\n \n-    public function getuser():user{\n+    public function getuser():User{\n         \n         return $this->user;\n     }\n \n"
+                },
+                {
+                    "date": 1686832149424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n     private $title;\n     private $content;\n     private $image;\n     private $createdAt;\n-     \n     \n     private User $user;\n \n     public function getuser():User{\n"
+                },
+                {
+                    "date": 1686832163797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Foot\\Entity;\n use DateTime;\n+use Foot\\Entity\\User;\n \n class Post{\n     private $id;\n     private $title;\n@@ -11,9 +12,10 @@\n     private $createdAt;\n     \n     private User $user;\n \n-    public function getuser():User{\n+    public function getuser():User\n+    {\n         \n         return $this->user;\n     }\n \n"
+                },
+                {
+                    "date": 1686832169429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,17 +18,19 @@\n         \n         return $this->user;\n     }\n \n-    public function setUser($user){\n+    public function setUser($user)\n+    {\n \n         $this->user = $user;\n \n         return $this;\n     }\n \n \n-    public function getId():int{\n+    public function getId():int\n+    {\n \n         return $this->id;\n     }\n     \n"
+                },
+                {
+                    "date": 1686832421887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     private $createdAt;\n     \n     private User $user;\n \n-    public function getuser():User\n+    public function getser():User\n     {\n         \n         return $this->user;\n     }\n@@ -33,9 +33,10 @@\n \n         return $this->id;\n     }\n     \n-    public function setTitle($title){\n+    public function setTitle($title)\n+    {\n \n         $this->title = $title;\n \n         return $this;\n"
+                },
+                {
+                    "date": 1686832558343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,17 +4,18 @@\n use DateTime;\n use Foot\\Entity\\User;\n \n class Post{\n+    private User $user;\n     private $id;\n     private $title;\n     private $content;\n     private $image;\n     private $createdAt;\n     \n     private User $user;\n \n-    public function getser():User\n+    public function getUser():User\n     {\n         \n         return $this->user;\n     }\n"
+                },
+                {
+                    "date": 1686832586295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,13 @@\n     private $content;\n     private $image;\n     private $createdAt;\n     \n-    private User $user;\n+   \n \n     public function getUser():User\n     {\n-        \n-        return $this->user;\n+          return $this->user;\n     }\n \n     public function setUser($user)\n     {\n"
+                },
+                {
+                    "date": 1686832801240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n           return $this->user;\n     }\n \n-    public function setUser($user)\n+    public function setUser( User $user)\n     {\n \n         $this->user = $user;\n \n"
+                },
+                {
+                    "date": 1686832862187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     private $content;\n     private $image;\n     private $createdAt;\n     \n-   \n+     $user = new User();\n \n     public function getUser():User\n     {\n           return $this->user;\n"
+                },
+                {
+                    "date": 1686832867260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     private $content;\n     private $image;\n     private $createdAt;\n     \n-     $user = new User();\n+  \n \n     public function getUser():User\n     {\n           return $this->user;\n"
+                },
+                {
+                    "date": 1686832898710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,5 +82,7 @@\n     public function getImage():string{\n \n         return $this->image;\n     }\n+\n+    $user = new User();\n }\n"
+                },
+                {
+                    "date": 1686832910268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,7 @@\n \n         return $this->image;\n     }\n \n-    $user = new User();\n+\n }\n+$user = new User();\n"
+                },
+                {
+                    "date": 1686832921821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,5 +85,5 @@\n     }\n \n \n }\n-$user = new User();\n+\n"
+                },
+                {
+                    "date": 1686900151432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     {\n           return $this->user;\n     }\n \n-    public function setUser( User $user)\n+    public function setUser($user)\n     {\n \n         $this->user = $user;\n \n"
+                },
+                {
+                    "date": 1686900167550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,8 @@\n     private $createdAt;\n     \n   \n \n-    public function getUser():User\n-    {\n-          return $this->user;\n-    }\n \n     public function setUser($user)\n     {\n \n"
+                },
+                {
+                    "date": 1686900173430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,20 +11,21 @@\n     private $content;\n     private $image;\n     private $createdAt;\n     \n-  \n \n-\n     public function setUser($user)\n     {\n \n         $this->user = $user;\n \n         return $this;\n     }\n+    public function getUser():User\n+    {\n+          return $this->user;\n+    }\n \n-\n     public function getId():int\n     {\n \n         return $this->id;\n"
+                },
+                {
+                    "date": 1686900178851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     private $title;\n     private $content;\n     private $image;\n     private $createdAt;\n-    \n+    private User $user;\n \n     public function setUser($user)\n     {\n \n"
+                },
+                {
+                    "date": 1686900451716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,20 @@\n use DateTime;\n use Foot\\Entity\\User;\n \n class Post{\n-    private User $user;\n+   \n     private $id;\n     private $title;\n     private $content;\n     private $image;\n     private $createdAt;\n     private User $user;\n \n+\n+    public function __construct() {\n+        $this->user = new User(); // Initialize the $user property with a User object\n+    }\n     public function setUser($user)\n     {\n \n         $this->user = $user;\n"
+                },
+                {
+                    "date": 1686900500900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,8 @@\n     }\n \n     public function getId():int\n     {\n-\n         return $this->id;\n     }\n     \n     public function setTitle($title)\n"
+                },
+                {
+                    "date": 1686901207375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,9 @@\n     private $createdAt;\n     private User $user;\n \n \n-    public function __construct() {\n-        $this->user = new User(); // Initialize the $user property with a User object\n-    }\n+    \n     public function setUser($user)\n     {\n \n         $this->user = $user;\n"
+                },
+                {
+                    "date": 1686901218903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n     private $createdAt;\n     private User $user;\n \n \n-    \n+    public function __construct() {\n+        $this->user = new User(); // Initialize the $user property with a User object\n+    }\n     public function setUser($user)\n     {\n \n         $this->user = $user;\n"
+                },
+                {
+                    "date": 1686901903325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n namespace Foot\\Entity;\n-use DateTime;\n+\n use Foot\\Entity\\User;\n \n class Post{\n    \n"
+                },
+                {
+                    "date": 1686902599592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Foot\\Entity;\n \n+use DateTime;\n use Foot\\Entity\\User;\n \n class Post{\n    \n"
+                },
+                {
+                    "date": 1686903650574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,9 @@\n     private $createdAt;\n     private User $user;\n \n \n-    public function __construct() {\n-        $this->user = new User(); // Initialize the $user property with a User object\n-    }\n+  \n     public function setUser($user)\n     {\n \n         $this->user = $user;\n"
+                },
+                {
+                    "date": 1686903683906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,8 @@\n \n   \n     public function setUser($user)\n     {\n-\n         $this->user = $user;\n \n         return $this;\n     }\n@@ -54,8 +53,9 @@\n     }\n \n     public function getContent():string{\n \n+        \n         return $this->content;\n \n     }\n \n"
+                },
+                {
+                    "date": 1686903758883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,11 +51,12 @@\n \n         return $this;\n     }\n \n-    public function getContent():string{\n+    public function getContent():string\n+    {\n \n-        \n+\n         return $this->content;\n \n     }\n \n"
+                },
+                {
+                    "date": 1686903765190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n     private $createdAt;\n     private User $user;\n \n \n-  \n+    public function __construct() {\n+        $this->user = new User(); // Initialize the $user property with a User object\n+    }\n     public function setUser($user)\n     {\n \n         $this->user = $user;\n"
+                },
+                {
+                    "date": 1687526717989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,8 @@\n     }\n \n     public function getCreatedAt(): DateTime\n     {\n-\n         return $this->createdAt;\n     }\n \n     public function setImage($image)\n"
                 }
             ],
             "date": 1683794095391,

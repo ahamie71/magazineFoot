@@ -1,0 +1,390 @@
+{
+    "sourceFile": "src/Controlleurs/CommentController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 93,
+            "patches": [
+                {
+                    "date": 1687349492675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1687349498477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <?php\n \n-nam\n\\ No newline at end of file\n+namespace F\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687349514395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n <?php\n-\n-namespace F\n\\ No newline at end of file\n+;\n"
+                },
+                {
+                    "date": 1687349520313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,6 @@\n <?php\n-;\n+\n+\n+namespace Foot\\Controlleurs;\n+\n+\n"
+                },
+                {
+                    "date": 1687349538178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-<?php\n+<?Php\n \n-\n namespace Foot\\Controlleurs;\n \n-\n"
+                },
+                {
+                    "date": 1687349545036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n <?Php\n \n-namespace Foot\\Controlleurs;\n+namespace Foot\\Controlleurs;;\n \n+\n+\n+\n"
+                },
+                {
+                    "date": 1687349559073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \n namespace Foot\\Controlleurs;;\n \n \n+Class CommentController \n \n-\n"
+                },
+                {
+                    "date": 1687349564628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,9 @@\n namespace Foot\\Controlleurs;;\n \n \n Class CommentController \n+{\n \n+    \n+}\n+\n"
+                },
+                {
+                    "date": 1687349570958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n \n Class CommentController \n {\n \n-    \n+    public function Cre\n }\n \n"
+                },
+                {
+                    "date": 1687349576697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,10 @@\n \n Class CommentController \n {\n \n-    public function Cre\n+    public function CreateComment(){\n+\n+\n+    }\n }\n \n"
+                },
+                {
+                    "date": 1687350083563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,29 @@\n \n Class CommentController \n {\n \n-    public function CreateComment(){\n+    public function CreateComment()\n+    {\n+      \n+        if(isset($_POST['content'])){\n+    \n+            $id= $_GET['id'];\n+        \n+            $comment= $_POST['content'];\n+            $created_at = date('Y-m-d H:i:s');\n+            $user_id = $_SESSION['user']['id'];\n+            $id_post= $_GET['id'];\n+          \n+            createComment($id_post, $user_id,$comment,$created_at);\n+            header('location:index.php?action=displayonepost&id='.$id_post);\n+            exit();\n+            \n+        \n+            \n+          \n+        \n+        \n \n \n     }\n }\n"
+                },
+                {
+                    "date": 1687350089007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             \n           \n         \n         \n+        }\n \n-\n     }\n }\n \n"
+                },
+                {
+                    "date": 1687350113534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     \n             $id= $_GET['id'];\n         \n             $comment= $_POST['content'];\n-            $created_at = date('Y-m-d H:i:s');\n+            \n             $user_id = $_SESSION['user']['id'];\n             $id_post= $_GET['id'];\n           \n             createComment($id_post, $user_id,$comment,$created_at);\n"
+                },
+                {
+                    "date": 1687350119384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n             $id= $_GET['id'];\n         \n             $comment= $_POST['content'];\n             \n-            $user_id = $_SESSION['user']['id'];\n+            $user_id = $_SESSION[;\n             $id_post= $_GET['id'];\n           \n             createComment($id_post, $user_id,$comment,$created_at);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n"
+                },
+                {
+                    "date": 1687350127526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n             $id= $_GET['id'];\n         \n             $comment= $_POST['content'];\n             \n-            $user_id = $_SESSION[;\n+            $user_id = $_SESSION['user']->get;\n             $id_post= $_GET['id'];\n           \n             createComment($id_post, $user_id,$comment,$created_at);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n"
+                },
+                {
+                    "date": 1687350136868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n             $id= $_GET['id'];\n         \n             $comment= $_POST['content'];\n             \n-            $user_id = $_SESSION['user']->get;\n+            $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             createComment($id_post, $user_id,$comment,$created_at);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n"
+                },
+                {
+                    "date": 1687350143531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            createComment($id_post, $user_id,$comment,$created_at);\n+            createComment($id_post, $user_id,$);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n         \n"
+                },
+                {
+                    "date": 1687350153670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            createComment($id_post, $user_id,$);\n+            createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n         \n"
+                },
+                {
+                    "date": 1687350173602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         if(isset($_POST['content'])){\n     \n             $id= $_GET['id'];\n         \n-            $comment= $_POST['content'];\n+            $text= $_POST['content'];\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n"
+                },
+                {
+                    "date": 1687350231421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n Class CommentController \n {\n \n-    public function CreateComment()\n+    public function Comment()\n     {\n       \n         if(isset($_POST['content'])){\n     \n"
+                },
+                {
+                    "date": 1687350241008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n Class CommentController \n {\n \n-    public function Comment()\n+    public function addComment()\n     {\n       \n         if(isset($_POST['content'])){\n     \n@@ -17,8 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n+            \n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350246597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            \n+            $\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350253505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            $\n+            $comment= \n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350260515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            $comment= \n+            $= new\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350267436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            $= new\n+            $postRepo= new Co\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350272749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            $postRepo= new Co\n+            $postRepo= new Pos\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350279152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?Php\n \n namespace Foot\\Controlleurs;;\n+use Foot\\Model\\PostRepository;\n \n \n Class CommentController \n {\n@@ -17,9 +18,9 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            $postRepo= new Pos\n+            $postRepo= new PostRepository()\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350286379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n             \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n-            $postRepo= new PostRepository()\n+            $postRepo= new PostRepository();\n+            \n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350296518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n-            \n+            $comment\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350302956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n-            $comment\n+            $comment= $post\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350311242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n-            $comment= $post\n+            $comment= $postRepo->cre\n             createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n"
+                },
+                {
+                    "date": 1687350318889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n-            $comment= $postRepo->cre\n-            createComment($id_post, $user_id, $text);\n+            $comment= $postRepo->createComment($id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n         \n"
+                },
+                {
+                    "date": 1687350326124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n-            $comment= $postRepo->createComment($id_post, $user_id, $text);\n+            $comment= $postRepo->createComment(id_post, $user_id, $text);\n             header('location:index.php?action=displayonepost&id='.$id_post);\n             exit();\n             \n         \n"
+                },
+                {
+                    "date": 1687350340923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n-            $comment= $postRepo->createComment(id_post, $user_id, $text);\n-            header('location:index.php?action=displayonepost&id='.$id_post);\n+            $comment= $postRepo->createComment($id_post, $user_id, $text);\n+            header('location:index.php?action=);\n             exit();\n             \n         \n             \n"
+                },
+                {
+                    "date": 1687350346475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=);\n+            header();\n             exit();\n             \n         \n             \n"
+                },
+                {
+                    "date": 1687350356721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,16 +20,15 @@\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n-            header();\n-            exit();\n             \n-        \n             \n-          \n+            \n         \n         \n+        \n+        \n         }\n \n     }\n }\n"
+                },
+                {
+                    "date": 1687350378512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n     {\n       \n         if(isset($_POST['content'])){\n     \n-            $id= $_GET['id'];\n+            \n+            \n         \n             $text= $_POST['content'];\n             \n             $user_id = $_SESSION['user']->getId();\n@@ -22,13 +23,10 @@\n             $postRepo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n             \n             \n-            \n         \n         \n-        \n-        \n         }\n \n     }\n }\n"
+                },
+                {
+                    "date": 1687350386025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,10 @@\n     {\n       \n         if(isset($_POST['content'])){\n     \n-            \n-            \n         \n             $text= $_POST['content'];\n-            \n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n           \n             $postRepo= new PostRepository();\n"
+                },
+                {
+                    "date": 1687350525870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace Foot\\Controlleurs;;\n use Foot\\Model\\PostRepository;\n \n+ses\n \n Class CommentController \n {\n \n@@ -15,9 +16,8 @@\n         \n             $text= $_POST['content'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n-          \n             $postRepo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n             \n             \n"
+                },
+                {
+                    "date": 1687350537998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace Foot\\Controlleurs;;\n use Foot\\Model\\PostRepository;\n \n-ses\n+session_start();\n \n Class CommentController \n {\n \n@@ -19,11 +19,9 @@\n             $id_post= $_GET['id'];\n             $postRepo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n             \n-            \n         \n-        \n         }\n \n     }\n }\n"
+                },
+                {
+                    "date": 1687350888501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       \n         if(isset($_POST['content'])){\n     \n         \n-            $text= $_POST['content'];\n+            $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $postRepo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n"
+                },
+                {
+                    "date": 1687351032381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,6 +23,14 @@\n         \n         }\n \n     }\n+\n+    function getcomment()\n+\n+{  \n+  $coms= afficheComment($_GET['id']);\n+  require_once(dirname(__FILE__, 2) . '/templates/displayOnepost.phtml');\n }\n \n+}\n+\n"
+                },
+                {
+                    "date": 1687351053930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,13 +24,13 @@\n         }\n \n     }\n \n-    function getcomment()\n+   public function getcomment()\n \n {  \n   $coms= afficheComment($_GET['id']);\n-  require_once(dirname(__FILE__, 2) . '/templates/displayOnepost.phtml');\n+  require_once(dirname(__FILE__, 2) . '/templates/displayOnepost.');\n }\n \n }\n \n"
+                },
+                {
+                    "date": 1687351071346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n    public function getcomment()\n \n {  \n   $coms= afficheComment($_GET['id']);\n-  require_once(dirname(__FILE__, 2) . '/templates/displayOnepost.');\n+  require_once(dirname(__FILE__, 2) . '/View/Posts/EditForm.php');\n }\n \n }\n \n"
+                },
+                {
+                    "date": 1687351082521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n    public function getcomment()\n \n {  \n   $coms= afficheComment($_GET['id']);\n-  require_once(dirname(__FILE__, 2) . '/View/Posts/EditForm.php');\n+  require_once(dirname(__FILE__, 2) . '/View/Posts/Displ.php');\n }\n \n }\n \n"
+                },
+                {
+                    "date": 1687351089297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n    public function getcomment()\n \n {  \n   $coms= afficheComment($_GET['id']);\n-  require_once(dirname(__FILE__, 2) . '/View/Posts/Displ.php');\n+  require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n \n"
+                },
+                {
+                    "date": 1687351648266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n \n    public function getcomment()\n \n {  \n+\n   $coms= afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687351661739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n    public function getcomment()\n \n {  \n-\n+  $p\n   $coms= afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687351667063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n    public function getcomment()\n \n {  \n-  $p\n+  \n   $coms= afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687351676811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n    public function getcomment()\n \n {  \n-  \n+  $postRepo= new\n   $coms= afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687351682649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n    public function getcomment()\n \n {  \n-  $postRepo= new\n+  $postRepo= new PostRepository();\n   $coms= afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687351689335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n    public function getcomment()\n \n {  \n   $postRepo= new PostRepository();\n-  $coms= afficheComment($_GET['id']);\n+\n+  $coms= $post afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687351695022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \n {  \n   $postRepo= new PostRepository();\n \n-  $coms= $post afficheComment($_GET['id']);\n+  $coms= $postRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687351903577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,9 @@\n    public function getcomment()\n \n {  \n   $postRepo= new PostRepository();\n-\n-  $coms= $postRepo->afficheComment($_GET['id']);\n+  $commentaires= $postRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687352039885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         }\n \n     }\n \n-   public function getcomment()\n+   public function getComment()\n \n {  \n   $postRepo= new PostRepository();\n   $commentaires= $postRepo->afficheComment($_GET['id']);\n"
+                },
+                {
+                    "date": 1687352052148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n \n    public function getComment()\n \n {  \n+    \n   $postRepo= new PostRepository();\n   $commentaires= $postRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n"
+                },
+                {
+                    "date": 1687352059020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,11 @@\n \n    public function getComment()\n \n {  \n-    \n+   \n   $postRepo= new PostRepository();\n+  \n   $commentaires= $postRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687354511199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,9 @@\n    public function getComment()\n \n {  \n    \n-  $postRepo= new PostRepository();\n-  \n+  $postRepo= new CommentRepository();\n   $commentaires= $postRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687354519234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?Php\n \n namespace Foot\\Controlleurs;;\n use Foot\\Model\\PostRepository;\n+use Foot\\Model\\CommentRepository;\n \n session_start();\n \n Class CommentController \n@@ -28,9 +29,9 @@\n    public function getComment()\n \n {  \n    \n-  $postRepo= new CommentRepository();\n+  $commentRepo= new CommentRepository();\n   $commentaires= $postRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n"
+                },
+                {
+                    "date": 1687354525741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n {  \n    \n   $commentRepo= new CommentRepository();\n-  $commentaires= $postRepo->afficheComment($_GET['id']);\n+  $commentaires= $commentRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687355921364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         \n             $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n-            $postRepo= new PostRepository();\n+            $Repo= new PostRepository();\n             $comment= $postRepo->createComment($id_post, $user_id, $text);\n             \n         \n         }\n"
+                },
+                {
+                    "date": 1687355942313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n         \n             $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n-            $Repo= new PostRepository();\n-            $comment= $postRepo->createComment($id_post, $user_id, $text);\n+            $CommentRepo= new PostRepository();\n+            $comment= $CommRepo->createComment($id_post, $user_id, $text);\n             \n         \n         }\n \n"
+                },
+                {
+                    "date": 1687355949237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n         \n             $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n-            $CommentRepo= new PostRepository();\n-            $comment= $CommRepo->createComment($id_post, $user_id, $text);\n+            $CommentRepo= new CommentRepository();\n+            $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n             \n         \n         }\n \n"
+                },
+                {
+                    "date": 1687356450565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            \n+            h \n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356456531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            h \n+            header(location) \n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356522802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header(location) \n+            header('location:index.php?action=displayonepost&id='.$id_post\n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356527953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=displayonepost&id='.$id_post\n+            header('location:index.php?action=Displayonepost&id='.$id_post\n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356541967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=Displayonepost&id='.$id_post\n+            header('location:index.php?action=&id='.$id_post\n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356548856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=&id='.$id_post\n+            header('location:index.php?action=DisplayOnePost&id='.$id_post.\n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356553952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=DisplayOnePost&id='.$id_post.\n+            header('location:index.php?action=DisplayOnePost&id='.$id_post.\");\n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356568242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=DisplayOnePost&id='.$id_post.\");\n+            header('location:index.php?action=DisplayOnePost&id='.$id_post.);\n         \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687356754271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,17 @@\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n-            header('location:index.php?action=DisplayOnePost&id='.$id_post.);\n+            header('location:index.php?action=DisplayOnePost&id='.$id_post);\n         \n         }\n \n+        else{\n+\n+            \n+        }\n+\n     }\n \n    public function getComment()\n \n"
+                },
+                {
+                    "date": 1687356759800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         }\n \n         else{\n \n-            \n+            require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'); \n         }\n \n     }\n \n"
+                },
+                {
+                    "date": 1687356813455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \n {  \n    \n   $commentRepo= new CommentRepository();\n-  $commentaires= $commentRepo->afficheComment($_GET['id']);\n+  $comments= $commentRepo->afficheComment($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687357060571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \n {  \n    \n   $commentRepo= new CommentRepository();\n-  $comments= $commentRepo->afficheComment($_GET['id']);\n+  $comments= $commentRepo->affi($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687357067479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \n {  \n    \n   $commentRepo= new CommentRepository();\n-  $comments= $commentRepo->affi($_GET['id']);\n+  $comments= $commentRepo->getComments($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n }\n"
+                },
+                {
+                    "date": 1687357098152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         \n         }\n \n         else{\n-\n+                \n             require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php'); \n         }\n \n     }\n"
+                },
+                {
+                    "date": 1687357103948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,8 @@\n \n    public function getComment()\n \n {  \n-   \n   $commentRepo= new CommentRepository();\n   $comments= $commentRepo->getComments($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n"
+                },
+                {
+                    "date": 1687358250784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n     public function addComment()\n     {\n       \n-        if(isset($_POST['content'])){\n+        if(isset($_POST[''])){\n     \n         \n             $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n"
+                },
+                {
+                    "date": 1687359161206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,16 @@\n \n     public function addComment()\n     {\n       \n-        if(isset($_POST[''])){\n+        if(isset($_POST['text'])){\n     \n         \n             $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n             $CommentRepo= new CommentRepository();\n+            \n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n             header('location:index.php?action=DisplayOnePost&id='.$id_post);\n         \n         }\n"
+                },
+                {
+                    "date": 1687359168408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,11 @@\n         \n             $text= $_POST['text'];\n             $user_id = $_SESSION['user']->getId();\n             $id_post= $_GET['id'];\n+           \n             $CommentRepo= new CommentRepository();\n-            \n+\n             $comment= $CommentRepo->createComment($id_post, $user_id, $text);\n             header('location:index.php?action=DisplayOnePost&id='.$id_post);\n         \n         }\n"
+                },
+                {
+                    "date": 1687419836344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,12 @@\n use Foot\\Model\\CommentRepository;\n \n session_start();\n \n+session_start();\n+if (!$_SESSION['user']) {\n+  header('location:index.php?action=Login');\n+}\n Class CommentController \n {\n \n     public function addComment()\n"
+                },
+                {
+                    "date": 1687420080123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n use Foot\\Model\\CommentRepository;\n \n session_start();\n \n-session_start();\n if (!$_SESSION['user']) {\n   header('location:index.php?action=Login');\n }\n Class CommentController \n@@ -44,6 +43,9 @@\n   $comments= $commentRepo->getComments($_GET['id']);\n   require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n }\n \n+\n+\n+ pub\n }\n \n"
+                },
+                {
+                    "date": 1687420089255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,7 @@\n }\n \n \n \n- pub\n+ public Function \n }\n \n"
+                },
+                {
+                    "date": 1687420114902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,7 @@\n }\n \n \n \n- public Function \n+ public function Move\n }\n \n"
+                },
+                {
+                    "date": 1687420120349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,7 +45,12 @@\n }\n \n \n \n- public function Move\n+ public function MoveComments()\n+ {\n+\n+\n+    \n+ }\n }\n \n"
+                },
+                {
+                    "date": 1687420147868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,7 +50,9 @@\n  {\n \n \n     \n+     \n+\n  }\n }\n \n"
+                },
+                {
+                    "date": 1687420165584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,14 +45,5 @@\n }\n \n \n \n- public function MoveComments()\n- {\n-\n-\n-    \n-     \n-\n- }\n-}\n-\n+ \n"
+                },
+                {
+                    "date": 1687420197467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,14 @@\n }\n \n \n \n- \n+ public function MoveComments()\n+ {\n+\n+      \n+\n+     \n+\n+ }\n+}\n+\n"
+                },
+                {
+                    "date": 1687421185618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n \n  public function MoveComments()\n  {\n \n-      \n+    $id  \n \n      \n \n  }\n"
+                },
+                {
+                    "date": 1687421191401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n \n  public function MoveComments()\n  {\n \n-    $id  \n+    $id= $_  \n \n      \n \n  }\n"
+                },
+                {
+                    "date": 1687421196738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n \n  public function MoveComments()\n  {\n \n-    $id= $_  \n+    $id= $_GET[\"id\"];  \n \n      \n \n  }\n"
+                },
+                {
+                    "date": 1687421202777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n  public function MoveComments()\n  {\n \n     $id= $_GET[\"id\"];\n-    $commentRepo  \n+    $commentRepo=  \n \n      \n \n  }\n"
+                },
+                {
+                    "date": 1687421463404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n \n     $id= $_GET[\"id\"];\n     $commentRepo=new CommentRepository();\n     $comment= $commentRepo->getCommentBYId($_GET['id'])  ;\n-    if($comment->getUserId()=)\n+    if($comment->getUserId()==)\n \n      \n \n  }\n"
+                }
+            ],
+            "date": 1687349492675,
+            "name": "Commit-0",
+            "content": "<?php\n\nnam"
+        }
+    ]
+}

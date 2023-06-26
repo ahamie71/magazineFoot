@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/Controllers/CommentController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1687524536126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1687524536126,
+            "name": "Commit-0",
+            "content": "<?Php\n\nnamespace Foot\\Controlle;\n\n\nuse Foot\\Services\\Tokenhandler;\nuse Foot\\Model\\CommentRepository;\n\nsession_start();\n\nif (!$_SESSION['user']) {\n    header('location:index.php?action=Login');\n}\nclass CommentController\n{\n    public function addComment()\n    {\n        if (isset($_POST['text'])) {\n            $text = $_POST['text'];\n            $user_id = $_SESSION['user']->getId();\n            $id_post = $_GET['id'];\n            $CommentRepo = new CommentRepository();\n            $comment = $CommentRepo->createComment($id_post, $user_id, $text);\n            header('location:index.php?action=DisplayOnePost&id=' . $id_post);\n        } else {\n            require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n        }\n    }\n\n    public function getComment()\n    {\n        $commentRepo = new CommentRepository();\n        $comments = $commentRepo->getComments($_GET['id']);\n        require_once(dirname(__FILE__, 2) . '/View/Posts/DisplayOnePost.php');\n    }\n\n    public function RemoveComments()\n    {\n        $id = $_GET[\"id\"];\n        // le terner\n        $token = isset($_GET['token']) ? $_GET['token'] : null;\n        $commentRepo = new CommentRepository();\n        $comment = $commentRepo->getCommentBYId($_GET['id']);\n        $tokenHandler = new TokenHandler();\n        if (\n            $comment->getUserId() === $_SESSION['user']->getId() && $tokenHandler->verifyToken($token)\n            && $token\n        ) {\n            $commentRepo->DeleteComments($id);\n            header('location:index.php?action=DisplayOnePost&id=' . $comment->getIdPost());\n            exit();\n        } else {\n            echo \"mais tu joues a quoi\";\n        }\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "sourceFile": "src/View/js/script.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 37,
+            "patches": [
+                {
+                    "date": 1686838242063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686838248822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../public/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./../src/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./public/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838259370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n-        document.getElementById(\"eye\").src = \"./public/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../public/image/red.png\";\n         e = true;\n          \n \n     }\n"
+                },
+                {
+                    "date": 1686838268375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n-        document.getElementById(\"eye\").src = \"./../public/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n         e = true;\n          \n \n     }\n"
+                },
+                {
+                    "date": 1686838298166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./src/View/image/red.png\";\n         e = true;\n          \n \n     }\n"
+                },
+                {
+                    "date": 1686838350173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838358242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n-        document.getElementById(\"eye\").src = \"./src/View/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n         e = true;\n          \n \n     }\n"
+                },
+                {
+                    "date": 1686838363374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"../src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \".//src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838414702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \".//src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838432483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838554445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838560990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838642967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838688237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838737266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838798765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./..src/View/image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838868881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./..src/View/image/green.png\";\n+        document.getElementById(\"eye\").src = \"./..image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838879739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./..image/green.png\";\n+        document.getElementById(\"eye\").src = \"./image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838902824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./image/green.png\";\n+        document.getElementById(\"eye\").src = \"image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838928377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"image/green.png\";\n+        document.getElementById(\"eye\").src = \".image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838953178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \".image/green.png\";\n+        document.getElementById(\"eye\").src = \"image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838959628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"image/green.png\";\n+        document.getElementById(\"eye\").src = \"..\n+        image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686838965221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"..\n-        image/green.png\";\n+        document.getElementById(\"eye\").src = \"./image/green.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839025476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./image/green.png\";\n+        document.getElementById(\"eye\").src = \"./../image/gre.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839057728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../image/gre.png\";\n+        document.getElementById(\"eye\").src = \"./../srcimage/gre.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839065158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../srcimage/gre.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/gre.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839100437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         document.getElementById(\"eye\").src = \"./../src/View/image/gre.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../View/image/red.png\";\n         e = true;\n          \n \n     }\n"
+                },
+                {
+                    "date": 1686839310465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/gre.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/gren.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839469890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         document.getElementById(\"eye\").src = \"./../src/View/image/gren.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n-        document.getElementById(\"eye\").src = \"./../View/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n         e = true;\n          \n \n     }\n"
+                },
+                {
+                    "date": 1686839522568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/gren.png\";\n+        document.getElementById(\"eye\").src = \"image/gren.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839561247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"image/gren.png\";\n+        document.getElementById(\"eye\").src = \"\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839567407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839601070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/gren.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839783676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/gren.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/vert\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686839789026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/vert\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/vert.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686840394807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/vert.png\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/green\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1686840404488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function changer() {\n     if (e) {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n-        document.getElementById(\"eye\").src = \"./../src/View/image/green\";\n+        document.getElementById(\"eye\").src = \"./../src/View/image/gre.png\";\n         e = false;\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n"
+                },
+                {
+                    "date": 1687526251948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     } else {\n         document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n         document.getElementById(\"eye\").src = \"./../src/View/image/red.png\";\n         e = true;\n-         \n \n+\n     }\n \n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1686838242063,
+            "name": "Commit-0",
+            "content": "e = true;\n\nfunction changer() {\n    if (e) {\n        document.getElementById(\"pass\").setAttribute(\"type\", \"text\");\n        document.getElementById(\"eye\").src = \"./../public/image/green.png\";\n        e = false;\n    } else {\n        document.getElementById(\"pass\").setAttribute(\"type\", \"password\");\n        document.getElementById(\"eye\").src = \"./public/image/red.png\";\n        e = true;\n         \n\n    }\n\n}"
+        }
+    ]
+}

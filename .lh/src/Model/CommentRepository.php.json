@@ -1,0 +1,330 @@
+{
+    "sourceFile": "src/Model/CommentRepository.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 78,
+            "patches": [
+                {
+                    "date": 1687354458523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1687354463757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n <?php\n \n+\n+Class Co\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687354469490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n <?php\n \n \n-Class Co\n\\ No newline at end of file\n+Class CommentRepo\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687354474617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,21 @@\n <?php\n \n \n-Class CommentRepo\n\\ No newline at end of file\n+Class CommentRepository\n+{\n+\n+\n+    function getComments($id_post):array{\n+    \n+        $bdd = new Database();\n+        $req =\"SELECT u.username,c.id_user,c.id,c.text,c.id_post FROM Comments c\n+        LEFT JOIN User u ON c.id_user = u.id\n+        LEFT JOIN Post p ON c.id_post = p.id  WHERE c.id_post = $id_post\";\n+        $stmt = $bdd->getPDO()->prepare($req);\n+        $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n+        $stmt->execute();\n+        $comments = $stmt->fetchAll();\n+        return $comments;\n+    }\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687354487751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,13 @@\n <?php\n \n \n+namespace Foot\\Model;\n+use PDO;\n+\n+\n+use Foot\\Entity\\Database;\n+\n Class CommentRepository\n {\n \n \n"
+                },
+                {
+                    "date": 1687355861995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,23 @@\n         $comments = $stmt->fetchAll();\n         return $comments;\n     }\n \n+\n+    public function createComment($id_post, $user_id,$text){\n+  \n+        $bdd = new Database();\n+        $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?,)\");\n+        $query->execute([\n+            $id_post,\n+            $_SESSION['user']->getId(),\n+            $text,\n+            \n+            \n+           \n+    \n+        ]); \n+}\n+\n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687355874260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n \n     public function createComment($id_post, $user_id,$text){\n   \n         $bdd = new Database();\n-        $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?,)\");\n+        $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?)\");\n         $query->execute([\n             $id_post,\n             $_SESSION['user']->getId(),\n             $text,\n"
+                },
+                {
+                    "date": 1687358636523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?)\");\n         $query->execute([\n             $id_post,\n             $_SESSION['user']->getId(),\n-            $text,\n+            $text\n             \n             \n            \n     \n"
+                },
+                {
+                    "date": 1687419919918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,8 @@\n }\n \n \n \n+public function \n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687419928399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,8 @@\n }\n \n \n \n-public function \n+public function DeleteComment($id_post)\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687419996781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,8 @@\n }\n \n \n \n-public function DeleteComment($id_post)\n+public function DeleteComment($id)\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420003524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,6 +43,12 @@\n \n \n public function DeleteComment($id)\n \n+{\n \n+\n+\n+}\n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420018142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,11 +44,14 @@\n \n public function DeleteComment($id)\n \n {\n+    $bdd = new Database();\n+    $sql = \"DELETE FROM Post WHERE id= $id\";\n+    $delet = $bdd->getPDO()->prepare($sql);\n+    $delet->execute();\n+  \n \n-\n-\n }\n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420024221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n public function DeleteComment($id)\n \n {\n     $bdd = new Database();\n-    $sql = \"DELETE FROM Post WHERE id= $id\";\n+    $sql = \"DELETE FROM Comments WHERE id= $id\";\n     $delet = $bdd->getPDO()->prepare($sql);\n     $delet->execute();\n   \n \n"
+                },
+                {
+                    "date": 1687420037827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \n {\n     $bdd = new Database();\n     $sql = \"DELETE FROM Comments WHERE id= $id\";\n-    $delet = $bdd->getPDO()->prepare($sql);\n+    $stmt= $bdd->getPDO()->prepare($sql);\n     $delet->execute();\n   \n \n }\n"
+                },
+                {
+                    "date": 1687420044670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n {\n     $bdd = new Database();\n     $sql = \"DELETE FROM Comments WHERE id= $id\";\n     $stmt= $bdd->getPDO()->prepare($sql);\n-    $delet->execute();\n+    $stmt->execute();\n   \n \n }\n \n"
+                },
+                {
+                    "date": 1687420108041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n }\n \n \n \n-public function DeleteComment($id)\n+public function DeleteComments($id)\n \n {\n     $bdd = new Database();\n     $sql = \"DELETE FROM Comments WHERE id= $id\";\n"
+                },
+                {
+                    "date": 1687420379256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,5 +53,7 @@\n \n }\n \n \n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420387901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n   \n \n }\n \n+public function \n \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420394201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n   \n \n }\n \n-public function \n+public function getCommentBYId\n \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420401374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,14 @@\n   \n \n }\n \n-public function getCommentBYId\n+public function getCommentBYId($id)\n+{\n \n \n+    \n+}\n \n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687420407989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,11 +54,12 @@\n }\n \n public function getCommentBYId($id)\n {\n+ \n+    $bdd\n \n \n-    \n }\n \n \n \n"
+                },
+                {
+                    "date": 1687420416855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,10 @@\n \n public function getCommentBYId($id)\n {\n  \n-    $bdd\n+    $bdd= new Database();\n+    \n \n \n }\n \n"
+                },
+                {
+                    "date": 1687420430676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,11 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    \n+    $req =\"SELECT Post.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n+    LEFT JOIN User ON Post.user_id = user.id\n+    WHERE Post.id =  $id\";\n \n \n }\n \n"
+                },
+                {
+                    "date": 1687420439904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Post.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n+    $req =\"SELECT Comments.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420446691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n+    $req =\"SELECT Comments.user_id, Comment.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420456182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.user_id, Comment.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n+    $req =\"SELECT Comments.user_id, Comments.id , , Post.created_at,Post.title,Post.content,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420463078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.user_id, Comments.id , , Post.created_at,Post.title,Post.content,User.username FROM Post\n+    $req =\"SELECT Comments.user_id, Comments.id , Comments.text, Post.created_at,Post.title,Post.content,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420479161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.user_id, Comments.id , Comments.text, Post.created_at,Post.title,Post.content,User.username FROM Post\n+    $req =\"SELECT Comments.user_id, Comments.id , Comments.text, ,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420502732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,10 +56,11 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.user_id, Comments.id , Comments.text, ,User.username FROM Post\n+    $req =\"SELECT Comments.user_id, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n+    \n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420509503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n {\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.user_id, Comments.id , Comments.text,User.username FROM Post\n+    LEFT JOIN User ON Comment.user_id = user.id\n     LEFT JOIN User ON Post.user_id = user.id\n-    \n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420529743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n {\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.user_id, Comments.id , Comments.text,User.username FROM Post\n-    LEFT JOIN User ON Comment.user_id = user.id\n     LEFT JOIN User ON Post.user_id = user.id\n+    LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420536786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n {\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.user_id, Comments.id , Comments.text,User.username FROM Post\n+    LEFT JOIN User ON Comments.user_id = user.id\n     LEFT JOIN User ON Post.user_id = user.id\n-    LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420548364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.user_id, Comments.id , Comments.text,User.username FROM Post\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Comments.user_id = user.id\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420555006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n {\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n-    LEFT JOIN User ON Comments.user_id = user.id\n+    LEFT JOIN User ON Comments.id_user = user.id\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420571279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n {\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n-    LEFT JOIN User ON Comments.id_user = user.id\n+    LEFT JOIN User ON Comments.id_user = ser.id\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n \n \n"
+                },
+                {
+                    "date": 1687420584160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n {\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n-    LEFT JOIN User ON Comments.id_user = ser.id\n-    LEFT JOIN User ON Post.user_id = user.id\n+    LEFT JOIN User ON Comments.id_user = User.id\n+    LEFT JOIN User ON Post. = user.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420593823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Comments.id_user = User.id\n-    LEFT JOIN User ON Post. = user.id\n+    LEFT JOIN User ON Comm. = user.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420600744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Comments.id_user = User.id\n-    LEFT JOIN User ON Comm. = user.id\n+    LEFT JOIN User ON Comments.id = user.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420608038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Comments.id_user = User.id\n-    LEFT JOIN User ON Comments.id = user.id\n+    LEFT JOIN User ON Comments.id_post = user.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420615157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n  \n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Comments.id_user = User.id\n-    LEFT JOIN User ON Comments.id_post = user.id\n+    LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Post.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687420625084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n-    WHERE Post.id =  $id\";\n+    WHERE Comments.id =  $id\";\n \n \n }\n \n"
+                },
+                {
+                    "date": 1687420710662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Post\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Co\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420774189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username FROM Co\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420820555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,FROM Comments\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,,FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420830793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,,FROM Comments\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.id_user,FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420849977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.id_user,FROM Comments\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.,FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420856325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.,FROM Comments\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.id_Post,FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687420865623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.id_Post,FROM Comments\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.id_Ppost,FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN User ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n"
+                },
+                {
+                    "date": 1687421042149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,11 +56,11 @@\n public function getCommentBYId($id)\n {\n  \n     $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username ,Comments.id_Ppost,FROM Comments\n+    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n-    LEFT JOIN User ON Comments.id_post = Post.id\n+    LEFT JOIN Post ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n \n \n }\n"
+                },
+                {
+                    "date": 1687421053816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,10 +60,14 @@\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n+    $stmt= $bdd->getPDO()->prepare($req);\n+    $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Post');\n+    $stmt->execute();\n+    $post = $stmt->fetch();\n+    return $post;\n \n-\n }\n \n \n \n"
+                },
+                {
+                    "date": 1687421063974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,11 +61,11 @@\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n-    $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Post');\n+    $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $post = $stmt->fetch();\n+    $comment = $stmt->fetch();\n     return $post;\n \n }\n \n"
+                },
+                {
+                    "date": 1687421069211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,10 +63,10 @@\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comment = $stmt->fetch();\n-    return $post;\n+    $comments = $stmt->fetch();\n+    return $comments;\n \n }\n \n \n"
+                },
+                {
+                    "date": 1687421295045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comments = $stmt->fetch();\n+    $comment = $stmt->fetch();\n     return $comments;\n \n }\n \n"
+                },
+                {
+                    "date": 1687425837750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,12 +60,13 @@\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n+    \n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comment = $stmt->fetch();\n+    $comments = $stmt->fetch();\n     return $comments;\n \n }\n \n"
+                },
+                {
+                    "date": 1687425846525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n-    \n+    ORDER BY Comments.created_at DESC LIMIT 6\"\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n     $comments = $stmt->fetch();\n"
+                },
+                {
+                    "date": 1687425855040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,10 +59,10 @@\n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n-    WHERE Comments.id =  $id\";\n-    ORDER BY Comments.created_at DESC LIMIT 6\"\n+    WHERE Comments.id =  $id\n+    ORDER BY Comments. DESC LIMIT 6\"\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n     $comments = $stmt->fetch();\n"
+                },
+                {
+                    "date": 1687425876811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,10 +59,9 @@\n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n-    WHERE Comments.id =  $id\n-    ORDER BY Comments. DESC LIMIT 6\"\n+    WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n     $comments = $stmt->fetch();\n"
+                },
+                {
+                    "date": 1687425948663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comments = $stmt->fetch();\n+    $comments = $stmt->fetchAll();\n     return $comments;\n \n }\n \n"
+                },
+                {
+                    "date": 1687425991284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comments = $stmt->fetchAll();\n+    $comments = $stmt->fetch();\n     return $comments;\n \n }\n \n"
+                },
+                {
+                    "date": 1687426210575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n-    WHERE Comments.id =  $id\";\n+    WHERE Comments.id_post =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n     $comments = $stmt->fetch();\n"
+                },
+                {
+                    "date": 1687426230699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     $bdd= new Database();\n     $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n-    WHERE Comments.id_post =  $id\";\n+    WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n     $comments = $stmt->fetch();\n"
+                },
+                {
+                    "date": 1687426379746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comments = $stmt->fetch();\n+    $comments = $stmt->fetchAll();\n     return $comments;\n \n }\n \n"
+                },
+                {
+                    "date": 1687426463669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n     WHERE Comments.id =  $id\";\n     $stmt= $bdd->getPDO()->prepare($req);\n     $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n     $stmt->execute();\n-    $comments = $stmt->fetchAll();\n+    $comments = $stmt->fetch();\n     return $comments;\n \n }\n \n"
+                },
+                {
+                    "date": 1687524794279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <?php\n \n-\n namespace Foot\\Model;\n use PDO;\n \n \n"
+                },
+                {
+                    "date": 1687524802311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,14 @@\n <?php\n \n namespace Foot\\Model;\n-use PDO;\n \n \n+use PDO;\n use Foot\\Entity\\Database;\n \n Class CommentRepository\n {\n-\n-\n     function getComments($id_post):array{\n     \n         $bdd = new Database();\n         $req =\"SELECT u.username,c.id_user,c.id,c.text,c.id_post FROM Comments c\n"
+                },
+                {
+                    "date": 1687524808909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n Class CommentRepository\n {\n     function getComments($id_post):array{\n-    \n+        \n         $bdd = new Database();\n         $req =\"SELECT u.username,c.id_user,c.id,c.text,c.id_post FROM Comments c\n         LEFT JOIN User u ON c.id_user = u.id\n         LEFT JOIN Post p ON c.id_post = p.id  WHERE c.id_post = $id_post\";\n"
+                },
+                {
+                    "date": 1687524814314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,67 +5,68 @@\n \n use PDO;\n use Foot\\Entity\\Database;\n \n-Class CommentRepository\n+class CommentRepository\n {\n-    function getComments($id_post):array{\n-        \n+    function getComments($id_post): array\n+    {\n+\n         $bdd = new Database();\n-        $req =\"SELECT u.username,c.id_user,c.id,c.text,c.id_post FROM Comments c\n+        $req = \"SELECT u.username,c.id_user,c.id,c.text,c.id_post FROM Comments c\n         LEFT JOIN User u ON c.id_user = u.id\n         LEFT JOIN Post p ON c.id_post = p.id  WHERE c.id_post = $id_post\";\n         $stmt = $bdd->getPDO()->prepare($req);\n-        $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n         $stmt->execute();\n         $comments = $stmt->fetchAll();\n         return $comments;\n     }\n \n \n-    public function createComment($id_post, $user_id,$text){\n-  \n+    public function createComment($id_post, $user_id, $text)\n+    {\n+\n         $bdd = new Database();\n         $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?)\");\n         $query->execute([\n             $id_post,\n             $_SESSION['user']->getId(),\n             $text\n-            \n-            \n-           \n-    \n-        ]); \n-}\n \n \n \n-public function DeleteComments($id)\n \n-{\n-    $bdd = new Database();\n-    $sql = \"DELETE FROM Comments WHERE id= $id\";\n-    $stmt= $bdd->getPDO()->prepare($sql);\n-    $stmt->execute();\n-  \n+        ]);\n+    }\n \n-}\n \n-public function getCommentBYId($id)\n-{\n- \n-    $bdd= new Database();\n-    $req =\"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n+\n+    public function DeleteComments($id)\n+    {\n+        $bdd = new Database();\n+        $sql = \"DELETE FROM Comments WHERE id= $id\";\n+        $stmt = $bdd->getPDO()->prepare($sql);\n+        $stmt->execute();\n+\n+\n+    }\n+\n+    public function getCommentBYId($id)\n+    {\n+\n+        $bdd = new Database();\n+        $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n     LEFT JOIN User ON Comments.id_user = User.id\n     LEFT JOIN Post ON Comments.id_post = Post.id\n     WHERE Comments.id =  $id\";\n-    $stmt= $bdd->getPDO()->prepare($req);\n-    $stmt->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Comment');\n-    $stmt->execute();\n-    $comments = $stmt->fetch();\n-    return $comments;\n+        $stmt = $bdd->getPDO()->prepare($req);\n+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n+        $stmt->execute();\n+        $comments = $stmt->fetch();\n+        return $comments;\n \n-}\n+    }\n \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687524822277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n class CommentRepository\n {\n     function getComments($id_post): array\n     {\n-\n         $bdd = new Database();\n         $req = \"SELECT u.username,c.id_user,c.id,c.text,c.id_post FROM Comments c\n         LEFT JOIN User u ON c.id_user = u.id\n         LEFT JOIN Post p ON c.id_post = p.id  WHERE c.id_post = $id_post\";\n@@ -20,10 +19,9 @@\n         $stmt->execute();\n         $comments = $stmt->fetchAll();\n         return $comments;\n     }\n-\n-\n+    \n     public function createComment($id_post, $user_id, $text)\n     {\n \n         $bdd = new Database();\n"
+                },
+                {
+                    "date": 1687524832123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,22 +19,17 @@\n         $stmt->execute();\n         $comments = $stmt->fetchAll();\n         return $comments;\n     }\n-    \n+\n     public function createComment($id_post, $user_id, $text)\n     {\n-\n         $bdd = new Database();\n         $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?)\");\n         $query->execute([\n             $id_post,\n             $_SESSION['user']->getId(),\n             $text\n-\n-\n-\n-\n         ]);\n     }\n \n \n"
+                },
+                {
+                    "date": 1687524838528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,8 @@\n             $text\n         ]);\n     }\n \n-\n-\n     public function DeleteComments($id)\n     {\n         $bdd = new Database();\n         $sql = \"DELETE FROM Comments WHERE id= $id\";\n"
+                },
+                {
+                    "date": 1687524846393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,12 +37,10 @@\n         $bdd = new Database();\n         $sql = \"DELETE FROM Comments WHERE id= $id\";\n         $stmt = $bdd->getPDO()->prepare($sql);\n         $stmt->execute();\n-\n-\n     }\n-\n+    \n     public function getCommentBYId($id)\n     {\n \n         $bdd = new Database();\n"
+                },
+                {
+                    "date": 1687524858460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,17 +38,16 @@\n         $sql = \"DELETE FROM Comments WHERE id= $id\";\n         $stmt = $bdd->getPDO()->prepare($sql);\n         $stmt->execute();\n     }\n-    \n+\n     public function getCommentBYId($id)\n     {\n-\n-        $bdd = new Database();\n-        $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n-    LEFT JOIN User ON Comments.id_user = User.id\n-    LEFT JOIN Post ON Comments.id_post = Post.id\n-    WHERE Comments.id =  $id\";\n+            $bdd = new Database();\n+            $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n+        LEFT JOIN User ON Comments.id_user = User.id\n+        LEFT JOIN Post ON Comments.id_post = Post.id\n+        WHERE Comments.id =  $id\";\n         $stmt = $bdd->getPDO()->prepare($req);\n         $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n         $stmt->execute();\n         $comments = $stmt->fetch();\n"
+                },
+                {
+                    "date": 1687524865031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n     public function getCommentBYId($id)\n     {\n             $bdd = new Database();\n             $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n-        LEFT JOIN User ON Comments.id_user = User.id\n+            LEFT JOIN User ON Comments.id_user = User.id\n         LEFT JOIN Post ON Comments.id_post = Post.id\n         WHERE Comments.id =  $id\";\n         $stmt = $bdd->getPDO()->prepare($req);\n         $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n"
+                },
+                {
+                    "date": 1687524870173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     {\n             $bdd = new Database();\n             $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n             LEFT JOIN User ON Comments.id_user = User.id\n-        LEFT JOIN Post ON Comments.id_post = Post.id\n+          LEFT JOIN Post ON Comments.id_post = Post.id\n         WHERE Comments.id =  $id\";\n         $stmt = $bdd->getPDO()->prepare($req);\n         $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n         $stmt->execute();\n"
+                },
+                {
+                    "date": 1687524876054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     {\n             $bdd = new Database();\n             $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n             LEFT JOIN User ON Comments.id_user = User.id\n-          LEFT JOIN Post ON Comments.id_post = Post.id\n+                      LEFT JOIN Post ON Comments.id_post = Post.id\n         WHERE Comments.id =  $id\";\n         $stmt = $bdd->getPDO()->prepare($req);\n         $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n         $stmt->execute();\n"
+                },
+                {
+                    "date": 1687524881682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,11 +41,11 @@\n     }\n \n     public function getCommentBYId($id)\n     {\n-            $bdd = new Database();\n-            $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n-            LEFT JOIN User ON Comments.id_user = User.id\n+        $bdd = new Database();\n+        $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n+        LEFT JOIN User ON Comments.id_user = User.id\n                       LEFT JOIN Post ON Comments.id_post = Post.id\n         WHERE Comments.id =  $id\";\n         $stmt = $bdd->getPDO()->prepare($req);\n         $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n"
+                },
+                {
+                    "date": 1687524892104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,17 +44,14 @@\n     {\n         $bdd = new Database();\n         $req = \"SELECT Comments.id_user, Comments.id , Comments.text,User.username,Comments.id_post FROM Comments\n         LEFT JOIN User ON Comments.id_user = User.id\n-                      LEFT JOIN Post ON Comments.id_post = Post.id\n+        LEFT JOIN Post ON Comments.id_post = Post.id\n         WHERE Comments.id =  $id\";\n         $stmt = $bdd->getPDO()->prepare($req);\n         $stmt->setFetchMode(PDO::FETCH_CLASS, 'Foot\\Entity\\Comment');\n         $stmt->execute();\n         $comments = $stmt->fetch();\n         return $comments;\n \n     }\n-\n-\n-\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1687525693400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         $stmt->execute();\n         $comments = $stmt->fetchAll();\n         return $comments;\n     }\n-\n+    \n     public function createComment($id_post, $user_id, $text)\n     {\n         $bdd = new Database();\n         $query = $bdd->getPDO()->prepare(\"INSERT INTO Comments(id_post,id_user,text)VALUES(?,?,?)\");\n"
+                }
+            ],
+            "date": 1687354458523,
+            "name": "Commit-0",
+            "content": "<?php\n\n"
+        }
+    ]
+}

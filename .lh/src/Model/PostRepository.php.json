@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/Model/PostRepository.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1686732784071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686732797002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n <?php\n+namespace Foot\\Model;\n+\n+\n+use Foot\\Entity\\Database;\n+use PDO;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732803842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n namespace Foot\\Model;\n \n \n use Foot\\Entity\\Database;\n-use PDO;\n\\ No newline at end of file\n+use PDO;\n+\n+Class \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732819336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n \n use Foot\\Entity\\Database;\n use PDO;\n \n-Class \n\\ No newline at end of file\n+class UserRepository\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732827792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,5 @@\n \n use Foot\\Entity\\Database;\n use PDO;\n \n-class UserRepository\n\\ No newline at end of file\n+class PostRepository\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732834060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,13 @@\n \n use Foot\\Entity\\Database;\n use PDO;\n \n-class PostRepository\n\\ No newline at end of file\n+class PostRepository\n+{\n+\n+\n+\n+    \n+\n+\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732846173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n \n class PostRepository\n {\n \n+      public function \n \n \n-    \n \n \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686732856665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n class PostRepository\n {\n \n-      public function \n+      public function  \n \n \n \n \n"
+                },
+                {
+                    "date": 1686732862211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n class PostRepository\n {\n \n-      public function  \n+      public function displayPos \n \n \n \n \n"
+                },
+                {
+                    "date": 1686732872279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,15 @@\n \n class PostRepository\n {\n \n-      public function displayPos \n+      public function displayPost(){\n \n \n \n+        \n+      } \n \n+\n+\n+\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686734092393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,21 @@\n {\n \n       public function displayPost(){\n \n+        $db = connectionDataBase();\n+        $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+        LEFT JOIN users ON posts.user_id = users.id\n+        LEFT JOIN categories ON posts.category_id = categories.id\n+        WHERE created_at BETWEEN'2022-03-21 08:43:50' AND '2023-03-21 08:43:50'\";\n+         $stmt = $db->prepare($req);\n+        //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n+        //  $stmt->bindParam(':current_date', $currentDate);\n+         $stmt->execute();\n+         $articles=$stmt->fetchAll();\n+         return $articles;\n \n \n-        \n       } \n \n \n \n"
+                },
+                {
+                    "date": 1686734118306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n {\n \n       public function displayPost(){\n \n-        $db = connectionDataBase();\n+        $bdd = new Database()\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         LEFT JOIN users ON posts.user_id = users.id\n         LEFT JOIN categories ON posts.category_id = categories.id\n         WHERE created_at BETWEEN'2022-03-21 08:43:50' AND '2023-03-21 08:43:50'\";\n"
+                },
+                {
+                    "date": 1686734123452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         LEFT JOIN users ON posts.user_id = users.id\n         LEFT JOIN categories ON posts.category_id = categories.id\n         WHERE created_at BETWEEN'2022-03-21 08:43:50' AND '2023-03-21 08:43:50'\";\n-         $stmt = $db->prepare($req);\n+         $stmt = $bss->prepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734138011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,14 +9,14 @@\n {\n \n       public function displayPost(){\n \n-        $bdd = new Database()\n+        $bdd = new Database();\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         LEFT JOIN users ON posts.user_id = users.id\n         LEFT JOIN categories ON posts.category_id = categories.id\n         WHERE created_at BETWEEN'2022-03-21 08:43:50' AND '2023-03-21 08:43:50'\";\n-         $stmt = $bss->prepare($req);\n+         $stmt = $bdd->prepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734160648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         LEFT JOIN users ON posts.user_id = users.id\n         LEFT JOIN categories ON posts.category_id = categories.id\n         WHERE created_at BETWEEN'2022-03-21 08:43:50' AND '2023-03-21 08:43:50'\";\n-         $stmt = $bdd->prepare($req);\n+         $stmt = $bdd->getPDOprepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734180003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n         $bdd = new Database();\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         LEFT JOIN users ON posts.user_id = users.id\n         LEFT JOIN categories ON posts.category_id = categories.id\n-        WHERE created_at BETWEEN'2022-03-21 08:43:50' AND '2023-03-21 08:43:50'\";\n-         $stmt = $bdd->getPDOprepare($req);\n+        \";\n+         $stmt = $bdd->getPDO()->prepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734206573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,9 @@\n       public function displayPost(){\n \n         $bdd = new Database();\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n-        LEFT JOIN users ON posts.user_id = users.id\n-        LEFT JOIN categories ON posts.category_id = categories.id\n-        \";\n+        LEFT JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n"
+                },
+                {
+                    "date": 1686734212459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       public function displayPost(){\n \n         $bdd = new Database();\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n-        LEFT JOIN users ON posts.user_id = users.id\";\n+        HINNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n"
+                },
+                {
+                    "date": 1686734220134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       public function displayPost(){\n \n         $bdd = new Database();\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n-        HINNER JOIN users ON posts.user_id = users.id\";\n+        INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n         //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n         //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n"
+                },
+                {
+                    "date": 1686734233915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,8 @@\n         $bdd = new Database();\n         $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n-        //  $stmt->bindParam(':one_year_ago', $oneYearAgo);\n-        //  $stmt->bindParam(':current_date', $currentDate);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n          return $articles;\n \n"
+                },
+                {
+                    "date": 1686734253295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT posts.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT POST.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734259242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT POST.user_id, posts.id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, .id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734264991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT Pos.user_id, .id , posts.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, Post.id , Pos.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734273618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT Pos.user_id, Post.id , Pos.image, posts.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734280236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,posts.title,posts.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,posts.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734287806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,posts.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,users.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734294182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,users.prenom,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.prenom,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686734299367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n       public function displayPost(){\n \n         $bdd = new Database();\n-        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.user,categories.name FROM posts\n+        $req =\"SELECT Pos.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.usern,categories.name FROM posts\n         INNER JOIN users ON posts.user_id = users.id\";\n          $stmt = $bdd->getPDO()->prepare($req);\n          $stmt->execute();\n          $articles=$stmt->fetchAll();\n"
+                },
+                {
+                    "date": 1686831179689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         $bdd = new Database();\n     $req =\"SELECT Post.user_id, Post.id , Post.image, Post.created_at,Post.title,Post.content,User.username FROM Post\n     LEFT JOIN User ON Post.user_id = user.id\n     WHERE Post.id =  $id\";\n-    $s= $bdd->getPDO()->prepare($req);\n+    $st= $bdd->getPDO()->prepare($req);\n     $search->setFetchMode(PDO::FETCH_CLASS,'Foot\\Entity\\Post');\n     $search->execute();\n     $post = $search->fetch();\n     return $post;\n"
+                }
+            ],
+            "date": 1686732784071,
+            "name": "Commit-0",
+            "content": "<?php\n"
+        }
+    ]
+}
